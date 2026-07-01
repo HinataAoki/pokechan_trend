@@ -23,3 +23,7 @@ FORECAST_HORIZON_DAYS = 3
 # the decay formula (TAU_HOURS above) itself is still being tuned - with the
 # current TAU, videos older than ~2 weeks already decay to a near-zero score.
 LOOKBACK_DAYS = 30
+
+# #shorts tend to be watched more passively / imitated less than full videos,
+# so their contribution is scaled down.
+SHORTS_WEIGHT = 1 / 3

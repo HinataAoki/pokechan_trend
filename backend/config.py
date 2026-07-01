@@ -7,6 +7,12 @@ load_dotenv()
 YOUTUBE_API_KEY = os.environ["YOUTUBE_API_KEY"]
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_SERVICE_ROLE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+
+# Used to disambiguate which Pokemon a title is actually "about" when more
+# than one name is matched (e.g. one used, one merely mentioned as an
+# opponent/counter/comparison) - see llm_classifier.py.
+GEMINI_MODEL = "gemini-3.1-flash-lite"
 
 # Search terms used to discover candidate videos via YouTube search.list.
 SEARCH_QUERIES = [

@@ -12,7 +12,7 @@ def get_youtube():
     return _youtube
 
 
-def search_video_ids(query: str, published_after: str, max_pages: int = 10) -> list[str]:
+def search_video_ids(query: str, published_after: str, max_pages: int = 5) -> list[str]:
     """Search videos matching a text query published since `published_after`
     (RFC3339 timestamp), paginating through all results rather than just the
     first 50 - with `order="date"` and no date bound, videos can get pushed

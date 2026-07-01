@@ -15,6 +15,7 @@ jobs:
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -26,8 +27,26 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked
 
-      - name: Discover new videos
+      - name: Decide whether to run keyword search this hour
+        id: search_gate
+        run: |
+          hour=$(date -u +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( 10#$hour % 6 )) -eq 0 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # search.list is quota-expensive (100 units/call) and only exists to
+      # find channels we haven't seen before, so it only needs to run a few
+      # times a day - rss_watcher.py below covers known channels for free,
+      # every hour.
+      - name: Discover new channels via keyword search (every 6h)
+        if: steps.search_gate.outputs.run == 'true'
         run: uv run python collector.py
+
+      - name: Discover new videos from known channels via RSS (free, hourly)
+        run: uv run python rss_watcher.py
 
       - name: Cache missing pokemon icons
         run: uv run python pokemon_images.py

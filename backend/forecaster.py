@@ -24,6 +24,10 @@ def _channel_weight(subscriber_count: int) -> float:
     return max(1.0, 1.0 + math.log10(max(subscriber_count, 1) / fc.SUBSCRIBER_BASELINE))
 
 
+def _shorts_weight(title: str) -> float:
+    return fc.SHORTS_WEIGHT if "#shorts" in title.lower() else 1.0
+
+
 def _latest_view_count(snapshots: list[dict]) -> int | None:
     if not snapshots:
         return None
@@ -96,7 +100,7 @@ def forecast() -> None:
             continue
 
         subscriber_count = subscribers_by_channel.get(video["channel_id"], 0)
-        weight = _channel_weight(subscriber_count)
+        weight = _channel_weight(subscriber_count) * _shorts_weight(video["title"])
         published = datetime.fromisoformat(video["published_at"].replace("Z", "+00:00"))
 
         for date in dates:
