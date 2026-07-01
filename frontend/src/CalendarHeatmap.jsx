@@ -18,14 +18,15 @@ function weekdayLabel(dateStr) {
   return ["日", "月", "火", "水", "木", "金", "土"][d.getUTCDay()];
 }
 
-export default function CalendarHeatmap({ dates, scoreByDate, today, onDateClick }) {
-  const maxScore = Math.max(1, ...Object.values(scoreByDate));
+export default function CalendarHeatmap({ dates, bestByDate, imageByName, today, onDateClick }) {
+  const maxScore = Math.max(1, ...dates.map((d) => bestByDate[d]?.score ?? 0));
 
   return (
     <div>
       <div className="calendar-strip">
         {dates.map((date) => {
-          const score = scoreByDate[date] ?? 0;
+          const best = bestByDate[date];
+          const score = best?.score ?? 0;
           const ratio = score / maxScore;
           const level = levelForRatio(ratio);
           const isToday = date === today;
@@ -36,12 +37,22 @@ export default function CalendarHeatmap({ dates, scoreByDate, today, onDateClick
               type="button"
               className={`calendar-cell${isToday ? " calendar-cell-today" : ""}`}
               style={{ backgroundColor: LEVEL_COLORS[level] }}
-              title={`${date}: score ${score.toFixed(1)}`}
+              title={best ? `${date}: ${best.pokemon_name} (${score.toFixed(1)})` : date}
               onClick={() => onDateClick?.(date)}
             >
               <div className="calendar-cell-weekday">{weekdayLabel(date)}</div>
               <div className="calendar-cell-date">{formatDate(date)}</div>
-              <div className="calendar-cell-score">{score > 0 ? score.toFixed(0) : "-"}</div>
+              {best &&
+                (imageByName[best.pokemon_name] ? (
+                  <img
+                    className="calendar-cell-icon"
+                    src={imageByName[best.pokemon_name]}
+                    alt={best.pokemon_name}
+                  />
+                ) : (
+                  <div className="calendar-cell-icon calendar-cell-icon-placeholder" />
+                ))}
+              <div className="calendar-cell-name">{best?.pokemon_name ?? "-"}</div>
               {isFuture && <div className="calendar-cell-forecast-tag">予想</div>}
             </button>
           );

@@ -6,48 +6,12 @@ video_pokemon but don't have a cached image yet, so a run with nothing
 new to fetch skips scraping entirely.
 """
 
-import html
-import re
-import urllib.request
 from datetime import datetime, timezone
 
+from pokewiki import fetch_bytes, scrape_pokemon_table
 from supabase_client import get_client
 
-LIST_URL = "https://www.pokewiki.de/index.php?title=Pok%C3%A9mon-Liste"
-BASE_URL = "https://www.pokewiki.de"
 STORAGE_BUCKET = "pokemon-icons"
-
-USER_AGENT = "pokechan-trend/1.0 (+https://github.com/HinataAoki/pokechan_trend)"
-
-ROW_NUMBER_RE = re.compile(r"^\s*<td>(\d{4})</td>")
-ICON_SRC_RE = re.compile(r'class="pokemon_icon[^"]*".*?<img src="([^"]+)"', re.S)
-FIRST_RUBY_RE = re.compile(r"<ruby><rb>([^<]+)</rb>")
-
-
-def _fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req) as resp:
-        return resp.read()
-
-
-def scrape_image_map() -> dict[str, tuple[int, str]]:
-    """Return {japanese_name: (dex_number, absolute_icon_url)} scraped once."""
-    page = _fetch(LIST_URL).decode("utf-8")
-    mapping: dict[str, tuple[int, str]] = {}
-
-    for row in page.split("<tr>"):
-        number_match = ROW_NUMBER_RE.match(row)
-        icon_match = ICON_SRC_RE.search(row)
-        name_match = FIRST_RUBY_RE.search(row)
-        if not (number_match and icon_match and name_match):
-            continue
-
-        dex_number = int(number_match.group(1))
-        image_url = BASE_URL + html.unescape(icon_match.group(1))
-        name = html.unescape(name_match.group(1))
-        mapping[name] = (dex_number, image_url)
-
-    return mapping
 
 
 def fetch_missing_images() -> None:
@@ -68,7 +32,7 @@ def fetch_missing_images() -> None:
         return
 
     print(f"scraping pokewiki.de for {len(missing_names)} missing icon(s)")
-    image_map = scrape_image_map()
+    image_map = {entry["japanese_name"]: entry for entry in scrape_pokemon_table()}
 
     rows_to_insert = []
     for name in missing_names:
@@ -77,9 +41,8 @@ def fetch_missing_images() -> None:
             print(f"no icon found on pokewiki for: {name}")
             continue
 
-        dex_number, image_url = entry
-        storage_path = f"{dex_number:04d}.png"
-        image_bytes = _fetch(image_url)
+        storage_path = f"{entry['dex_number']:04d}.png"
+        image_bytes = fetch_bytes(entry["image_url"])
 
         client.storage.from_(STORAGE_BUCKET).upload(
             storage_path,

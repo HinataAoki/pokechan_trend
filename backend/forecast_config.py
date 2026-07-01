@@ -19,5 +19,7 @@ SUBSCRIBER_BASELINE = 10_000
 FORECAST_HORIZON_DAYS = 3
 
 # How many days back to look for videos whose influence might still be nonzero.
-# Should comfortably exceed MAX_TRACKING_HOURS so no contributing video is missed.
-LOOKBACK_DAYS = 10
+# Set to ~1 month so a month of history is always considered/available while
+# the decay formula (TAU_HOURS above) itself is still being tuned - with the
+# current TAU, videos older than ~2 weeks already decay to a near-zero score.
+LOOKBACK_DAYS = 30

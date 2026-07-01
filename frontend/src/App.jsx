@@ -15,11 +15,10 @@ function todayIso() {
 function App() {
   const [rows, setRows] = useState([]);
   const [imageByName, setImageByName] = useState({});
-  const [selectedPokemon, setSelectedPokemon] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const [modalDate, setModalDate] = useState(null);
+  const [modal, setModal] = useState(null); // { date, pokemonName } | null
   const [modalVideos, setModalVideos] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
 
@@ -58,20 +57,6 @@ function App() {
     };
   }, []);
 
-  const pokemonTotals = useMemo(() => {
-    const totals = new Map();
-    for (const row of rows) {
-      totals.set(row.pokemon_name, (totals.get(row.pokemon_name) ?? 0) + row.score);
-    }
-    return [...totals.entries()].sort((a, b) => b[1] - a[1]);
-  }, [rows]);
-
-  useEffect(() => {
-    if (!selectedPokemon && pokemonTotals.length > 0) {
-      setSelectedPokemon(pokemonTotals[0][0]);
-    }
-  }, [pokemonTotals, selectedPokemon]);
-
   const dates = useMemo(() => [...new Set(rows.map((r) => r.date))].sort(), [rows]);
 
   const today = todayIso();
@@ -86,22 +71,25 @@ function App() {
     return [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
   }, [rows, today]);
 
-  const scoreByDate = useMemo(() => {
+  // Best (top-1) pokemon per date, shown as the calendar day's icon.
+  const bestByDate = useMemo(() => {
     const map = {};
     for (const row of rows) {
-      if (row.pokemon_name === selectedPokemon) {
-        map[row.date] = row.score;
+      const current = map[row.date];
+      if (!current || row.score > current.score) {
+        map[row.date] = { pokemon_name: row.pokemon_name, score: row.score };
       }
     }
     return map;
-  }, [rows, selectedPokemon]);
+  }, [rows]);
 
-  async function handleDateClick(date) {
-    setModalDate(date);
+  async function openContributions(date, pokemonName) {
+    if (!pokemonName) return;
+    setModal({ date, pokemonName });
     setModalLoading(true);
 
     if (USE_MOCK_DATA) {
-      setModalVideos(generateMockContributions(date, selectedPokemon));
+      setModalVideos(generateMockContributions(date, pokemonName));
       setModalLoading(false);
       return;
     }
@@ -110,7 +98,7 @@ function App() {
       .from("pokemon_video_contribution")
       .select("video_id, video_title, youtube_url, published_at, contribution_score")
       .eq("date", date)
-      .eq("pokemon_name", selectedPokemon)
+      .eq("pokemon_name", pokemonName)
       .order("contribution_score", { ascending: false });
 
     setModalVideos(error ? [] : data ?? []);
@@ -137,43 +125,30 @@ function App() {
 
       {!loading && !error && rows.length > 0 && (
         <>
-          <TopThree top3={top3} imageByName={imageByName} onSelect={setSelectedPokemon} />
-
-          <div className="pokemon-select">
-            <label htmlFor="pokemon">ポケモン: </label>
-            {imageByName[selectedPokemon] && (
-              <img className="pokemon-select-icon" src={imageByName[selectedPokemon]} alt="" />
-            )}
-            <select
-              id="pokemon"
-              value={selectedPokemon}
-              onChange={(e) => setSelectedPokemon(e.target.value)}
-            >
-              {pokemonTotals.map(([name]) => (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </div>
+          <TopThree
+            top3={top3}
+            imageByName={imageByName}
+            onSelect={(name) => openContributions(today, name)}
+          />
 
           <CalendarHeatmap
             dates={dates}
-            scoreByDate={scoreByDate}
+            bestByDate={bestByDate}
+            imageByName={imageByName}
             today={today}
-            onDateClick={handleDateClick}
+            onDateClick={(date) => openContributions(date, bestByDate[date]?.pokemon_name)}
           />
-          <p className="calendar-hint">日付をタップすると、その日に影響した動画を確認できます。</p>
+          <p className="calendar-hint">日付をタップすると、その日のTOP1ポケモンに影響した動画を確認できます。</p>
         </>
       )}
 
-      {modalDate && (
+      {modal && (
         <ContributionModal
-          date={modalDate}
-          pokemonName={selectedPokemon}
+          date={modal.date}
+          pokemonName={modal.pokemonName}
           videos={modalVideos}
           loading={modalLoading}
-          onClose={() => setModalDate(null)}
+          onClose={() => setModal(null)}
         />
       )}
     </div>

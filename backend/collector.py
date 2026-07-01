@@ -11,6 +11,9 @@ from supabase_client import get_client
 
 
 def _classify_discovery(title: str, description: str, tags: list[str]) -> str | None:
+    """Is this video about Pokemon Champions at all? Title/description/tags
+    are all fair signals here - this only decides relevance, not which
+    Pokemon are shown (see match_pokemon below, which is title-only)."""
     haystack_title = title or ""
     haystack_rest = "\n".join([description or "", "\n".join(tags or [])])
 
@@ -37,6 +40,9 @@ def collect() -> None:
     videos = youtube_client.get_videos_details(list(video_ids))
     print(f"fetched details for {len(videos)} videos")
 
+    # A video is only kept if it's recognizably about the game (title/
+    # description/tags) AND names at least one Pokemon in its title -
+    # titles without a named Pokemon give us nothing to attribute usage to.
     relevant_videos = []
     for video in videos:
         snippet = video["snippet"]
@@ -46,15 +52,19 @@ def collect() -> None:
 
         discovered_via = _classify_discovery(title, description, tags)
         if discovered_via is None:
-            continue  # search hit was noise, not actually about this game
+            continue
 
-        relevant_videos.append((video, discovered_via))
+        pokemon_names = match_pokemon(title)
+        if not pokemon_names:
+            continue
+
+        relevant_videos.append((video, discovered_via, pokemon_names))
 
     if not relevant_videos:
-        print("no relevant videos after keyword/hashtag filtering")
+        print("no relevant videos with a Pokemon named in the title")
         return
 
-    channel_ids = [v["snippet"]["channelId"] for v, _ in relevant_videos]
+    channel_ids = [v["snippet"]["channelId"] for v, _, _ in relevant_videos]
     channels = youtube_client.get_channels_details(channel_ids)
 
     channel_rows = [
@@ -70,25 +80,22 @@ def collect() -> None:
 
     video_rows = []
     video_pokemon_rows = []
-    for video, discovered_via in relevant_videos:
+    for video, discovered_via, pokemon_names in relevant_videos:
         snippet = video["snippet"]
         video_id = video["id"]
-        title = snippet.get("title", "")
-        description = snippet.get("description", "")
-        tags = snippet.get("tags", [])
 
         video_rows.append(
             {
                 "video_id": video_id,
                 "youtube_url": f"https://www.youtube.com/watch?v={video_id}",
-                "title": title,
+                "title": snippet.get("title", ""),
                 "published_at": snippet["publishedAt"],
                 "channel_id": snippet["channelId"],
                 "discovered_via": discovered_via,
             }
         )
 
-        for pokemon_name in match_pokemon(title, description, "\n".join(tags)):
+        for pokemon_name in pokemon_names:
             video_pokemon_rows.append({"video_id": video_id, "pokemon_name": pokemon_name})
 
     if video_rows:
