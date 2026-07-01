@@ -1,0 +1,4 @@
+supabase==2.9.1
+websockets>=13,<16
+google-api-python-client==2.149.0
+python-dotenv==1.0.1

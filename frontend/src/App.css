@@ -1,0 +1,93 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #222;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.error {
+  color: #c0392b;
+}
+
+.pokemon-select {
+  margin: 1.5rem 0 1rem;
+  font-size: 1rem;
+}
+
+.pokemon-select select {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.calendar-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calendar-cell {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.calendar-cell-today {
+  border-color: #333;
+}
+
+.calendar-cell-weekday {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.calendar-cell-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.calendar-cell-score {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.calendar-cell-forecast-tag {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 0.6rem;
+  color: #888;
+}
+
+.calendar-legend {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.calendar-legend-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+}

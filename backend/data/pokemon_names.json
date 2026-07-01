@@ -1,0 +1,7177 @@
+[
+  {
+    "canonical": "フシギダネ",
+    "surface_forms": [
+      "Bulbasaur",
+      "フシギダネ"
+    ]
+  },
+  {
+    "canonical": "フシギソウ",
+    "surface_forms": [
+      "Ivysaur",
+      "フシギソウ"
+    ]
+  },
+  {
+    "canonical": "フシギバナ",
+    "surface_forms": [
+      "Venusaur",
+      "フシギバナ"
+    ]
+  },
+  {
+    "canonical": "ヒトカゲ",
+    "surface_forms": [
+      "Charmander",
+      "ヒトカゲ"
+    ]
+  },
+  {
+    "canonical": "リザード",
+    "surface_forms": [
+      "Charmeleon",
+      "リザード"
+    ]
+  },
+  {
+    "canonical": "リザードン",
+    "surface_forms": [
+      "Charizard",
+      "リザードン"
+    ]
+  },
+  {
+    "canonical": "ゼニガメ",
+    "surface_forms": [
+      "Squirtle",
+      "ゼニガメ"
+    ]
+  },
+  {
+    "canonical": "カメール",
+    "surface_forms": [
+      "Wartortle",
+      "カメール"
+    ]
+  },
+  {
+    "canonical": "カメックス",
+    "surface_forms": [
+      "Blastoise",
+      "カメックス"
+    ]
+  },
+  {
+    "canonical": "キャタピー",
+    "surface_forms": [
+      "Caterpie",
+      "キャタピー"
+    ]
+  },
+  {
+    "canonical": "トランセル",
+    "surface_forms": [
+      "Metapod",
+      "トランセル"
+    ]
+  },
+  {
+    "canonical": "バタフリー",
+    "surface_forms": [
+      "Butterfree",
+      "バタフリー"
+    ]
+  },
+  {
+    "canonical": "ビードル",
+    "surface_forms": [
+      "Weedle",
+      "ビードル"
+    ]
+  },
+  {
+    "canonical": "コクーン",
+    "surface_forms": [
+      "Kakuna",
+      "コクーン"
+    ]
+  },
+  {
+    "canonical": "スピアー",
+    "surface_forms": [
+      "Beedrill",
+      "スピアー"
+    ]
+  },
+  {
+    "canonical": "ポッポ",
+    "surface_forms": [
+      "Pidgey",
+      "ポッポ"
+    ]
+  },
+  {
+    "canonical": "ピジョン",
+    "surface_forms": [
+      "Pidgeotto",
+      "ピジョン"
+    ]
+  },
+  {
+    "canonical": "ピジョット",
+    "surface_forms": [
+      "Pidgeot",
+      "ピジョット"
+    ]
+  },
+  {
+    "canonical": "コラッタ",
+    "surface_forms": [
+      "Rattata",
+      "コラッタ"
+    ]
+  },
+  {
+    "canonical": "ラッタ",
+    "surface_forms": [
+      "Raticate",
+      "ラッタ"
+    ]
+  },
+  {
+    "canonical": "オニスズメ",
+    "surface_forms": [
+      "Spearow",
+      "オニスズメ"
+    ]
+  },
+  {
+    "canonical": "オニドリル",
+    "surface_forms": [
+      "Fearow",
+      "オニドリル"
+    ]
+  },
+  {
+    "canonical": "アーボ",
+    "surface_forms": [
+      "Ekans",
+      "アーボ"
+    ]
+  },
+  {
+    "canonical": "アーボック",
+    "surface_forms": [
+      "Arbok",
+      "アーボック"
+    ]
+  },
+  {
+    "canonical": "ピカチュウ",
+    "surface_forms": [
+      "Pikachu",
+      "ピカチュウ"
+    ]
+  },
+  {
+    "canonical": "ライチュウ",
+    "surface_forms": [
+      "Raichu",
+      "ライチュウ"
+    ]
+  },
+  {
+    "canonical": "サンド",
+    "surface_forms": [
+      "Sandshrew",
+      "サンド"
+    ]
+  },
+  {
+    "canonical": "サンドパン",
+    "surface_forms": [
+      "Sandslash",
+      "サンドパン"
+    ]
+  },
+  {
+    "canonical": "ニドラン♀",
+    "surface_forms": [
+      "Nidoran♀",
+      "ニドラン♀"
+    ]
+  },
+  {
+    "canonical": "ニドリーナ",
+    "surface_forms": [
+      "Nidorina",
+      "ニドリーナ"
+    ]
+  },
+  {
+    "canonical": "ニドクイン",
+    "surface_forms": [
+      "Nidoqueen",
+      "ニドクイン"
+    ]
+  },
+  {
+    "canonical": "ニドラン♂",
+    "surface_forms": [
+      "Nidoran♂",
+      "ニドラン♂"
+    ]
+  },
+  {
+    "canonical": "ニドリーノ",
+    "surface_forms": [
+      "Nidorino",
+      "ニドリーノ"
+    ]
+  },
+  {
+    "canonical": "ニドキング",
+    "surface_forms": [
+      "Nidoking",
+      "ニドキング"
+    ]
+  },
+  {
+    "canonical": "ピッピ",
+    "surface_forms": [
+      "Clefairy",
+      "ピッピ"
+    ]
+  },
+  {
+    "canonical": "ピクシー",
+    "surface_forms": [
+      "Clefable",
+      "ピクシー"
+    ]
+  },
+  {
+    "canonical": "ロコン",
+    "surface_forms": [
+      "Vulpix",
+      "ロコン"
+    ]
+  },
+  {
+    "canonical": "キュウコン",
+    "surface_forms": [
+      "Ninetales",
+      "キュウコン"
+    ]
+  },
+  {
+    "canonical": "プリン",
+    "surface_forms": [
+      "Jigglypuff",
+      "プリン"
+    ]
+  },
+  {
+    "canonical": "プクリン",
+    "surface_forms": [
+      "Wigglytuff",
+      "プクリン"
+    ]
+  },
+  {
+    "canonical": "ズバット",
+    "surface_forms": [
+      "Zubat",
+      "ズバット"
+    ]
+  },
+  {
+    "canonical": "ゴルバット",
+    "surface_forms": [
+      "Golbat",
+      "ゴルバット"
+    ]
+  },
+  {
+    "canonical": "ナゾノクサ",
+    "surface_forms": [
+      "Oddish",
+      "ナゾノクサ"
+    ]
+  },
+  {
+    "canonical": "クサイハナ",
+    "surface_forms": [
+      "Gloom",
+      "クサイハナ"
+    ]
+  },
+  {
+    "canonical": "ラフレシア",
+    "surface_forms": [
+      "Vileplume",
+      "ラフレシア"
+    ]
+  },
+  {
+    "canonical": "パラス",
+    "surface_forms": [
+      "Paras",
+      "パラス"
+    ]
+  },
+  {
+    "canonical": "パラセクト",
+    "surface_forms": [
+      "Parasect",
+      "パラセクト"
+    ]
+  },
+  {
+    "canonical": "コンパン",
+    "surface_forms": [
+      "Venonat",
+      "コンパン"
+    ]
+  },
+  {
+    "canonical": "モルフォン",
+    "surface_forms": [
+      "Venomoth",
+      "モルフォン"
+    ]
+  },
+  {
+    "canonical": "ディグダ",
+    "surface_forms": [
+      "Diglett",
+      "ディグダ"
+    ]
+  },
+  {
+    "canonical": "ダグトリオ",
+    "surface_forms": [
+      "Dugtrio",
+      "ダグトリオ"
+    ]
+  },
+  {
+    "canonical": "ニャース",
+    "surface_forms": [
+      "Meowth",
+      "ニャース"
+    ]
+  },
+  {
+    "canonical": "ペルシアン",
+    "surface_forms": [
+      "Persian",
+      "ペルシアン"
+    ]
+  },
+  {
+    "canonical": "コダック",
+    "surface_forms": [
+      "Psyduck",
+      "コダック"
+    ]
+  },
+  {
+    "canonical": "ゴルダック",
+    "surface_forms": [
+      "Golduck",
+      "ゴルダック"
+    ]
+  },
+  {
+    "canonical": "マンキー",
+    "surface_forms": [
+      "Mankey",
+      "マンキー"
+    ]
+  },
+  {
+    "canonical": "オコリザル",
+    "surface_forms": [
+      "Primeape",
+      "オコリザル"
+    ]
+  },
+  {
+    "canonical": "ガーディ",
+    "surface_forms": [
+      "Growlithe",
+      "ガーディ"
+    ]
+  },
+  {
+    "canonical": "ウインディ",
+    "surface_forms": [
+      "Arcanine",
+      "ウインディ"
+    ]
+  },
+  {
+    "canonical": "ニョロモ",
+    "surface_forms": [
+      "Poliwag",
+      "ニョロモ"
+    ]
+  },
+  {
+    "canonical": "ニョロゾ",
+    "surface_forms": [
+      "Poliwhirl",
+      "ニョロゾ"
+    ]
+  },
+  {
+    "canonical": "ニョロボン",
+    "surface_forms": [
+      "Poliwrath",
+      "ニョロボン"
+    ]
+  },
+  {
+    "canonical": "ケーシィ",
+    "surface_forms": [
+      "Abra",
+      "ケーシィ"
+    ]
+  },
+  {
+    "canonical": "ユンゲラー",
+    "surface_forms": [
+      "Kadabra",
+      "ユンゲラー"
+    ]
+  },
+  {
+    "canonical": "フーディン",
+    "surface_forms": [
+      "Alakazam",
+      "フーディン"
+    ]
+  },
+  {
+    "canonical": "ワンリキー",
+    "surface_forms": [
+      "Machop",
+      "ワンリキー"
+    ]
+  },
+  {
+    "canonical": "ゴーリキー",
+    "surface_forms": [
+      "Machoke",
+      "ゴーリキー"
+    ]
+  },
+  {
+    "canonical": "カイリキー",
+    "surface_forms": [
+      "Machamp",
+      "カイリキー"
+    ]
+  },
+  {
+    "canonical": "マダツボミ",
+    "surface_forms": [
+      "Bellsprout",
+      "マダツボミ"
+    ]
+  },
+  {
+    "canonical": "ウツドン",
+    "surface_forms": [
+      "Weepinbell",
+      "ウツドン"
+    ]
+  },
+  {
+    "canonical": "ウツボット",
+    "surface_forms": [
+      "Victreebel",
+      "ウツボット"
+    ]
+  },
+  {
+    "canonical": "メノクラゲ",
+    "surface_forms": [
+      "Tentacool",
+      "メノクラゲ"
+    ]
+  },
+  {
+    "canonical": "ドククラゲ",
+    "surface_forms": [
+      "Tentacruel",
+      "ドククラゲ"
+    ]
+  },
+  {
+    "canonical": "イシツブテ",
+    "surface_forms": [
+      "Geodude",
+      "イシツブテ"
+    ]
+  },
+  {
+    "canonical": "ゴローン",
+    "surface_forms": [
+      "Graveler",
+      "ゴローン"
+    ]
+  },
+  {
+    "canonical": "ゴローニャ",
+    "surface_forms": [
+      "Golem",
+      "ゴローニャ"
+    ]
+  },
+  {
+    "canonical": "ポニータ",
+    "surface_forms": [
+      "Ponyta",
+      "ポニータ"
+    ]
+  },
+  {
+    "canonical": "ギャロップ",
+    "surface_forms": [
+      "Rapidash",
+      "ギャロップ"
+    ]
+  },
+  {
+    "canonical": "ヤドン",
+    "surface_forms": [
+      "Slowpoke",
+      "ヤドン"
+    ]
+  },
+  {
+    "canonical": "ヤドラン",
+    "surface_forms": [
+      "Slowbro",
+      "ヤドラン"
+    ]
+  },
+  {
+    "canonical": "コイル",
+    "surface_forms": [
+      "Magnemite",
+      "コイル"
+    ]
+  },
+  {
+    "canonical": "レアコイル",
+    "surface_forms": [
+      "Magneton",
+      "レアコイル"
+    ]
+  },
+  {
+    "canonical": "カモネギ",
+    "surface_forms": [
+      "Farfetch’d",
+      "カモネギ"
+    ]
+  },
+  {
+    "canonical": "ドードー",
+    "surface_forms": [
+      "Doduo",
+      "ドードー"
+    ]
+  },
+  {
+    "canonical": "ドードリオ",
+    "surface_forms": [
+      "Dodrio",
+      "ドードリオ"
+    ]
+  },
+  {
+    "canonical": "パウワウ",
+    "surface_forms": [
+      "Seel",
+      "パウワウ"
+    ]
+  },
+  {
+    "canonical": "ジュゴン",
+    "surface_forms": [
+      "Dewgong",
+      "ジュゴン"
+    ]
+  },
+  {
+    "canonical": "ベトベター",
+    "surface_forms": [
+      "Grimer",
+      "ベトベター"
+    ]
+  },
+  {
+    "canonical": "ベトベトン",
+    "surface_forms": [
+      "Muk",
+      "ベトベトン"
+    ]
+  },
+  {
+    "canonical": "シェルダー",
+    "surface_forms": [
+      "Shellder",
+      "シェルダー"
+    ]
+  },
+  {
+    "canonical": "パルシェン",
+    "surface_forms": [
+      "Cloyster",
+      "パルシェン"
+    ]
+  },
+  {
+    "canonical": "ゴース",
+    "surface_forms": [
+      "Gastly",
+      "ゴース"
+    ]
+  },
+  {
+    "canonical": "ゴースト",
+    "surface_forms": [
+      "Haunter",
+      "ゴースト"
+    ]
+  },
+  {
+    "canonical": "ゲンガー",
+    "surface_forms": [
+      "Gengar",
+      "ゲンガー"
+    ]
+  },
+  {
+    "canonical": "イワーク",
+    "surface_forms": [
+      "Onix",
+      "イワーク"
+    ]
+  },
+  {
+    "canonical": "スリープ",
+    "surface_forms": [
+      "Drowzee",
+      "スリープ"
+    ]
+  },
+  {
+    "canonical": "スリーパー",
+    "surface_forms": [
+      "Hypno",
+      "スリーパー"
+    ]
+  },
+  {
+    "canonical": "クラブ",
+    "surface_forms": [
+      "Krabby",
+      "クラブ"
+    ]
+  },
+  {
+    "canonical": "キングラー",
+    "surface_forms": [
+      "Kingler",
+      "キングラー"
+    ]
+  },
+  {
+    "canonical": "ビリリダマ",
+    "surface_forms": [
+      "Voltorb",
+      "ビリリダマ"
+    ]
+  },
+  {
+    "canonical": "マルマイン",
+    "surface_forms": [
+      "Electrode",
+      "マルマイン"
+    ]
+  },
+  {
+    "canonical": "タマタマ",
+    "surface_forms": [
+      "Exeggcute",
+      "タマタマ"
+    ]
+  },
+  {
+    "canonical": "ナッシー",
+    "surface_forms": [
+      "Exeggutor",
+      "ナッシー"
+    ]
+  },
+  {
+    "canonical": "カラカラ",
+    "surface_forms": [
+      "Cubone",
+      "カラカラ"
+    ]
+  },
+  {
+    "canonical": "ガラガラ",
+    "surface_forms": [
+      "Marowak",
+      "ガラガラ"
+    ]
+  },
+  {
+    "canonical": "サワムラー",
+    "surface_forms": [
+      "Hitmonlee",
+      "サワムラー"
+    ]
+  },
+  {
+    "canonical": "エビワラー",
+    "surface_forms": [
+      "Hitmonchan",
+      "エビワラー"
+    ]
+  },
+  {
+    "canonical": "ベロリンガ",
+    "surface_forms": [
+      "Lickitung",
+      "ベロリンガ"
+    ]
+  },
+  {
+    "canonical": "ドガース",
+    "surface_forms": [
+      "Koffing",
+      "ドガース"
+    ]
+  },
+  {
+    "canonical": "マタドガス",
+    "surface_forms": [
+      "Weezing",
+      "マタドガス"
+    ]
+  },
+  {
+    "canonical": "サイホーン",
+    "surface_forms": [
+      "Rhyhorn",
+      "サイホーン"
+    ]
+  },
+  {
+    "canonical": "サイドン",
+    "surface_forms": [
+      "Rhydon",
+      "サイドン"
+    ]
+  },
+  {
+    "canonical": "ラッキー",
+    "surface_forms": [
+      "Chansey",
+      "ラッキー"
+    ]
+  },
+  {
+    "canonical": "モンジャラ",
+    "surface_forms": [
+      "Tangela",
+      "モンジャラ"
+    ]
+  },
+  {
+    "canonical": "ガルーラ",
+    "surface_forms": [
+      "Kangaskhan",
+      "ガルーラ"
+    ]
+  },
+  {
+    "canonical": "タッツー",
+    "surface_forms": [
+      "Horsea",
+      "タッツー"
+    ]
+  },
+  {
+    "canonical": "シードラ",
+    "surface_forms": [
+      "Seadra",
+      "シードラ"
+    ]
+  },
+  {
+    "canonical": "トサキント",
+    "surface_forms": [
+      "Goldeen",
+      "トサキント"
+    ]
+  },
+  {
+    "canonical": "アズマオウ",
+    "surface_forms": [
+      "Seaking",
+      "アズマオウ"
+    ]
+  },
+  {
+    "canonical": "ヒトデマン",
+    "surface_forms": [
+      "Staryu",
+      "ヒトデマン"
+    ]
+  },
+  {
+    "canonical": "スターミー",
+    "surface_forms": [
+      "Starmie",
+      "スターミー"
+    ]
+  },
+  {
+    "canonical": "バリヤード",
+    "surface_forms": [
+      "Mr. Mime",
+      "バリヤード"
+    ]
+  },
+  {
+    "canonical": "ストライク",
+    "surface_forms": [
+      "Scyther",
+      "ストライク"
+    ]
+  },
+  {
+    "canonical": "ルージュラ",
+    "surface_forms": [
+      "Jynx",
+      "ルージュラ"
+    ]
+  },
+  {
+    "canonical": "エレブー",
+    "surface_forms": [
+      "Electabuzz",
+      "エレブー"
+    ]
+  },
+  {
+    "canonical": "ブーバー",
+    "surface_forms": [
+      "Magmar",
+      "ブーバー"
+    ]
+  },
+  {
+    "canonical": "カイロス",
+    "surface_forms": [
+      "Pinsir",
+      "カイロス"
+    ]
+  },
+  {
+    "canonical": "ケンタロス",
+    "surface_forms": [
+      "Tauros",
+      "ケンタロス"
+    ]
+  },
+  {
+    "canonical": "コイキング",
+    "surface_forms": [
+      "Magikarp",
+      "コイキング"
+    ]
+  },
+  {
+    "canonical": "ギャラドス",
+    "surface_forms": [
+      "Gyarados",
+      "ギャラドス"
+    ]
+  },
+  {
+    "canonical": "ラプラス",
+    "surface_forms": [
+      "Lapras",
+      "ラプラス"
+    ]
+  },
+  {
+    "canonical": "メタモン",
+    "surface_forms": [
+      "Ditto",
+      "メタモン"
+    ]
+  },
+  {
+    "canonical": "イーブイ",
+    "surface_forms": [
+      "Eevee",
+      "イーブイ"
+    ]
+  },
+  {
+    "canonical": "シャワーズ",
+    "surface_forms": [
+      "Vaporeon",
+      "シャワーズ"
+    ]
+  },
+  {
+    "canonical": "サンダース",
+    "surface_forms": [
+      "Jolteon",
+      "サンダース"
+    ]
+  },
+  {
+    "canonical": "ブースター",
+    "surface_forms": [
+      "Flareon",
+      "ブースター"
+    ]
+  },
+  {
+    "canonical": "ポリゴン",
+    "surface_forms": [
+      "Porygon",
+      "ポリゴン"
+    ]
+  },
+  {
+    "canonical": "オムナイト",
+    "surface_forms": [
+      "Omanyte",
+      "オムナイト"
+    ]
+  },
+  {
+    "canonical": "オムスター",
+    "surface_forms": [
+      "Omastar",
+      "オムスター"
+    ]
+  },
+  {
+    "canonical": "カブト",
+    "surface_forms": [
+      "Kabuto",
+      "カブト"
+    ]
+  },
+  {
+    "canonical": "カブトプス",
+    "surface_forms": [
+      "Kabutops",
+      "カブトプス"
+    ]
+  },
+  {
+    "canonical": "プテラ",
+    "surface_forms": [
+      "Aerodactyl",
+      "プテラ"
+    ]
+  },
+  {
+    "canonical": "カビゴン",
+    "surface_forms": [
+      "Snorlax",
+      "カビゴン"
+    ]
+  },
+  {
+    "canonical": "フリーザー",
+    "surface_forms": [
+      "Articuno",
+      "フリーザー"
+    ]
+  },
+  {
+    "canonical": "サンダー",
+    "surface_forms": [
+      "Zapdos",
+      "サンダー"
+    ]
+  },
+  {
+    "canonical": "ファイヤー",
+    "surface_forms": [
+      "Moltres",
+      "ファイヤー"
+    ]
+  },
+  {
+    "canonical": "ミニリュウ",
+    "surface_forms": [
+      "Dratini",
+      "ミニリュウ"
+    ]
+  },
+  {
+    "canonical": "ハクリュー",
+    "surface_forms": [
+      "Dragonair",
+      "ハクリュー"
+    ]
+  },
+  {
+    "canonical": "カイリュー",
+    "surface_forms": [
+      "Dragonite",
+      "カイリュー"
+    ]
+  },
+  {
+    "canonical": "ミュウツー",
+    "surface_forms": [
+      "Mewtwo",
+      "ミュウツー"
+    ]
+  },
+  {
+    "canonical": "ミュウ",
+    "surface_forms": [
+      "Mew",
+      "ミュウ"
+    ]
+  },
+  {
+    "canonical": "チコリータ",
+    "surface_forms": [
+      "Chikorita",
+      "チコリータ"
+    ]
+  },
+  {
+    "canonical": "ベイリーフ",
+    "surface_forms": [
+      "Bayleef",
+      "ベイリーフ"
+    ]
+  },
+  {
+    "canonical": "メガニウム",
+    "surface_forms": [
+      "Meganium",
+      "メガニウム"
+    ]
+  },
+  {
+    "canonical": "ヒノアラシ",
+    "surface_forms": [
+      "Cyndaquil",
+      "ヒノアラシ"
+    ]
+  },
+  {
+    "canonical": "マグマラシ",
+    "surface_forms": [
+      "Quilava",
+      "マグマラシ"
+    ]
+  },
+  {
+    "canonical": "バクフーン",
+    "surface_forms": [
+      "Typhlosion",
+      "バクフーン"
+    ]
+  },
+  {
+    "canonical": "ワニノコ",
+    "surface_forms": [
+      "Totodile",
+      "ワニノコ"
+    ]
+  },
+  {
+    "canonical": "アリゲイツ",
+    "surface_forms": [
+      "Croconaw",
+      "アリゲイツ"
+    ]
+  },
+  {
+    "canonical": "オーダイル",
+    "surface_forms": [
+      "Feraligatr",
+      "オーダイル"
+    ]
+  },
+  {
+    "canonical": "オタチ",
+    "surface_forms": [
+      "Sentret",
+      "オタチ"
+    ]
+  },
+  {
+    "canonical": "オオタチ",
+    "surface_forms": [
+      "Furret",
+      "オオタチ"
+    ]
+  },
+  {
+    "canonical": "ホーホー",
+    "surface_forms": [
+      "Hoothoot",
+      "ホーホー"
+    ]
+  },
+  {
+    "canonical": "ヨルノズク",
+    "surface_forms": [
+      "Noctowl",
+      "ヨルノズク"
+    ]
+  },
+  {
+    "canonical": "レディバ",
+    "surface_forms": [
+      "Ledyba",
+      "レディバ"
+    ]
+  },
+  {
+    "canonical": "レディアン",
+    "surface_forms": [
+      "Ledian",
+      "レディアン"
+    ]
+  },
+  {
+    "canonical": "イトマル",
+    "surface_forms": [
+      "Spinarak",
+      "イトマル"
+    ]
+  },
+  {
+    "canonical": "アリアドス",
+    "surface_forms": [
+      "Ariados",
+      "アリアドス"
+    ]
+  },
+  {
+    "canonical": "クロバット",
+    "surface_forms": [
+      "Crobat",
+      "クロバット"
+    ]
+  },
+  {
+    "canonical": "チョンチー",
+    "surface_forms": [
+      "Chinchou",
+      "チョンチー"
+    ]
+  },
+  {
+    "canonical": "ランターン",
+    "surface_forms": [
+      "Lanturn",
+      "ランターン"
+    ]
+  },
+  {
+    "canonical": "ピチュー",
+    "surface_forms": [
+      "Pichu",
+      "ピチュー"
+    ]
+  },
+  {
+    "canonical": "ピィ",
+    "surface_forms": [
+      "Cleffa",
+      "ピィ"
+    ]
+  },
+  {
+    "canonical": "ププリン",
+    "surface_forms": [
+      "Igglybuff",
+      "ププリン"
+    ]
+  },
+  {
+    "canonical": "トゲピー",
+    "surface_forms": [
+      "Togepi",
+      "トゲピー"
+    ]
+  },
+  {
+    "canonical": "トゲチック",
+    "surface_forms": [
+      "Togetic",
+      "トゲチック"
+    ]
+  },
+  {
+    "canonical": "ネイティ",
+    "surface_forms": [
+      "Natu",
+      "ネイティ"
+    ]
+  },
+  {
+    "canonical": "ネイティオ",
+    "surface_forms": [
+      "Xatu",
+      "ネイティオ"
+    ]
+  },
+  {
+    "canonical": "メリープ",
+    "surface_forms": [
+      "Mareep",
+      "メリープ"
+    ]
+  },
+  {
+    "canonical": "モココ",
+    "surface_forms": [
+      "Flaaffy",
+      "モココ"
+    ]
+  },
+  {
+    "canonical": "デンリュウ",
+    "surface_forms": [
+      "Ampharos",
+      "デンリュウ"
+    ]
+  },
+  {
+    "canonical": "キレイハナ",
+    "surface_forms": [
+      "Bellossom",
+      "キレイハナ"
+    ]
+  },
+  {
+    "canonical": "マリル",
+    "surface_forms": [
+      "Marill",
+      "マリル"
+    ]
+  },
+  {
+    "canonical": "マリルリ",
+    "surface_forms": [
+      "Azumarill",
+      "マリルリ"
+    ]
+  },
+  {
+    "canonical": "ウソッキー",
+    "surface_forms": [
+      "Sudowoodo",
+      "ウソッキー"
+    ]
+  },
+  {
+    "canonical": "ニョロトノ",
+    "surface_forms": [
+      "Politoed",
+      "ニョロトノ"
+    ]
+  },
+  {
+    "canonical": "ハネッコ",
+    "surface_forms": [
+      "Hoppip",
+      "ハネッコ"
+    ]
+  },
+  {
+    "canonical": "ポポッコ",
+    "surface_forms": [
+      "Skiploom",
+      "ポポッコ"
+    ]
+  },
+  {
+    "canonical": "ワタッコ",
+    "surface_forms": [
+      "Jumpluff",
+      "ワタッコ"
+    ]
+  },
+  {
+    "canonical": "エイパム",
+    "surface_forms": [
+      "Aipom",
+      "エイパム"
+    ]
+  },
+  {
+    "canonical": "ヒマナッツ",
+    "surface_forms": [
+      "Sunkern",
+      "ヒマナッツ"
+    ]
+  },
+  {
+    "canonical": "キマワリ",
+    "surface_forms": [
+      "Sunflora",
+      "キマワリ"
+    ]
+  },
+  {
+    "canonical": "ヤンヤンマ",
+    "surface_forms": [
+      "Yanma",
+      "ヤンヤンマ"
+    ]
+  },
+  {
+    "canonical": "ウパー",
+    "surface_forms": [
+      "Wooper",
+      "ウパー"
+    ]
+  },
+  {
+    "canonical": "ヌオー",
+    "surface_forms": [
+      "Quagsire",
+      "ヌオー"
+    ]
+  },
+  {
+    "canonical": "エーフィ",
+    "surface_forms": [
+      "Espeon",
+      "エーフィ"
+    ]
+  },
+  {
+    "canonical": "ブラッキー",
+    "surface_forms": [
+      "Umbreon",
+      "ブラッキー"
+    ]
+  },
+  {
+    "canonical": "ヤミカラス",
+    "surface_forms": [
+      "Murkrow",
+      "ヤミカラス"
+    ]
+  },
+  {
+    "canonical": "ヤドキング",
+    "surface_forms": [
+      "Slowking",
+      "ヤドキング"
+    ]
+  },
+  {
+    "canonical": "ムウマ",
+    "surface_forms": [
+      "Misdreavus",
+      "ムウマ"
+    ]
+  },
+  {
+    "canonical": "アンノーン",
+    "surface_forms": [
+      "Unown",
+      "アンノーン"
+    ]
+  },
+  {
+    "canonical": "ソーナンス",
+    "surface_forms": [
+      "Wobbuffet",
+      "ソーナンス"
+    ]
+  },
+  {
+    "canonical": "キリンリキ",
+    "surface_forms": [
+      "Girafarig",
+      "キリンリキ"
+    ]
+  },
+  {
+    "canonical": "クヌギダマ",
+    "surface_forms": [
+      "Pineco",
+      "クヌギダマ"
+    ]
+  },
+  {
+    "canonical": "フォレトス",
+    "surface_forms": [
+      "Forretress",
+      "フォレトス"
+    ]
+  },
+  {
+    "canonical": "ノコッチ",
+    "surface_forms": [
+      "Dunsparce",
+      "ノコッチ"
+    ]
+  },
+  {
+    "canonical": "グライガー",
+    "surface_forms": [
+      "Gligar",
+      "グライガー"
+    ]
+  },
+  {
+    "canonical": "ハガネール",
+    "surface_forms": [
+      "Steelix",
+      "ハガネール"
+    ]
+  },
+  {
+    "canonical": "ブルー",
+    "surface_forms": [
+      "Snubbull",
+      "ブルー"
+    ]
+  },
+  {
+    "canonical": "グランブル",
+    "surface_forms": [
+      "Granbull",
+      "グランブル"
+    ]
+  },
+  {
+    "canonical": "ハリーセン",
+    "surface_forms": [
+      "Qwilfish",
+      "ハリーセン"
+    ]
+  },
+  {
+    "canonical": "ハッサム",
+    "surface_forms": [
+      "Scizor",
+      "ハッサム"
+    ]
+  },
+  {
+    "canonical": "ツボツボ",
+    "surface_forms": [
+      "Shuckle",
+      "ツボツボ"
+    ]
+  },
+  {
+    "canonical": "ヘラクロス",
+    "surface_forms": [
+      "Heracross",
+      "ヘラクロス"
+    ]
+  },
+  {
+    "canonical": "ニューラ",
+    "surface_forms": [
+      "Sneasel",
+      "ニューラ"
+    ]
+  },
+  {
+    "canonical": "ヒメグマ",
+    "surface_forms": [
+      "Teddiursa",
+      "ヒメグマ"
+    ]
+  },
+  {
+    "canonical": "リングマ",
+    "surface_forms": [
+      "Ursaring",
+      "リングマ"
+    ]
+  },
+  {
+    "canonical": "マグマッグ",
+    "surface_forms": [
+      "Slugma",
+      "マグマッグ"
+    ]
+  },
+  {
+    "canonical": "マグカルゴ",
+    "surface_forms": [
+      "Magcargo",
+      "マグカルゴ"
+    ]
+  },
+  {
+    "canonical": "ウリムー",
+    "surface_forms": [
+      "Swinub",
+      "ウリムー"
+    ]
+  },
+  {
+    "canonical": "イノムー",
+    "surface_forms": [
+      "Piloswine",
+      "イノムー"
+    ]
+  },
+  {
+    "canonical": "サニーゴ",
+    "surface_forms": [
+      "Corsola",
+      "サニーゴ"
+    ]
+  },
+  {
+    "canonical": "テッポウオ",
+    "surface_forms": [
+      "Remoraid",
+      "テッポウオ"
+    ]
+  },
+  {
+    "canonical": "オクタン",
+    "surface_forms": [
+      "Octillery",
+      "オクタン"
+    ]
+  },
+  {
+    "canonical": "デリバード",
+    "surface_forms": [
+      "Delibird",
+      "デリバード"
+    ]
+  },
+  {
+    "canonical": "マンタイン",
+    "surface_forms": [
+      "Mantine",
+      "マンタイン"
+    ]
+  },
+  {
+    "canonical": "エアームド",
+    "surface_forms": [
+      "Skarmory",
+      "エアームド"
+    ]
+  },
+  {
+    "canonical": "デルビル",
+    "surface_forms": [
+      "Houndour",
+      "デルビル"
+    ]
+  },
+  {
+    "canonical": "ヘルガー",
+    "surface_forms": [
+      "Houndoom",
+      "ヘルガー"
+    ]
+  },
+  {
+    "canonical": "キングドラ",
+    "surface_forms": [
+      "Kingdra",
+      "キングドラ"
+    ]
+  },
+  {
+    "canonical": "ゴマゾウ",
+    "surface_forms": [
+      "Phanpy",
+      "ゴマゾウ"
+    ]
+  },
+  {
+    "canonical": "ドンファン",
+    "surface_forms": [
+      "Donphan",
+      "ドンファン"
+    ]
+  },
+  {
+    "canonical": "ポリゴン２",
+    "surface_forms": [
+      "Porygon2",
+      "ポリゴン２"
+    ]
+  },
+  {
+    "canonical": "オドシシ",
+    "surface_forms": [
+      "Stantler",
+      "オドシシ"
+    ]
+  },
+  {
+    "canonical": "ドーブル",
+    "surface_forms": [
+      "Smeargle",
+      "ドーブル"
+    ]
+  },
+  {
+    "canonical": "バルキー",
+    "surface_forms": [
+      "Tyrogue",
+      "バルキー"
+    ]
+  },
+  {
+    "canonical": "カポエラー",
+    "surface_forms": [
+      "Hitmontop",
+      "カポエラー"
+    ]
+  },
+  {
+    "canonical": "ムチュール",
+    "surface_forms": [
+      "Smoochum",
+      "ムチュール"
+    ]
+  },
+  {
+    "canonical": "エレキッド",
+    "surface_forms": [
+      "Elekid",
+      "エレキッド"
+    ]
+  },
+  {
+    "canonical": "ブビィ",
+    "surface_forms": [
+      "Magby",
+      "ブビィ"
+    ]
+  },
+  {
+    "canonical": "ミルタンク",
+    "surface_forms": [
+      "Miltank",
+      "ミルタンク"
+    ]
+  },
+  {
+    "canonical": "ハピナス",
+    "surface_forms": [
+      "Blissey",
+      "ハピナス"
+    ]
+  },
+  {
+    "canonical": "ライコウ",
+    "surface_forms": [
+      "Raikou",
+      "ライコウ"
+    ]
+  },
+  {
+    "canonical": "エンテイ",
+    "surface_forms": [
+      "Entei",
+      "エンテイ"
+    ]
+  },
+  {
+    "canonical": "スイクン",
+    "surface_forms": [
+      "Suicune",
+      "スイクン"
+    ]
+  },
+  {
+    "canonical": "ヨーギラス",
+    "surface_forms": [
+      "Larvitar",
+      "ヨーギラス"
+    ]
+  },
+  {
+    "canonical": "サナギラス",
+    "surface_forms": [
+      "Pupitar",
+      "サナギラス"
+    ]
+  },
+  {
+    "canonical": "バンギラス",
+    "surface_forms": [
+      "Tyranitar",
+      "バンギラス"
+    ]
+  },
+  {
+    "canonical": "ルギア",
+    "surface_forms": [
+      "Lugia",
+      "ルギア"
+    ]
+  },
+  {
+    "canonical": "ホウオウ",
+    "surface_forms": [
+      "Ho-Oh",
+      "ホウオウ"
+    ]
+  },
+  {
+    "canonical": "セレビィ",
+    "surface_forms": [
+      "Celebi",
+      "セレビィ"
+    ]
+  },
+  {
+    "canonical": "キモリ",
+    "surface_forms": [
+      "Treecko",
+      "キモリ"
+    ]
+  },
+  {
+    "canonical": "ジュプトル",
+    "surface_forms": [
+      "Grovyle",
+      "ジュプトル"
+    ]
+  },
+  {
+    "canonical": "ジュカイン",
+    "surface_forms": [
+      "Sceptile",
+      "ジュカイン"
+    ]
+  },
+  {
+    "canonical": "アチャモ",
+    "surface_forms": [
+      "Torchic",
+      "アチャモ"
+    ]
+  },
+  {
+    "canonical": "ワカシャモ",
+    "surface_forms": [
+      "Combusken",
+      "ワカシャモ"
+    ]
+  },
+  {
+    "canonical": "バシャーモ",
+    "surface_forms": [
+      "Blaziken",
+      "バシャーモ"
+    ]
+  },
+  {
+    "canonical": "ミズゴロウ",
+    "surface_forms": [
+      "Mudkip",
+      "ミズゴロウ"
+    ]
+  },
+  {
+    "canonical": "ヌマクロー",
+    "surface_forms": [
+      "Marshtomp",
+      "ヌマクロー"
+    ]
+  },
+  {
+    "canonical": "ラグラージ",
+    "surface_forms": [
+      "Swampert",
+      "ラグラージ"
+    ]
+  },
+  {
+    "canonical": "ポチエナ",
+    "surface_forms": [
+      "Poochyena",
+      "ポチエナ"
+    ]
+  },
+  {
+    "canonical": "グラエナ",
+    "surface_forms": [
+      "Mightyena",
+      "グラエナ"
+    ]
+  },
+  {
+    "canonical": "ジグザグマ",
+    "surface_forms": [
+      "Zigzagoon",
+      "ジグザグマ"
+    ]
+  },
+  {
+    "canonical": "マッスグマ",
+    "surface_forms": [
+      "Linoone",
+      "マッスグマ"
+    ]
+  },
+  {
+    "canonical": "ケムッソ",
+    "surface_forms": [
+      "Wurmple",
+      "ケムッソ"
+    ]
+  },
+  {
+    "canonical": "カラサリス",
+    "surface_forms": [
+      "Silcoon",
+      "カラサリス"
+    ]
+  },
+  {
+    "canonical": "アゲハント",
+    "surface_forms": [
+      "Beautifly",
+      "アゲハント"
+    ]
+  },
+  {
+    "canonical": "マユルド",
+    "surface_forms": [
+      "Cascoon",
+      "マユルド"
+    ]
+  },
+  {
+    "canonical": "ドクケイル",
+    "surface_forms": [
+      "Dustox",
+      "ドクケイル"
+    ]
+  },
+  {
+    "canonical": "ハスボー",
+    "surface_forms": [
+      "Lotad",
+      "ハスボー"
+    ]
+  },
+  {
+    "canonical": "ハスブレロ",
+    "surface_forms": [
+      "Lombre",
+      "ハスブレロ"
+    ]
+  },
+  {
+    "canonical": "ルンパッパ",
+    "surface_forms": [
+      "Ludicolo",
+      "ルンパッパ"
+    ]
+  },
+  {
+    "canonical": "タネボー",
+    "surface_forms": [
+      "Seedot",
+      "タネボー"
+    ]
+  },
+  {
+    "canonical": "コノハナ",
+    "surface_forms": [
+      "Nuzleaf",
+      "コノハナ"
+    ]
+  },
+  {
+    "canonical": "ダーテング",
+    "surface_forms": [
+      "Shiftry",
+      "ダーテング"
+    ]
+  },
+  {
+    "canonical": "スバメ",
+    "surface_forms": [
+      "Taillow",
+      "スバメ"
+    ]
+  },
+  {
+    "canonical": "オオスバメ",
+    "surface_forms": [
+      "Swellow",
+      "オオスバメ"
+    ]
+  },
+  {
+    "canonical": "キャモメ",
+    "surface_forms": [
+      "Wingull",
+      "キャモメ"
+    ]
+  },
+  {
+    "canonical": "ペリッパー",
+    "surface_forms": [
+      "Pelipper",
+      "ペリッパー"
+    ]
+  },
+  {
+    "canonical": "ラルトス",
+    "surface_forms": [
+      "Ralts",
+      "ラルトス"
+    ]
+  },
+  {
+    "canonical": "キルリア",
+    "surface_forms": [
+      "Kirlia",
+      "キルリア"
+    ]
+  },
+  {
+    "canonical": "サーナイト",
+    "surface_forms": [
+      "Gardevoir",
+      "サーナイト"
+    ]
+  },
+  {
+    "canonical": "アメタマ",
+    "surface_forms": [
+      "Surskit",
+      "アメタマ"
+    ]
+  },
+  {
+    "canonical": "アメモース",
+    "surface_forms": [
+      "Masquerain",
+      "アメモース"
+    ]
+  },
+  {
+    "canonical": "キノココ",
+    "surface_forms": [
+      "Shroomish",
+      "キノココ"
+    ]
+  },
+  {
+    "canonical": "キノガッサ",
+    "surface_forms": [
+      "Breloom",
+      "キノガッサ"
+    ]
+  },
+  {
+    "canonical": "ナマケロ",
+    "surface_forms": [
+      "Slakoth",
+      "ナマケロ"
+    ]
+  },
+  {
+    "canonical": "ヤルキモノ",
+    "surface_forms": [
+      "Vigoroth",
+      "ヤルキモノ"
+    ]
+  },
+  {
+    "canonical": "ケッキング",
+    "surface_forms": [
+      "Slaking",
+      "ケッキング"
+    ]
+  },
+  {
+    "canonical": "ツチニン",
+    "surface_forms": [
+      "Nincada",
+      "ツチニン"
+    ]
+  },
+  {
+    "canonical": "テッカニン",
+    "surface_forms": [
+      "Ninjask",
+      "テッカニン"
+    ]
+  },
+  {
+    "canonical": "ヌケニン",
+    "surface_forms": [
+      "Shedinja",
+      "ヌケニン"
+    ]
+  },
+  {
+    "canonical": "ゴニョニョ",
+    "surface_forms": [
+      "Whismur",
+      "ゴニョニョ"
+    ]
+  },
+  {
+    "canonical": "ドゴーム",
+    "surface_forms": [
+      "Loudred",
+      "ドゴーム"
+    ]
+  },
+  {
+    "canonical": "バクオング",
+    "surface_forms": [
+      "Exploud",
+      "バクオング"
+    ]
+  },
+  {
+    "canonical": "マクノシタ",
+    "surface_forms": [
+      "Makuhita",
+      "マクノシタ"
+    ]
+  },
+  {
+    "canonical": "ハリテヤマ",
+    "surface_forms": [
+      "Hariyama",
+      "ハリテヤマ"
+    ]
+  },
+  {
+    "canonical": "ルリリ",
+    "surface_forms": [
+      "Azurill",
+      "ルリリ"
+    ]
+  },
+  {
+    "canonical": "ノズパス",
+    "surface_forms": [
+      "Nosepass",
+      "ノズパス"
+    ]
+  },
+  {
+    "canonical": "エネコ",
+    "surface_forms": [
+      "Skitty",
+      "エネコ"
+    ]
+  },
+  {
+    "canonical": "エネコロロ",
+    "surface_forms": [
+      "Delcatty",
+      "エネコロロ"
+    ]
+  },
+  {
+    "canonical": "ヤミラミ",
+    "surface_forms": [
+      "Sableye",
+      "ヤミラミ"
+    ]
+  },
+  {
+    "canonical": "クチート",
+    "surface_forms": [
+      "Mawile",
+      "クチート"
+    ]
+  },
+  {
+    "canonical": "ココドラ",
+    "surface_forms": [
+      "Aron",
+      "ココドラ"
+    ]
+  },
+  {
+    "canonical": "コドラ",
+    "surface_forms": [
+      "Lairon",
+      "コドラ"
+    ]
+  },
+  {
+    "canonical": "ボスゴドラ",
+    "surface_forms": [
+      "Aggron",
+      "ボスゴドラ"
+    ]
+  },
+  {
+    "canonical": "アサナン",
+    "surface_forms": [
+      "Meditite",
+      "アサナン"
+    ]
+  },
+  {
+    "canonical": "チャーレム",
+    "surface_forms": [
+      "Medicham",
+      "チャーレム"
+    ]
+  },
+  {
+    "canonical": "ラクライ",
+    "surface_forms": [
+      "Electrike",
+      "ラクライ"
+    ]
+  },
+  {
+    "canonical": "ライボルト",
+    "surface_forms": [
+      "Manectric",
+      "ライボルト"
+    ]
+  },
+  {
+    "canonical": "プラスル",
+    "surface_forms": [
+      "Plusle",
+      "プラスル"
+    ]
+  },
+  {
+    "canonical": "マイナン",
+    "surface_forms": [
+      "Minun",
+      "マイナン"
+    ]
+  },
+  {
+    "canonical": "バルビート",
+    "surface_forms": [
+      "Volbeat",
+      "バルビート"
+    ]
+  },
+  {
+    "canonical": "イルミーゼ",
+    "surface_forms": [
+      "Illumise",
+      "イルミーゼ"
+    ]
+  },
+  {
+    "canonical": "ロゼリア",
+    "surface_forms": [
+      "Roselia",
+      "ロゼリア"
+    ]
+  },
+  {
+    "canonical": "ゴクリン",
+    "surface_forms": [
+      "Gulpin",
+      "ゴクリン"
+    ]
+  },
+  {
+    "canonical": "マルノーム",
+    "surface_forms": [
+      "Swalot",
+      "マルノーム"
+    ]
+  },
+  {
+    "canonical": "キバニア",
+    "surface_forms": [
+      "Carvanha",
+      "キバニア"
+    ]
+  },
+  {
+    "canonical": "サメハダー",
+    "surface_forms": [
+      "Sharpedo",
+      "サメハダー"
+    ]
+  },
+  {
+    "canonical": "ホエルコ",
+    "surface_forms": [
+      "Wailmer",
+      "ホエルコ"
+    ]
+  },
+  {
+    "canonical": "ホエルオー",
+    "surface_forms": [
+      "Wailord",
+      "ホエルオー"
+    ]
+  },
+  {
+    "canonical": "ドンメル",
+    "surface_forms": [
+      "Numel",
+      "ドンメル"
+    ]
+  },
+  {
+    "canonical": "バクーダ",
+    "surface_forms": [
+      "Camerupt",
+      "バクーダ"
+    ]
+  },
+  {
+    "canonical": "コータス",
+    "surface_forms": [
+      "Torkoal",
+      "コータス"
+    ]
+  },
+  {
+    "canonical": "バネブー",
+    "surface_forms": [
+      "Spoink",
+      "バネブー"
+    ]
+  },
+  {
+    "canonical": "ブーピッグ",
+    "surface_forms": [
+      "Grumpig",
+      "ブーピッグ"
+    ]
+  },
+  {
+    "canonical": "パッチール",
+    "surface_forms": [
+      "Spinda",
+      "パッチール"
+    ]
+  },
+  {
+    "canonical": "ナックラー",
+    "surface_forms": [
+      "Trapinch",
+      "ナックラー"
+    ]
+  },
+  {
+    "canonical": "ビブラーバ",
+    "surface_forms": [
+      "Vibrava",
+      "ビブラーバ"
+    ]
+  },
+  {
+    "canonical": "フライゴン",
+    "surface_forms": [
+      "Flygon",
+      "フライゴン"
+    ]
+  },
+  {
+    "canonical": "サボネア",
+    "surface_forms": [
+      "Cacnea",
+      "サボネア"
+    ]
+  },
+  {
+    "canonical": "ノクタス",
+    "surface_forms": [
+      "Cacturne",
+      "ノクタス"
+    ]
+  },
+  {
+    "canonical": "チルット",
+    "surface_forms": [
+      "Swablu",
+      "チルット"
+    ]
+  },
+  {
+    "canonical": "チルタリス",
+    "surface_forms": [
+      "Altaria",
+      "チルタリス"
+    ]
+  },
+  {
+    "canonical": "ザングース",
+    "surface_forms": [
+      "Zangoose",
+      "ザングース"
+    ]
+  },
+  {
+    "canonical": "ハブネーク",
+    "surface_forms": [
+      "Seviper",
+      "ハブネーク"
+    ]
+  },
+  {
+    "canonical": "ルナトーン",
+    "surface_forms": [
+      "Lunatone",
+      "ルナトーン"
+    ]
+  },
+  {
+    "canonical": "ソルロック",
+    "surface_forms": [
+      "Solrock",
+      "ソルロック"
+    ]
+  },
+  {
+    "canonical": "ドジョッチ",
+    "surface_forms": [
+      "Barboach",
+      "ドジョッチ"
+    ]
+  },
+  {
+    "canonical": "ナマズン",
+    "surface_forms": [
+      "Whiscash",
+      "ナマズン"
+    ]
+  },
+  {
+    "canonical": "ヘイガニ",
+    "surface_forms": [
+      "Corphish",
+      "ヘイガニ"
+    ]
+  },
+  {
+    "canonical": "シザリガー",
+    "surface_forms": [
+      "Crawdaunt",
+      "シザリガー"
+    ]
+  },
+  {
+    "canonical": "ヤジロン",
+    "surface_forms": [
+      "Baltoy",
+      "ヤジロン"
+    ]
+  },
+  {
+    "canonical": "ネンドール",
+    "surface_forms": [
+      "Claydol",
+      "ネンドール"
+    ]
+  },
+  {
+    "canonical": "リリーラ",
+    "surface_forms": [
+      "Lileep",
+      "リリーラ"
+    ]
+  },
+  {
+    "canonical": "ユレイドル",
+    "surface_forms": [
+      "Cradily",
+      "ユレイドル"
+    ]
+  },
+  {
+    "canonical": "アノプス",
+    "surface_forms": [
+      "Anorith",
+      "アノプス"
+    ]
+  },
+  {
+    "canonical": "アーマルド",
+    "surface_forms": [
+      "Armaldo",
+      "アーマルド"
+    ]
+  },
+  {
+    "canonical": "ヒンバス",
+    "surface_forms": [
+      "Feebas",
+      "ヒンバス"
+    ]
+  },
+  {
+    "canonical": "ミロカロス",
+    "surface_forms": [
+      "Milotic",
+      "ミロカロス"
+    ]
+  },
+  {
+    "canonical": "ポワルン",
+    "surface_forms": [
+      "Castform",
+      "ポワルン"
+    ]
+  },
+  {
+    "canonical": "カクレオン",
+    "surface_forms": [
+      "Kecleon",
+      "カクレオン"
+    ]
+  },
+  {
+    "canonical": "カゲボウズ",
+    "surface_forms": [
+      "Shuppet",
+      "カゲボウズ"
+    ]
+  },
+  {
+    "canonical": "ジュペッタ",
+    "surface_forms": [
+      "Banette",
+      "ジュペッタ"
+    ]
+  },
+  {
+    "canonical": "ヨマワル",
+    "surface_forms": [
+      "Duskull",
+      "ヨマワル"
+    ]
+  },
+  {
+    "canonical": "サマヨール",
+    "surface_forms": [
+      "Dusclops",
+      "サマヨール"
+    ]
+  },
+  {
+    "canonical": "トロピウス",
+    "surface_forms": [
+      "Tropius",
+      "トロピウス"
+    ]
+  },
+  {
+    "canonical": "チリーン",
+    "surface_forms": [
+      "Chimecho",
+      "チリーン"
+    ]
+  },
+  {
+    "canonical": "アブソル",
+    "surface_forms": [
+      "Absol",
+      "アブソル"
+    ]
+  },
+  {
+    "canonical": "ソーナノ",
+    "surface_forms": [
+      "Wynaut",
+      "ソーナノ"
+    ]
+  },
+  {
+    "canonical": "ユキワラシ",
+    "surface_forms": [
+      "Snorunt",
+      "ユキワラシ"
+    ]
+  },
+  {
+    "canonical": "オニゴーリ",
+    "surface_forms": [
+      "Glalie",
+      "オニゴーリ"
+    ]
+  },
+  {
+    "canonical": "タマザラシ",
+    "surface_forms": [
+      "Spheal",
+      "タマザラシ"
+    ]
+  },
+  {
+    "canonical": "トドグラー",
+    "surface_forms": [
+      "Sealeo",
+      "トドグラー"
+    ]
+  },
+  {
+    "canonical": "トドゼルガ",
+    "surface_forms": [
+      "Walrein",
+      "トドゼルガ"
+    ]
+  },
+  {
+    "canonical": "パールル",
+    "surface_forms": [
+      "Clamperl",
+      "パールル"
+    ]
+  },
+  {
+    "canonical": "ハンテール",
+    "surface_forms": [
+      "Huntail",
+      "ハンテール"
+    ]
+  },
+  {
+    "canonical": "サクラビス",
+    "surface_forms": [
+      "Gorebyss",
+      "サクラビス"
+    ]
+  },
+  {
+    "canonical": "ジーランス",
+    "surface_forms": [
+      "Relicanth",
+      "ジーランス"
+    ]
+  },
+  {
+    "canonical": "ラブカス",
+    "surface_forms": [
+      "Luvdisc",
+      "ラブカス"
+    ]
+  },
+  {
+    "canonical": "タツベイ",
+    "surface_forms": [
+      "Bagon",
+      "タツベイ"
+    ]
+  },
+  {
+    "canonical": "コモルー",
+    "surface_forms": [
+      "Shelgon",
+      "コモルー"
+    ]
+  },
+  {
+    "canonical": "ボーマンダ",
+    "surface_forms": [
+      "Salamence",
+      "ボーマンダ"
+    ]
+  },
+  {
+    "canonical": "ダンバル",
+    "surface_forms": [
+      "Beldum",
+      "ダンバル"
+    ]
+  },
+  {
+    "canonical": "メタング",
+    "surface_forms": [
+      "Metang",
+      "メタング"
+    ]
+  },
+  {
+    "canonical": "メタグロス",
+    "surface_forms": [
+      "Metagross",
+      "メタグロス"
+    ]
+  },
+  {
+    "canonical": "レジロック",
+    "surface_forms": [
+      "Regirock",
+      "レジロック"
+    ]
+  },
+  {
+    "canonical": "レジアイス",
+    "surface_forms": [
+      "Regice",
+      "レジアイス"
+    ]
+  },
+  {
+    "canonical": "レジスチル",
+    "surface_forms": [
+      "Registeel",
+      "レジスチル"
+    ]
+  },
+  {
+    "canonical": "ラティアス",
+    "surface_forms": [
+      "Latias",
+      "ラティアス"
+    ]
+  },
+  {
+    "canonical": "ラティオス",
+    "surface_forms": [
+      "Latios",
+      "ラティオス"
+    ]
+  },
+  {
+    "canonical": "カイオーガ",
+    "surface_forms": [
+      "Kyogre",
+      "カイオーガ"
+    ]
+  },
+  {
+    "canonical": "グラードン",
+    "surface_forms": [
+      "Groudon",
+      "グラードン"
+    ]
+  },
+  {
+    "canonical": "レックウザ",
+    "surface_forms": [
+      "Rayquaza",
+      "レックウザ"
+    ]
+  },
+  {
+    "canonical": "ジラーチ",
+    "surface_forms": [
+      "Jirachi",
+      "ジラーチ"
+    ]
+  },
+  {
+    "canonical": "デオキシス",
+    "surface_forms": [
+      "Deoxys",
+      "デオキシス"
+    ]
+  },
+  {
+    "canonical": "ナエトル",
+    "surface_forms": [
+      "Turtwig",
+      "ナエトル"
+    ]
+  },
+  {
+    "canonical": "ハヤシガメ",
+    "surface_forms": [
+      "Grotle",
+      "ハヤシガメ"
+    ]
+  },
+  {
+    "canonical": "ドダイトス",
+    "surface_forms": [
+      "Torterra",
+      "ドダイトス"
+    ]
+  },
+  {
+    "canonical": "ヒコザル",
+    "surface_forms": [
+      "Chimchar",
+      "ヒコザル"
+    ]
+  },
+  {
+    "canonical": "モウカザル",
+    "surface_forms": [
+      "Monferno",
+      "モウカザル"
+    ]
+  },
+  {
+    "canonical": "ゴウカザル",
+    "surface_forms": [
+      "Infernape",
+      "ゴウカザル"
+    ]
+  },
+  {
+    "canonical": "ポッチャマ",
+    "surface_forms": [
+      "Piplup",
+      "ポッチャマ"
+    ]
+  },
+  {
+    "canonical": "ポッタイシ",
+    "surface_forms": [
+      "Prinplup",
+      "ポッタイシ"
+    ]
+  },
+  {
+    "canonical": "エンペルト",
+    "surface_forms": [
+      "Empoleon",
+      "エンペルト"
+    ]
+  },
+  {
+    "canonical": "ムックル",
+    "surface_forms": [
+      "Starly",
+      "ムックル"
+    ]
+  },
+  {
+    "canonical": "ムクバード",
+    "surface_forms": [
+      "Staravia",
+      "ムクバード"
+    ]
+  },
+  {
+    "canonical": "ムクホーク",
+    "surface_forms": [
+      "Staraptor",
+      "ムクホーク"
+    ]
+  },
+  {
+    "canonical": "ビッパ",
+    "surface_forms": [
+      "Bidoof",
+      "ビッパ"
+    ]
+  },
+  {
+    "canonical": "ビーダル",
+    "surface_forms": [
+      "Bibarel",
+      "ビーダル"
+    ]
+  },
+  {
+    "canonical": "コロボーシ",
+    "surface_forms": [
+      "Kricketot",
+      "コロボーシ"
+    ]
+  },
+  {
+    "canonical": "コロトック",
+    "surface_forms": [
+      "Kricketune",
+      "コロトック"
+    ]
+  },
+  {
+    "canonical": "コリンク",
+    "surface_forms": [
+      "Shinx",
+      "コリンク"
+    ]
+  },
+  {
+    "canonical": "ルクシオ",
+    "surface_forms": [
+      "Luxio",
+      "ルクシオ"
+    ]
+  },
+  {
+    "canonical": "レントラー",
+    "surface_forms": [
+      "Luxray",
+      "レントラー"
+    ]
+  },
+  {
+    "canonical": "スボミー",
+    "surface_forms": [
+      "Budew",
+      "スボミー"
+    ]
+  },
+  {
+    "canonical": "ロズレイド",
+    "surface_forms": [
+      "Roserade",
+      "ロズレイド"
+    ]
+  },
+  {
+    "canonical": "ズガイドス",
+    "surface_forms": [
+      "Cranidos",
+      "ズガイドス"
+    ]
+  },
+  {
+    "canonical": "ラムパルド",
+    "surface_forms": [
+      "Rampardos",
+      "ラムパルド"
+    ]
+  },
+  {
+    "canonical": "タテトプス",
+    "surface_forms": [
+      "Shieldon",
+      "タテトプス"
+    ]
+  },
+  {
+    "canonical": "トリデプス",
+    "surface_forms": [
+      "Bastiodon",
+      "トリデプス"
+    ]
+  },
+  {
+    "canonical": "ミノムッチ",
+    "surface_forms": [
+      "Burmy",
+      "ミノムッチ"
+    ]
+  },
+  {
+    "canonical": "ミノマダム",
+    "surface_forms": [
+      "Wormadam",
+      "ミノマダム"
+    ]
+  },
+  {
+    "canonical": "ガーメイル",
+    "surface_forms": [
+      "Mothim",
+      "ガーメイル"
+    ]
+  },
+  {
+    "canonical": "ミツハニー",
+    "surface_forms": [
+      "Combee",
+      "ミツハニー"
+    ]
+  },
+  {
+    "canonical": "ビークイン",
+    "surface_forms": [
+      "Vespiquen",
+      "ビークイン"
+    ]
+  },
+  {
+    "canonical": "パチリス",
+    "surface_forms": [
+      "Pachirisu",
+      "パチリス"
+    ]
+  },
+  {
+    "canonical": "ブイゼル",
+    "surface_forms": [
+      "Buizel",
+      "ブイゼル"
+    ]
+  },
+  {
+    "canonical": "フローゼル",
+    "surface_forms": [
+      "Floatzel",
+      "フローゼル"
+    ]
+  },
+  {
+    "canonical": "チェリンボ",
+    "surface_forms": [
+      "Cherubi",
+      "チェリンボ"
+    ]
+  },
+  {
+    "canonical": "チェリム",
+    "surface_forms": [
+      "Cherrim",
+      "チェリム"
+    ]
+  },
+  {
+    "canonical": "カラナクシ",
+    "surface_forms": [
+      "Shellos",
+      "カラナクシ"
+    ]
+  },
+  {
+    "canonical": "トリトドン",
+    "surface_forms": [
+      "Gastrodon",
+      "トリトドン"
+    ]
+  },
+  {
+    "canonical": "エテボース",
+    "surface_forms": [
+      "Ambipom",
+      "エテボース"
+    ]
+  },
+  {
+    "canonical": "フワンテ",
+    "surface_forms": [
+      "Drifloon",
+      "フワンテ"
+    ]
+  },
+  {
+    "canonical": "フワライド",
+    "surface_forms": [
+      "Drifblim",
+      "フワライド"
+    ]
+  },
+  {
+    "canonical": "ミミロル",
+    "surface_forms": [
+      "Buneary",
+      "ミミロル"
+    ]
+  },
+  {
+    "canonical": "ミミロップ",
+    "surface_forms": [
+      "Lopunny",
+      "ミミロップ"
+    ]
+  },
+  {
+    "canonical": "ムウマージ",
+    "surface_forms": [
+      "Mismagius",
+      "ムウマージ"
+    ]
+  },
+  {
+    "canonical": "ドンカラス",
+    "surface_forms": [
+      "Honchkrow",
+      "ドンカラス"
+    ]
+  },
+  {
+    "canonical": "ニャルマー",
+    "surface_forms": [
+      "Glameow",
+      "ニャルマー"
+    ]
+  },
+  {
+    "canonical": "ブニャット",
+    "surface_forms": [
+      "Purugly",
+      "ブニャット"
+    ]
+  },
+  {
+    "canonical": "リーシャン",
+    "surface_forms": [
+      "Chingling",
+      "リーシャン"
+    ]
+  },
+  {
+    "canonical": "スカンプー",
+    "surface_forms": [
+      "Stunky",
+      "スカンプー"
+    ]
+  },
+  {
+    "canonical": "スカタンク",
+    "surface_forms": [
+      "Skuntank",
+      "スカタンク"
+    ]
+  },
+  {
+    "canonical": "ドーミラー",
+    "surface_forms": [
+      "Bronzor",
+      "ドーミラー"
+    ]
+  },
+  {
+    "canonical": "ドータクン",
+    "surface_forms": [
+      "Bronzong",
+      "ドータクン"
+    ]
+  },
+  {
+    "canonical": "ウソハチ",
+    "surface_forms": [
+      "Bonsly",
+      "ウソハチ"
+    ]
+  },
+  {
+    "canonical": "マネネ",
+    "surface_forms": [
+      "Mime Jr.",
+      "マネネ"
+    ]
+  },
+  {
+    "canonical": "ピンプク",
+    "surface_forms": [
+      "Happiny",
+      "ピンプク"
+    ]
+  },
+  {
+    "canonical": "ペラップ",
+    "surface_forms": [
+      "Chatot",
+      "ペラップ"
+    ]
+  },
+  {
+    "canonical": "ミカルゲ",
+    "surface_forms": [
+      "Spiritomb",
+      "ミカルゲ"
+    ]
+  },
+  {
+    "canonical": "フカマル",
+    "surface_forms": [
+      "Gible",
+      "フカマル"
+    ]
+  },
+  {
+    "canonical": "ガバイト",
+    "surface_forms": [
+      "Gabite",
+      "ガバイト"
+    ]
+  },
+  {
+    "canonical": "ガブリアス",
+    "surface_forms": [
+      "Garchomp",
+      "ガブリアス"
+    ]
+  },
+  {
+    "canonical": "ゴンベ",
+    "surface_forms": [
+      "Munchlax",
+      "ゴンベ"
+    ]
+  },
+  {
+    "canonical": "リオル",
+    "surface_forms": [
+      "Riolu",
+      "リオル"
+    ]
+  },
+  {
+    "canonical": "ルカリオ",
+    "surface_forms": [
+      "Lucario",
+      "ルカリオ"
+    ]
+  },
+  {
+    "canonical": "ヒポポタス",
+    "surface_forms": [
+      "Hippopotas",
+      "ヒポポタス"
+    ]
+  },
+  {
+    "canonical": "カバルドン",
+    "surface_forms": [
+      "Hippowdon",
+      "カバルドン"
+    ]
+  },
+  {
+    "canonical": "スコルピ",
+    "surface_forms": [
+      "Skorupi",
+      "スコルピ"
+    ]
+  },
+  {
+    "canonical": "ドラピオン",
+    "surface_forms": [
+      "Drapion",
+      "ドラピオン"
+    ]
+  },
+  {
+    "canonical": "グレッグル",
+    "surface_forms": [
+      "Croagunk",
+      "グレッグル"
+    ]
+  },
+  {
+    "canonical": "ドクロッグ",
+    "surface_forms": [
+      "Toxicroak",
+      "ドクロッグ"
+    ]
+  },
+  {
+    "canonical": "マスキッパ",
+    "surface_forms": [
+      "Carnivine",
+      "マスキッパ"
+    ]
+  },
+  {
+    "canonical": "ケイコウオ",
+    "surface_forms": [
+      "Finneon",
+      "ケイコウオ"
+    ]
+  },
+  {
+    "canonical": "ネオラント",
+    "surface_forms": [
+      "Lumineon",
+      "ネオラント"
+    ]
+  },
+  {
+    "canonical": "タマンタ",
+    "surface_forms": [
+      "Mantyke",
+      "タマンタ"
+    ]
+  },
+  {
+    "canonical": "ユキカブリ",
+    "surface_forms": [
+      "Snover",
+      "ユキカブリ"
+    ]
+  },
+  {
+    "canonical": "ユキノオー",
+    "surface_forms": [
+      "Abomasnow",
+      "ユキノオー"
+    ]
+  },
+  {
+    "canonical": "マニューラ",
+    "surface_forms": [
+      "Weavile",
+      "マニューラ"
+    ]
+  },
+  {
+    "canonical": "ジバコイル",
+    "surface_forms": [
+      "Magnezone",
+      "ジバコイル"
+    ]
+  },
+  {
+    "canonical": "ベロベルト",
+    "surface_forms": [
+      "Lickilicky",
+      "ベロベルト"
+    ]
+  },
+  {
+    "canonical": "ドサイドン",
+    "surface_forms": [
+      "Rhyperior",
+      "ドサイドン"
+    ]
+  },
+  {
+    "canonical": "モジャンボ",
+    "surface_forms": [
+      "Tangrowth",
+      "モジャンボ"
+    ]
+  },
+  {
+    "canonical": "エレキブル",
+    "surface_forms": [
+      "Electivire",
+      "エレキブル"
+    ]
+  },
+  {
+    "canonical": "ブーバーン",
+    "surface_forms": [
+      "Magmortar",
+      "ブーバーン"
+    ]
+  },
+  {
+    "canonical": "トゲキッス",
+    "surface_forms": [
+      "Togekiss",
+      "トゲキッス"
+    ]
+  },
+  {
+    "canonical": "メガヤンマ",
+    "surface_forms": [
+      "Yanmega",
+      "メガヤンマ"
+    ]
+  },
+  {
+    "canonical": "リーフィア",
+    "surface_forms": [
+      "Leafeon",
+      "リーフィア"
+    ]
+  },
+  {
+    "canonical": "グレイシア",
+    "surface_forms": [
+      "Glaceon",
+      "グレイシア"
+    ]
+  },
+  {
+    "canonical": "グライオン",
+    "surface_forms": [
+      "Gliscor",
+      "グライオン"
+    ]
+  },
+  {
+    "canonical": "マンムー",
+    "surface_forms": [
+      "Mamoswine",
+      "マンムー"
+    ]
+  },
+  {
+    "canonical": "ポリゴンＺ",
+    "surface_forms": [
+      "Porygon-Z",
+      "ポリゴンＺ"
+    ]
+  },
+  {
+    "canonical": "エルレイド",
+    "surface_forms": [
+      "Gallade",
+      "エルレイド"
+    ]
+  },
+  {
+    "canonical": "ダイノーズ",
+    "surface_forms": [
+      "Probopass",
+      "ダイノーズ"
+    ]
+  },
+  {
+    "canonical": "ヨノワール",
+    "surface_forms": [
+      "Dusknoir",
+      "ヨノワール"
+    ]
+  },
+  {
+    "canonical": "ユキメノコ",
+    "surface_forms": [
+      "Froslass",
+      "ユキメノコ"
+    ]
+  },
+  {
+    "canonical": "ロトム",
+    "surface_forms": [
+      "Rotom",
+      "ロトム"
+    ]
+  },
+  {
+    "canonical": "ユクシー",
+    "surface_forms": [
+      "Uxie",
+      "ユクシー"
+    ]
+  },
+  {
+    "canonical": "エムリット",
+    "surface_forms": [
+      "Mesprit",
+      "エムリット"
+    ]
+  },
+  {
+    "canonical": "アグノム",
+    "surface_forms": [
+      "Azelf",
+      "アグノム"
+    ]
+  },
+  {
+    "canonical": "ディアルガ",
+    "surface_forms": [
+      "Dialga",
+      "ディアルガ"
+    ]
+  },
+  {
+    "canonical": "パルキア",
+    "surface_forms": [
+      "Palkia",
+      "パルキア"
+    ]
+  },
+  {
+    "canonical": "ヒードラン",
+    "surface_forms": [
+      "Heatran",
+      "ヒードラン"
+    ]
+  },
+  {
+    "canonical": "レジギガス",
+    "surface_forms": [
+      "Regigigas",
+      "レジギガス"
+    ]
+  },
+  {
+    "canonical": "ギラティナ",
+    "surface_forms": [
+      "Giratina",
+      "ギラティナ"
+    ]
+  },
+  {
+    "canonical": "クレセリア",
+    "surface_forms": [
+      "Cresselia",
+      "クレセリア"
+    ]
+  },
+  {
+    "canonical": "フィオネ",
+    "surface_forms": [
+      "Phione",
+      "フィオネ"
+    ]
+  },
+  {
+    "canonical": "マナフィ",
+    "surface_forms": [
+      "Manaphy",
+      "マナフィ"
+    ]
+  },
+  {
+    "canonical": "ダークライ",
+    "surface_forms": [
+      "Darkrai",
+      "ダークライ"
+    ]
+  },
+  {
+    "canonical": "シェイミ",
+    "surface_forms": [
+      "Shaymin",
+      "シェイミ"
+    ]
+  },
+  {
+    "canonical": "アルセウス",
+    "surface_forms": [
+      "Arceus",
+      "アルセウス"
+    ]
+  },
+  {
+    "canonical": "ビクティニ",
+    "surface_forms": [
+      "Victini",
+      "ビクティニ"
+    ]
+  },
+  {
+    "canonical": "ツタージャ",
+    "surface_forms": [
+      "Snivy",
+      "ツタージャ"
+    ]
+  },
+  {
+    "canonical": "ジャノビー",
+    "surface_forms": [
+      "Servine",
+      "ジャノビー"
+    ]
+  },
+  {
+    "canonical": "ジャローダ",
+    "surface_forms": [
+      "Serperior",
+      "ジャローダ"
+    ]
+  },
+  {
+    "canonical": "ポカブ",
+    "surface_forms": [
+      "Tepig",
+      "ポカブ"
+    ]
+  },
+  {
+    "canonical": "チャオブー",
+    "surface_forms": [
+      "Pignite",
+      "チャオブー"
+    ]
+  },
+  {
+    "canonical": "エンブオー",
+    "surface_forms": [
+      "Emboar",
+      "エンブオー"
+    ]
+  },
+  {
+    "canonical": "ミジュマル",
+    "surface_forms": [
+      "Oshawott",
+      "ミジュマル"
+    ]
+  },
+  {
+    "canonical": "フタチマル",
+    "surface_forms": [
+      "Dewott",
+      "フタチマル"
+    ]
+  },
+  {
+    "canonical": "ダイケンキ",
+    "surface_forms": [
+      "Samurott",
+      "ダイケンキ"
+    ]
+  },
+  {
+    "canonical": "ミネズミ",
+    "surface_forms": [
+      "Patrat",
+      "ミネズミ"
+    ]
+  },
+  {
+    "canonical": "ミルホッグ",
+    "surface_forms": [
+      "Watchog",
+      "ミルホッグ"
+    ]
+  },
+  {
+    "canonical": "ヨーテリー",
+    "surface_forms": [
+      "Lillipup",
+      "ヨーテリー"
+    ]
+  },
+  {
+    "canonical": "ハーデリア",
+    "surface_forms": [
+      "Herdier",
+      "ハーデリア"
+    ]
+  },
+  {
+    "canonical": "ムーランド",
+    "surface_forms": [
+      "Stoutland",
+      "ムーランド"
+    ]
+  },
+  {
+    "canonical": "チョロネコ",
+    "surface_forms": [
+      "Purrloin",
+      "チョロネコ"
+    ]
+  },
+  {
+    "canonical": "レパルダス",
+    "surface_forms": [
+      "Liepard",
+      "レパルダス"
+    ]
+  },
+  {
+    "canonical": "ヤナップ",
+    "surface_forms": [
+      "Pansage",
+      "ヤナップ"
+    ]
+  },
+  {
+    "canonical": "ヤナッキー",
+    "surface_forms": [
+      "Simisage",
+      "ヤナッキー"
+    ]
+  },
+  {
+    "canonical": "バオップ",
+    "surface_forms": [
+      "Pansear",
+      "バオップ"
+    ]
+  },
+  {
+    "canonical": "バオッキー",
+    "surface_forms": [
+      "Simisear",
+      "バオッキー"
+    ]
+  },
+  {
+    "canonical": "ヒヤップ",
+    "surface_forms": [
+      "Panpour",
+      "ヒヤップ"
+    ]
+  },
+  {
+    "canonical": "ヒヤッキー",
+    "surface_forms": [
+      "Simipour",
+      "ヒヤッキー"
+    ]
+  },
+  {
+    "canonical": "ムンナ",
+    "surface_forms": [
+      "Munna",
+      "ムンナ"
+    ]
+  },
+  {
+    "canonical": "ムシャーナ",
+    "surface_forms": [
+      "Musharna",
+      "ムシャーナ"
+    ]
+  },
+  {
+    "canonical": "マメパト",
+    "surface_forms": [
+      "Pidove",
+      "マメパト"
+    ]
+  },
+  {
+    "canonical": "ハトーボー",
+    "surface_forms": [
+      "Tranquill",
+      "ハトーボー"
+    ]
+  },
+  {
+    "canonical": "ケンホロウ",
+    "surface_forms": [
+      "Unfezant",
+      "ケンホロウ"
+    ]
+  },
+  {
+    "canonical": "シママ",
+    "surface_forms": [
+      "Blitzle",
+      "シママ"
+    ]
+  },
+  {
+    "canonical": "ゼブライカ",
+    "surface_forms": [
+      "Zebstrika",
+      "ゼブライカ"
+    ]
+  },
+  {
+    "canonical": "ダンゴロ",
+    "surface_forms": [
+      "Roggenrola",
+      "ダンゴロ"
+    ]
+  },
+  {
+    "canonical": "ガントル",
+    "surface_forms": [
+      "Boldore",
+      "ガントル"
+    ]
+  },
+  {
+    "canonical": "ギガイアス",
+    "surface_forms": [
+      "Gigalith",
+      "ギガイアス"
+    ]
+  },
+  {
+    "canonical": "コロモリ",
+    "surface_forms": [
+      "Woobat",
+      "コロモリ"
+    ]
+  },
+  {
+    "canonical": "ココロモリ",
+    "surface_forms": [
+      "Swoobat",
+      "ココロモリ"
+    ]
+  },
+  {
+    "canonical": "モグリュー",
+    "surface_forms": [
+      "Drilbur",
+      "モグリュー"
+    ]
+  },
+  {
+    "canonical": "ドリュウズ",
+    "surface_forms": [
+      "Excadrill",
+      "ドリュウズ"
+    ]
+  },
+  {
+    "canonical": "タブンネ",
+    "surface_forms": [
+      "Audino",
+      "タブンネ"
+    ]
+  },
+  {
+    "canonical": "ドッコラー",
+    "surface_forms": [
+      "Timburr",
+      "ドッコラー"
+    ]
+  },
+  {
+    "canonical": "ドテッコツ",
+    "surface_forms": [
+      "Gurdurr",
+      "ドテッコツ"
+    ]
+  },
+  {
+    "canonical": "ローブシン",
+    "surface_forms": [
+      "Conkeldurr",
+      "ローブシン"
+    ]
+  },
+  {
+    "canonical": "オタマロ",
+    "surface_forms": [
+      "Tympole",
+      "オタマロ"
+    ]
+  },
+  {
+    "canonical": "ガマガル",
+    "surface_forms": [
+      "Palpitoad",
+      "ガマガル"
+    ]
+  },
+  {
+    "canonical": "ガマゲロゲ",
+    "surface_forms": [
+      "Seismitoad",
+      "ガマゲロゲ"
+    ]
+  },
+  {
+    "canonical": "ナゲキ",
+    "surface_forms": [
+      "Throh",
+      "ナゲキ"
+    ]
+  },
+  {
+    "canonical": "ダゲキ",
+    "surface_forms": [
+      "Sawk",
+      "ダゲキ"
+    ]
+  },
+  {
+    "canonical": "クルミル",
+    "surface_forms": [
+      "Sewaddle",
+      "クルミル"
+    ]
+  },
+  {
+    "canonical": "クルマユ",
+    "surface_forms": [
+      "Swadloon",
+      "クルマユ"
+    ]
+  },
+  {
+    "canonical": "ハハコモリ",
+    "surface_forms": [
+      "Leavanny",
+      "ハハコモリ"
+    ]
+  },
+  {
+    "canonical": "フシデ",
+    "surface_forms": [
+      "Venipede",
+      "フシデ"
+    ]
+  },
+  {
+    "canonical": "ホイーガ",
+    "surface_forms": [
+      "Whirlipede",
+      "ホイーガ"
+    ]
+  },
+  {
+    "canonical": "ペンドラー",
+    "surface_forms": [
+      "Scolipede",
+      "ペンドラー"
+    ]
+  },
+  {
+    "canonical": "モンメン",
+    "surface_forms": [
+      "Cottonee",
+      "モンメン"
+    ]
+  },
+  {
+    "canonical": "エルフーン",
+    "surface_forms": [
+      "Whimsicott",
+      "エルフーン"
+    ]
+  },
+  {
+    "canonical": "チュリネ",
+    "surface_forms": [
+      "Petilil",
+      "チュリネ"
+    ]
+  },
+  {
+    "canonical": "ドレディア",
+    "surface_forms": [
+      "Lilligant",
+      "ドレディア"
+    ]
+  },
+  {
+    "canonical": "バスラオ",
+    "surface_forms": [
+      "Basculin",
+      "バスラオ"
+    ]
+  },
+  {
+    "canonical": "メグロコ",
+    "surface_forms": [
+      "Sandile",
+      "メグロコ"
+    ]
+  },
+  {
+    "canonical": "ワルビル",
+    "surface_forms": [
+      "Krokorok",
+      "ワルビル"
+    ]
+  },
+  {
+    "canonical": "ワルビアル",
+    "surface_forms": [
+      "Krookodile",
+      "ワルビアル"
+    ]
+  },
+  {
+    "canonical": "ダルマッカ",
+    "surface_forms": [
+      "Darumaka",
+      "ダルマッカ"
+    ]
+  },
+  {
+    "canonical": "ヒヒダルマ",
+    "surface_forms": [
+      "Darmanitan",
+      "ヒヒダルマ"
+    ]
+  },
+  {
+    "canonical": "マラカッチ",
+    "surface_forms": [
+      "Maractus",
+      "マラカッチ"
+    ]
+  },
+  {
+    "canonical": "イシズマイ",
+    "surface_forms": [
+      "Dwebble",
+      "イシズマイ"
+    ]
+  },
+  {
+    "canonical": "イワパレス",
+    "surface_forms": [
+      "Crustle",
+      "イワパレス"
+    ]
+  },
+  {
+    "canonical": "ズルッグ",
+    "surface_forms": [
+      "Scraggy",
+      "ズルッグ"
+    ]
+  },
+  {
+    "canonical": "ズルズキン",
+    "surface_forms": [
+      "Scrafty",
+      "ズルズキン"
+    ]
+  },
+  {
+    "canonical": "シンボラー",
+    "surface_forms": [
+      "Sigilyph",
+      "シンボラー"
+    ]
+  },
+  {
+    "canonical": "デスマス",
+    "surface_forms": [
+      "Yamask",
+      "デスマス"
+    ]
+  },
+  {
+    "canonical": "デスカーン",
+    "surface_forms": [
+      "Cofagrigus",
+      "デスカーン"
+    ]
+  },
+  {
+    "canonical": "プロトーガ",
+    "surface_forms": [
+      "Tirtouga",
+      "プロトーガ"
+    ]
+  },
+  {
+    "canonical": "アバゴーラ",
+    "surface_forms": [
+      "Carracosta",
+      "アバゴーラ"
+    ]
+  },
+  {
+    "canonical": "アーケン",
+    "surface_forms": [
+      "Archen",
+      "アーケン"
+    ]
+  },
+  {
+    "canonical": "アーケオス",
+    "surface_forms": [
+      "Archeops",
+      "アーケオス"
+    ]
+  },
+  {
+    "canonical": "ヤブクロン",
+    "surface_forms": [
+      "Trubbish",
+      "ヤブクロン"
+    ]
+  },
+  {
+    "canonical": "ダストダス",
+    "surface_forms": [
+      "Garbodor",
+      "ダストダス"
+    ]
+  },
+  {
+    "canonical": "ゾロア",
+    "surface_forms": [
+      "Zorua",
+      "ゾロア"
+    ]
+  },
+  {
+    "canonical": "ゾロアーク",
+    "surface_forms": [
+      "Zoroark",
+      "ゾロアーク"
+    ]
+  },
+  {
+    "canonical": "チラーミィ",
+    "surface_forms": [
+      "Minccino",
+      "チラーミィ"
+    ]
+  },
+  {
+    "canonical": "チラチーノ",
+    "surface_forms": [
+      "Cinccino",
+      "チラチーノ"
+    ]
+  },
+  {
+    "canonical": "ゴチム",
+    "surface_forms": [
+      "Gothita",
+      "ゴチム"
+    ]
+  },
+  {
+    "canonical": "ゴチミル",
+    "surface_forms": [
+      "Gothorita",
+      "ゴチミル"
+    ]
+  },
+  {
+    "canonical": "ゴチルゼル",
+    "surface_forms": [
+      "Gothitelle",
+      "ゴチルゼル"
+    ]
+  },
+  {
+    "canonical": "ユニラン",
+    "surface_forms": [
+      "Solosis",
+      "ユニラン"
+    ]
+  },
+  {
+    "canonical": "ダブラン",
+    "surface_forms": [
+      "Duosion",
+      "ダブラン"
+    ]
+  },
+  {
+    "canonical": "ランクルス",
+    "surface_forms": [
+      "Reuniclus",
+      "ランクルス"
+    ]
+  },
+  {
+    "canonical": "コアルヒー",
+    "surface_forms": [
+      "Ducklett",
+      "コアルヒー"
+    ]
+  },
+  {
+    "canonical": "スワンナ",
+    "surface_forms": [
+      "Swanna",
+      "スワンナ"
+    ]
+  },
+  {
+    "canonical": "バニプッチ",
+    "surface_forms": [
+      "Vanillite",
+      "バニプッチ"
+    ]
+  },
+  {
+    "canonical": "バニリッチ",
+    "surface_forms": [
+      "Vanillish",
+      "バニリッチ"
+    ]
+  },
+  {
+    "canonical": "バイバニラ",
+    "surface_forms": [
+      "Vanilluxe",
+      "バイバニラ"
+    ]
+  },
+  {
+    "canonical": "シキジカ",
+    "surface_forms": [
+      "Deerling",
+      "シキジカ"
+    ]
+  },
+  {
+    "canonical": "メブキジカ",
+    "surface_forms": [
+      "Sawsbuck",
+      "メブキジカ"
+    ]
+  },
+  {
+    "canonical": "エモンガ",
+    "surface_forms": [
+      "Emolga",
+      "エモンガ"
+    ]
+  },
+  {
+    "canonical": "カブルモ",
+    "surface_forms": [
+      "Karrablast",
+      "カブルモ"
+    ]
+  },
+  {
+    "canonical": "シュバルゴ",
+    "surface_forms": [
+      "Escavalier",
+      "シュバルゴ"
+    ]
+  },
+  {
+    "canonical": "タマゲタケ",
+    "surface_forms": [
+      "Foongus",
+      "タマゲタケ"
+    ]
+  },
+  {
+    "canonical": "モロバレル",
+    "surface_forms": [
+      "Amoonguss",
+      "モロバレル"
+    ]
+  },
+  {
+    "canonical": "プルリル",
+    "surface_forms": [
+      "Frillish",
+      "プルリル"
+    ]
+  },
+  {
+    "canonical": "ブルンゲル",
+    "surface_forms": [
+      "Jellicent",
+      "ブルンゲル"
+    ]
+  },
+  {
+    "canonical": "ママンボウ",
+    "surface_forms": [
+      "Alomomola",
+      "ママンボウ"
+    ]
+  },
+  {
+    "canonical": "バチュル",
+    "surface_forms": [
+      "Joltik",
+      "バチュル"
+    ]
+  },
+  {
+    "canonical": "デンチュラ",
+    "surface_forms": [
+      "Galvantula",
+      "デンチュラ"
+    ]
+  },
+  {
+    "canonical": "テッシード",
+    "surface_forms": [
+      "Ferroseed",
+      "テッシード"
+    ]
+  },
+  {
+    "canonical": "ナットレイ",
+    "surface_forms": [
+      "Ferrothorn",
+      "ナットレイ"
+    ]
+  },
+  {
+    "canonical": "ギアル",
+    "surface_forms": [
+      "Klink",
+      "ギアル"
+    ]
+  },
+  {
+    "canonical": "ギギアル",
+    "surface_forms": [
+      "Klang",
+      "ギギアル"
+    ]
+  },
+  {
+    "canonical": "ギギギアル",
+    "surface_forms": [
+      "Klinklang",
+      "ギギギアル"
+    ]
+  },
+  {
+    "canonical": "シビシラス",
+    "surface_forms": [
+      "Tynamo",
+      "シビシラス"
+    ]
+  },
+  {
+    "canonical": "シビビール",
+    "surface_forms": [
+      "Eelektrik",
+      "シビビール"
+    ]
+  },
+  {
+    "canonical": "シビルドン",
+    "surface_forms": [
+      "Eelektross",
+      "シビルドン"
+    ]
+  },
+  {
+    "canonical": "リグレー",
+    "surface_forms": [
+      "Elgyem",
+      "リグレー"
+    ]
+  },
+  {
+    "canonical": "オーベム",
+    "surface_forms": [
+      "Beheeyem",
+      "オーベム"
+    ]
+  },
+  {
+    "canonical": "ヒトモシ",
+    "surface_forms": [
+      "Litwick",
+      "ヒトモシ"
+    ]
+  },
+  {
+    "canonical": "ランプラー",
+    "surface_forms": [
+      "Lampent",
+      "ランプラー"
+    ]
+  },
+  {
+    "canonical": "シャンデラ",
+    "surface_forms": [
+      "Chandelure",
+      "シャンデラ"
+    ]
+  },
+  {
+    "canonical": "キバゴ",
+    "surface_forms": [
+      "Axew",
+      "キバゴ"
+    ]
+  },
+  {
+    "canonical": "オノンド",
+    "surface_forms": [
+      "Fraxure",
+      "オノンド"
+    ]
+  },
+  {
+    "canonical": "オノノクス",
+    "surface_forms": [
+      "Haxorus",
+      "オノノクス"
+    ]
+  },
+  {
+    "canonical": "クマシュン",
+    "surface_forms": [
+      "Cubchoo",
+      "クマシュン"
+    ]
+  },
+  {
+    "canonical": "ツンベアー",
+    "surface_forms": [
+      "Beartic",
+      "ツンベアー"
+    ]
+  },
+  {
+    "canonical": "フリージオ",
+    "surface_forms": [
+      "Cryogonal",
+      "フリージオ"
+    ]
+  },
+  {
+    "canonical": "チョボマキ",
+    "surface_forms": [
+      "Shelmet",
+      "チョボマキ"
+    ]
+  },
+  {
+    "canonical": "アギルダー",
+    "surface_forms": [
+      "Accelgor",
+      "アギルダー"
+    ]
+  },
+  {
+    "canonical": "マッギョ",
+    "surface_forms": [
+      "Stunfisk",
+      "マッギョ"
+    ]
+  },
+  {
+    "canonical": "コジョフー",
+    "surface_forms": [
+      "Mienfoo",
+      "コジョフー"
+    ]
+  },
+  {
+    "canonical": "コジョンド",
+    "surface_forms": [
+      "Mienshao",
+      "コジョンド"
+    ]
+  },
+  {
+    "canonical": "クリムガン",
+    "surface_forms": [
+      "Druddigon",
+      "クリムガン"
+    ]
+  },
+  {
+    "canonical": "ゴビット",
+    "surface_forms": [
+      "Golett",
+      "ゴビット"
+    ]
+  },
+  {
+    "canonical": "ゴルーグ",
+    "surface_forms": [
+      "Golurk",
+      "ゴルーグ"
+    ]
+  },
+  {
+    "canonical": "コマタナ",
+    "surface_forms": [
+      "Pawniard",
+      "コマタナ"
+    ]
+  },
+  {
+    "canonical": "キリキザン",
+    "surface_forms": [
+      "Bisharp",
+      "キリキザン"
+    ]
+  },
+  {
+    "canonical": "バッフロン",
+    "surface_forms": [
+      "Bouffalant",
+      "バッフロン"
+    ]
+  },
+  {
+    "canonical": "ワシボン",
+    "surface_forms": [
+      "Rufflet",
+      "ワシボン"
+    ]
+  },
+  {
+    "canonical": "ウォーグル",
+    "surface_forms": [
+      "Braviary",
+      "ウォーグル"
+    ]
+  },
+  {
+    "canonical": "バルチャイ",
+    "surface_forms": [
+      "Vullaby",
+      "バルチャイ"
+    ]
+  },
+  {
+    "canonical": "バルジーナ",
+    "surface_forms": [
+      "Mandibuzz",
+      "バルジーナ"
+    ]
+  },
+  {
+    "canonical": "クイタラン",
+    "surface_forms": [
+      "Heatmor",
+      "クイタラン"
+    ]
+  },
+  {
+    "canonical": "アイアント",
+    "surface_forms": [
+      "Durant",
+      "アイアント"
+    ]
+  },
+  {
+    "canonical": "モノズ",
+    "surface_forms": [
+      "Deino",
+      "モノズ"
+    ]
+  },
+  {
+    "canonical": "ジヘッド",
+    "surface_forms": [
+      "Zweilous",
+      "ジヘッド"
+    ]
+  },
+  {
+    "canonical": "サザンドラ",
+    "surface_forms": [
+      "Hydreigon",
+      "サザンドラ"
+    ]
+  },
+  {
+    "canonical": "メラルバ",
+    "surface_forms": [
+      "Larvesta",
+      "メラルバ"
+    ]
+  },
+  {
+    "canonical": "ウルガモス",
+    "surface_forms": [
+      "Volcarona",
+      "ウルガモス"
+    ]
+  },
+  {
+    "canonical": "コバルオン",
+    "surface_forms": [
+      "Cobalion",
+      "コバルオン"
+    ]
+  },
+  {
+    "canonical": "テラキオン",
+    "surface_forms": [
+      "Terrakion",
+      "テラキオン"
+    ]
+  },
+  {
+    "canonical": "ビリジオン",
+    "surface_forms": [
+      "Virizion",
+      "ビリジオン"
+    ]
+  },
+  {
+    "canonical": "トルネロス",
+    "surface_forms": [
+      "Tornadus",
+      "トルネロス"
+    ]
+  },
+  {
+    "canonical": "ボルトロス",
+    "surface_forms": [
+      "Thundurus",
+      "ボルトロス"
+    ]
+  },
+  {
+    "canonical": "レシラム",
+    "surface_forms": [
+      "Reshiram",
+      "レシラム"
+    ]
+  },
+  {
+    "canonical": "ゼクロム",
+    "surface_forms": [
+      "Zekrom",
+      "ゼクロム"
+    ]
+  },
+  {
+    "canonical": "ランドロス",
+    "surface_forms": [
+      "Landorus",
+      "ランドロス"
+    ]
+  },
+  {
+    "canonical": "キュレム",
+    "surface_forms": [
+      "Kyurem",
+      "キュレム"
+    ]
+  },
+  {
+    "canonical": "ケルディオ",
+    "surface_forms": [
+      "Keldeo",
+      "ケルディオ"
+    ]
+  },
+  {
+    "canonical": "メロエッタ",
+    "surface_forms": [
+      "Meloetta",
+      "メロエッタ"
+    ]
+  },
+  {
+    "canonical": "ゲノセクト",
+    "surface_forms": [
+      "Genesect",
+      "ゲノセクト"
+    ]
+  },
+  {
+    "canonical": "ハリマロン",
+    "surface_forms": [
+      "Chespin",
+      "ハリマロン"
+    ]
+  },
+  {
+    "canonical": "ハリボーグ",
+    "surface_forms": [
+      "Quilladin",
+      "ハリボーグ"
+    ]
+  },
+  {
+    "canonical": "ブリガロン",
+    "surface_forms": [
+      "Chesnaught",
+      "ブリガロン"
+    ]
+  },
+  {
+    "canonical": "フォッコ",
+    "surface_forms": [
+      "Fennekin",
+      "フォッコ"
+    ]
+  },
+  {
+    "canonical": "テールナー",
+    "surface_forms": [
+      "Braixen",
+      "テールナー"
+    ]
+  },
+  {
+    "canonical": "マフォクシー",
+    "surface_forms": [
+      "Delphox",
+      "マフォクシー"
+    ]
+  },
+  {
+    "canonical": "ケロマツ",
+    "surface_forms": [
+      "Froakie",
+      "ケロマツ"
+    ]
+  },
+  {
+    "canonical": "ゲコガシラ",
+    "surface_forms": [
+      "Frogadier",
+      "ゲコガシラ"
+    ]
+  },
+  {
+    "canonical": "ゲッコウガ",
+    "surface_forms": [
+      "Greninja",
+      "ゲッコウガ"
+    ]
+  },
+  {
+    "canonical": "ホルビー",
+    "surface_forms": [
+      "Bunnelby",
+      "ホルビー"
+    ]
+  },
+  {
+    "canonical": "ホルード",
+    "surface_forms": [
+      "Diggersby",
+      "ホルード"
+    ]
+  },
+  {
+    "canonical": "ヤヤコマ",
+    "surface_forms": [
+      "Fletchling",
+      "ヤヤコマ"
+    ]
+  },
+  {
+    "canonical": "ヒノヤコマ",
+    "surface_forms": [
+      "Fletchinder",
+      "ヒノヤコマ"
+    ]
+  },
+  {
+    "canonical": "ファイアロー",
+    "surface_forms": [
+      "Talonflame",
+      "ファイアロー"
+    ]
+  },
+  {
+    "canonical": "コフキムシ",
+    "surface_forms": [
+      "Scatterbug",
+      "コフキムシ"
+    ]
+  },
+  {
+    "canonical": "コフーライ",
+    "surface_forms": [
+      "Spewpa",
+      "コフーライ"
+    ]
+  },
+  {
+    "canonical": "ビビヨン",
+    "surface_forms": [
+      "Vivillon",
+      "ビビヨン"
+    ]
+  },
+  {
+    "canonical": "シシコ",
+    "surface_forms": [
+      "Litleo",
+      "シシコ"
+    ]
+  },
+  {
+    "canonical": "カエンジシ",
+    "surface_forms": [
+      "Pyroar",
+      "カエンジシ"
+    ]
+  },
+  {
+    "canonical": "フラベベ",
+    "surface_forms": [
+      "Flabébé",
+      "フラベベ"
+    ]
+  },
+  {
+    "canonical": "フラエッテ",
+    "surface_forms": [
+      "Floette",
+      "フラエッテ"
+    ]
+  },
+  {
+    "canonical": "フラージェス",
+    "surface_forms": [
+      "Florges",
+      "フラージェス"
+    ]
+  },
+  {
+    "canonical": "メェークル",
+    "surface_forms": [
+      "Skiddo",
+      "メェークル"
+    ]
+  },
+  {
+    "canonical": "ゴーゴート",
+    "surface_forms": [
+      "Gogoat",
+      "ゴーゴート"
+    ]
+  },
+  {
+    "canonical": "ヤンチャム",
+    "surface_forms": [
+      "Pancham",
+      "ヤンチャム"
+    ]
+  },
+  {
+    "canonical": "ゴロンダ",
+    "surface_forms": [
+      "Pangoro",
+      "ゴロンダ"
+    ]
+  },
+  {
+    "canonical": "トリミアン",
+    "surface_forms": [
+      "Furfrou",
+      "トリミアン"
+    ]
+  },
+  {
+    "canonical": "ニャスパー",
+    "surface_forms": [
+      "Espurr",
+      "ニャスパー"
+    ]
+  },
+  {
+    "canonical": "ニャオニクス",
+    "surface_forms": [
+      "Meowstic",
+      "ニャオニクス"
+    ]
+  },
+  {
+    "canonical": "ヒトツキ",
+    "surface_forms": [
+      "Honedge",
+      "ヒトツキ"
+    ]
+  },
+  {
+    "canonical": "ニダンギル",
+    "surface_forms": [
+      "Doublade",
+      "ニダンギル"
+    ]
+  },
+  {
+    "canonical": "ギルガルド",
+    "surface_forms": [
+      "Aegislash",
+      "ギルガルド"
+    ]
+  },
+  {
+    "canonical": "シュシュプ",
+    "surface_forms": [
+      "Spritzee",
+      "シュシュプ"
+    ]
+  },
+  {
+    "canonical": "フレフワン",
+    "surface_forms": [
+      "Aromatisse",
+      "フレフワン"
+    ]
+  },
+  {
+    "canonical": "ペロッパフ",
+    "surface_forms": [
+      "Swirlix",
+      "ペロッパフ"
+    ]
+  },
+  {
+    "canonical": "ペロリーム",
+    "surface_forms": [
+      "Slurpuff",
+      "ペロリーム"
+    ]
+  },
+  {
+    "canonical": "マーイーカ",
+    "surface_forms": [
+      "Inkay",
+      "マーイーカ"
+    ]
+  },
+  {
+    "canonical": "カラマネロ",
+    "surface_forms": [
+      "Malamar",
+      "カラマネロ"
+    ]
+  },
+  {
+    "canonical": "カメテテ",
+    "surface_forms": [
+      "Binacle",
+      "カメテテ"
+    ]
+  },
+  {
+    "canonical": "ガメノデス",
+    "surface_forms": [
+      "Barbaracle",
+      "ガメノデス"
+    ]
+  },
+  {
+    "canonical": "クズモー",
+    "surface_forms": [
+      "Skrelp",
+      "クズモー"
+    ]
+  },
+  {
+    "canonical": "ドラミドロ",
+    "surface_forms": [
+      "Dragalge",
+      "ドラミドロ"
+    ]
+  },
+  {
+    "canonical": "ウデッポウ",
+    "surface_forms": [
+      "Clauncher",
+      "ウデッポウ"
+    ]
+  },
+  {
+    "canonical": "ブロスター",
+    "surface_forms": [
+      "Clawitzer",
+      "ブロスター"
+    ]
+  },
+  {
+    "canonical": "エリキテル",
+    "surface_forms": [
+      "Helioptile",
+      "エリキテル"
+    ]
+  },
+  {
+    "canonical": "エレザード",
+    "surface_forms": [
+      "Heliolisk",
+      "エレザード"
+    ]
+  },
+  {
+    "canonical": "チゴラス",
+    "surface_forms": [
+      "Tyrunt",
+      "チゴラス"
+    ]
+  },
+  {
+    "canonical": "ガチゴラス",
+    "surface_forms": [
+      "Tyrantrum",
+      "ガチゴラス"
+    ]
+  },
+  {
+    "canonical": "アマルス",
+    "surface_forms": [
+      "Amaura",
+      "アマルス"
+    ]
+  },
+  {
+    "canonical": "アマルルガ",
+    "surface_forms": [
+      "Aurorus",
+      "アマルルガ"
+    ]
+  },
+  {
+    "canonical": "ニンフィア",
+    "surface_forms": [
+      "Sylveon",
+      "ニンフィア"
+    ]
+  },
+  {
+    "canonical": "ルチャブル",
+    "surface_forms": [
+      "Hawlucha",
+      "ルチャブル"
+    ]
+  },
+  {
+    "canonical": "デデンネ",
+    "surface_forms": [
+      "Dedenne",
+      "デデンネ"
+    ]
+  },
+  {
+    "canonical": "メレシー",
+    "surface_forms": [
+      "Carbink",
+      "メレシー"
+    ]
+  },
+  {
+    "canonical": "ヌメラ",
+    "surface_forms": [
+      "Goomy",
+      "ヌメラ"
+    ]
+  },
+  {
+    "canonical": "ヌメイル",
+    "surface_forms": [
+      "Sliggoo",
+      "ヌメイル"
+    ]
+  },
+  {
+    "canonical": "ヌメルゴン",
+    "surface_forms": [
+      "Goodra",
+      "ヌメルゴン"
+    ]
+  },
+  {
+    "canonical": "クレッフィ",
+    "surface_forms": [
+      "Klefki",
+      "クレッフィ"
+    ]
+  },
+  {
+    "canonical": "ボクレー",
+    "surface_forms": [
+      "Phantump",
+      "ボクレー"
+    ]
+  },
+  {
+    "canonical": "オーロット",
+    "surface_forms": [
+      "Trevenant",
+      "オーロット"
+    ]
+  },
+  {
+    "canonical": "バケッチャ",
+    "surface_forms": [
+      "Pumpkaboo",
+      "バケッチャ"
+    ]
+  },
+  {
+    "canonical": "パンプジン",
+    "surface_forms": [
+      "Gourgeist",
+      "パンプジン"
+    ]
+  },
+  {
+    "canonical": "カチコール",
+    "surface_forms": [
+      "Bergmite",
+      "カチコール"
+    ]
+  },
+  {
+    "canonical": "クレベース",
+    "surface_forms": [
+      "Avalugg",
+      "クレベース"
+    ]
+  },
+  {
+    "canonical": "オンバット",
+    "surface_forms": [
+      "Noibat",
+      "オンバット"
+    ]
+  },
+  {
+    "canonical": "オンバーン",
+    "surface_forms": [
+      "Noivern",
+      "オンバーン"
+    ]
+  },
+  {
+    "canonical": "ゼルネアス",
+    "surface_forms": [
+      "Xerneas",
+      "ゼルネアス"
+    ]
+  },
+  {
+    "canonical": "イベルタル",
+    "surface_forms": [
+      "Yveltal",
+      "イベルタル"
+    ]
+  },
+  {
+    "canonical": "ジガルデ",
+    "surface_forms": [
+      "Zygarde",
+      "ジガルデ"
+    ]
+  },
+  {
+    "canonical": "ディアンシー",
+    "surface_forms": [
+      "Diancie",
+      "ディアンシー"
+    ]
+  },
+  {
+    "canonical": "フーパ",
+    "surface_forms": [
+      "Hoopa",
+      "フーパ"
+    ]
+  },
+  {
+    "canonical": "ボルケニオン",
+    "surface_forms": [
+      "Volcanion",
+      "ボルケニオン"
+    ]
+  },
+  {
+    "canonical": "モクロー",
+    "surface_forms": [
+      "Rowlet",
+      "モクロー"
+    ]
+  },
+  {
+    "canonical": "フクスロー",
+    "surface_forms": [
+      "Dartrix",
+      "フクスロー"
+    ]
+  },
+  {
+    "canonical": "ジュナイパー",
+    "surface_forms": [
+      "Decidueye",
+      "ジュナイパー"
+    ]
+  },
+  {
+    "canonical": "ニャビー",
+    "surface_forms": [
+      "Litten",
+      "ニャビー"
+    ]
+  },
+  {
+    "canonical": "ニャヒート",
+    "surface_forms": [
+      "Torracat",
+      "ニャヒート"
+    ]
+  },
+  {
+    "canonical": "ガオガエン",
+    "surface_forms": [
+      "Incineroar",
+      "ガオガエン"
+    ]
+  },
+  {
+    "canonical": "アシマリ",
+    "surface_forms": [
+      "Popplio",
+      "アシマリ"
+    ]
+  },
+  {
+    "canonical": "オシャマリ",
+    "surface_forms": [
+      "Brionne",
+      "オシャマリ"
+    ]
+  },
+  {
+    "canonical": "アシレーヌ",
+    "surface_forms": [
+      "Primarina",
+      "アシレーヌ"
+    ]
+  },
+  {
+    "canonical": "ツツケラ",
+    "surface_forms": [
+      "Pikipek",
+      "ツツケラ"
+    ]
+  },
+  {
+    "canonical": "ケララッパ",
+    "surface_forms": [
+      "Trumbeak",
+      "ケララッパ"
+    ]
+  },
+  {
+    "canonical": "ドデカバシ",
+    "surface_forms": [
+      "Toucannon",
+      "ドデカバシ"
+    ]
+  },
+  {
+    "canonical": "ヤングース",
+    "surface_forms": [
+      "Yungoos",
+      "ヤングース"
+    ]
+  },
+  {
+    "canonical": "デカグース",
+    "surface_forms": [
+      "Gumshoos",
+      "デカグース"
+    ]
+  },
+  {
+    "canonical": "アゴジムシ",
+    "surface_forms": [
+      "Grubbin",
+      "アゴジムシ"
+    ]
+  },
+  {
+    "canonical": "デンヂムシ",
+    "surface_forms": [
+      "Charjabug",
+      "デンヂムシ"
+    ]
+  },
+  {
+    "canonical": "クワガノン",
+    "surface_forms": [
+      "Vikavolt",
+      "クワガノン"
+    ]
+  },
+  {
+    "canonical": "マケンカニ",
+    "surface_forms": [
+      "Crabrawler",
+      "マケンカニ"
+    ]
+  },
+  {
+    "canonical": "ケケンカニ",
+    "surface_forms": [
+      "Crabominable",
+      "ケケンカニ"
+    ]
+  },
+  {
+    "canonical": "オドリドリ",
+    "surface_forms": [
+      "Oricorio",
+      "オドリドリ"
+    ]
+  },
+  {
+    "canonical": "アブリー",
+    "surface_forms": [
+      "Cutiefly",
+      "アブリー"
+    ]
+  },
+  {
+    "canonical": "アブリボン",
+    "surface_forms": [
+      "Ribombee",
+      "アブリボン"
+    ]
+  },
+  {
+    "canonical": "イワンコ",
+    "surface_forms": [
+      "Rockruff",
+      "イワンコ"
+    ]
+  },
+  {
+    "canonical": "ルガルガン",
+    "surface_forms": [
+      "Lycanroc",
+      "ルガルガン"
+    ]
+  },
+  {
+    "canonical": "ヨワシ",
+    "surface_forms": [
+      "Wishiwashi",
+      "ヨワシ"
+    ]
+  },
+  {
+    "canonical": "ヒドイデ",
+    "surface_forms": [
+      "Mareanie",
+      "ヒドイデ"
+    ]
+  },
+  {
+    "canonical": "ドヒドイデ",
+    "surface_forms": [
+      "Toxapex",
+      "ドヒドイデ"
+    ]
+  },
+  {
+    "canonical": "ドロバンコ",
+    "surface_forms": [
+      "Mudbray",
+      "ドロバンコ"
+    ]
+  },
+  {
+    "canonical": "バンバドロ",
+    "surface_forms": [
+      "Mudsdale",
+      "バンバドロ"
+    ]
+  },
+  {
+    "canonical": "シズクモ",
+    "surface_forms": [
+      "Dewpider",
+      "シズクモ"
+    ]
+  },
+  {
+    "canonical": "オニシズクモ",
+    "surface_forms": [
+      "Araquanid",
+      "オニシズクモ"
+    ]
+  },
+  {
+    "canonical": "カリキリ",
+    "surface_forms": [
+      "Fomantis",
+      "カリキリ"
+    ]
+  },
+  {
+    "canonical": "ラランテス",
+    "surface_forms": [
+      "Lurantis",
+      "ラランテス"
+    ]
+  },
+  {
+    "canonical": "ネマシュ",
+    "surface_forms": [
+      "Morelull",
+      "ネマシュ"
+    ]
+  },
+  {
+    "canonical": "マシェード",
+    "surface_forms": [
+      "Shiinotic",
+      "マシェード"
+    ]
+  },
+  {
+    "canonical": "ヤトウモリ",
+    "surface_forms": [
+      "Salandit",
+      "ヤトウモリ"
+    ]
+  },
+  {
+    "canonical": "エンニュート",
+    "surface_forms": [
+      "Salazzle",
+      "エンニュート"
+    ]
+  },
+  {
+    "canonical": "ヌイコグマ",
+    "surface_forms": [
+      "Stufful",
+      "ヌイコグマ"
+    ]
+  },
+  {
+    "canonical": "キテルグマ",
+    "surface_forms": [
+      "Bewear",
+      "キテルグマ"
+    ]
+  },
+  {
+    "canonical": "アマカジ",
+    "surface_forms": [
+      "Bounsweet",
+      "アマカジ"
+    ]
+  },
+  {
+    "canonical": "アママイコ",
+    "surface_forms": [
+      "Steenee",
+      "アママイコ"
+    ]
+  },
+  {
+    "canonical": "アマージョ",
+    "surface_forms": [
+      "Tsareena",
+      "アマージョ"
+    ]
+  },
+  {
+    "canonical": "キュワワー",
+    "surface_forms": [
+      "Comfey",
+      "キュワワー"
+    ]
+  },
+  {
+    "canonical": "ヤレユータン",
+    "surface_forms": [
+      "Oranguru",
+      "ヤレユータン"
+    ]
+  },
+  {
+    "canonical": "ナゲツケサル",
+    "surface_forms": [
+      "Passimian",
+      "ナゲツケサル"
+    ]
+  },
+  {
+    "canonical": "コソクムシ",
+    "surface_forms": [
+      "Wimpod",
+      "コソクムシ"
+    ]
+  },
+  {
+    "canonical": "グソクムシャ",
+    "surface_forms": [
+      "Golisopod",
+      "グソクムシャ"
+    ]
+  },
+  {
+    "canonical": "スナバァ",
+    "surface_forms": [
+      "Sandygast",
+      "スナバァ"
+    ]
+  },
+  {
+    "canonical": "シロデスナ",
+    "surface_forms": [
+      "Palossand",
+      "シロデスナ"
+    ]
+  },
+  {
+    "canonical": "ナマコブシ",
+    "surface_forms": [
+      "Pyukumuku",
+      "ナマコブシ"
+    ]
+  },
+  {
+    "canonical": "タイプ：ヌル",
+    "surface_forms": [
+      "Type: Null",
+      "タイプ：ヌル"
+    ]
+  },
+  {
+    "canonical": "シルヴァディ",
+    "surface_forms": [
+      "Silvally",
+      "シルヴァディ"
+    ]
+  },
+  {
+    "canonical": "メテノ",
+    "surface_forms": [
+      "Minior",
+      "メテノ"
+    ]
+  },
+  {
+    "canonical": "ネッコアラ",
+    "surface_forms": [
+      "Komala",
+      "ネッコアラ"
+    ]
+  },
+  {
+    "canonical": "バクガメス",
+    "surface_forms": [
+      "Turtonator",
+      "バクガメス"
+    ]
+  },
+  {
+    "canonical": "トゲデマル",
+    "surface_forms": [
+      "Togedemaru",
+      "トゲデマル"
+    ]
+  },
+  {
+    "canonical": "ミミッキュ",
+    "surface_forms": [
+      "Mimikyu",
+      "ミミッキュ"
+    ]
+  },
+  {
+    "canonical": "ハギギシリ",
+    "surface_forms": [
+      "Bruxish",
+      "ハギギシリ"
+    ]
+  },
+  {
+    "canonical": "ジジーロン",
+    "surface_forms": [
+      "Drampa",
+      "ジジーロン"
+    ]
+  },
+  {
+    "canonical": "ダダリン",
+    "surface_forms": [
+      "Dhelmise",
+      "ダダリン"
+    ]
+  },
+  {
+    "canonical": "ジャラコ",
+    "surface_forms": [
+      "Jangmo-o",
+      "ジャラコ"
+    ]
+  },
+  {
+    "canonical": "ジャランゴ",
+    "surface_forms": [
+      "Hakamo-o",
+      "ジャランゴ"
+    ]
+  },
+  {
+    "canonical": "ジャラランガ",
+    "surface_forms": [
+      "Kommo-o",
+      "ジャラランガ"
+    ]
+  },
+  {
+    "canonical": "カプ・コケコ",
+    "surface_forms": [
+      "Tapu Koko",
+      "カプ・コケコ"
+    ]
+  },
+  {
+    "canonical": "カプ・テテフ",
+    "surface_forms": [
+      "Tapu Lele",
+      "カプ・テテフ"
+    ]
+  },
+  {
+    "canonical": "カプ・ブルル",
+    "surface_forms": [
+      "Tapu Bulu",
+      "カプ・ブルル"
+    ]
+  },
+  {
+    "canonical": "カプ・レヒレ",
+    "surface_forms": [
+      "Tapu Fini",
+      "カプ・レヒレ"
+    ]
+  },
+  {
+    "canonical": "コスモッグ",
+    "surface_forms": [
+      "Cosmog",
+      "コスモッグ"
+    ]
+  },
+  {
+    "canonical": "コスモウム",
+    "surface_forms": [
+      "Cosmoem",
+      "コスモウム"
+    ]
+  },
+  {
+    "canonical": "ソルガレオ",
+    "surface_forms": [
+      "Solgaleo",
+      "ソルガレオ"
+    ]
+  },
+  {
+    "canonical": "ルナアーラ",
+    "surface_forms": [
+      "Lunala",
+      "ルナアーラ"
+    ]
+  },
+  {
+    "canonical": "ウツロイド",
+    "surface_forms": [
+      "Nihilego",
+      "ウツロイド"
+    ]
+  },
+  {
+    "canonical": "マッシブーン",
+    "surface_forms": [
+      "Buzzwole",
+      "マッシブーン"
+    ]
+  },
+  {
+    "canonical": "フェローチェ",
+    "surface_forms": [
+      "Pheromosa",
+      "フェローチェ"
+    ]
+  },
+  {
+    "canonical": "デンジュモク",
+    "surface_forms": [
+      "Xurkitree",
+      "デンジュモク"
+    ]
+  },
+  {
+    "canonical": "テッカグヤ",
+    "surface_forms": [
+      "Celesteela",
+      "テッカグヤ"
+    ]
+  },
+  {
+    "canonical": "カミツルギ",
+    "surface_forms": [
+      "Kartana",
+      "カミツルギ"
+    ]
+  },
+  {
+    "canonical": "アクジキング",
+    "surface_forms": [
+      "Guzzlord",
+      "アクジキング"
+    ]
+  },
+  {
+    "canonical": "ネクロズマ",
+    "surface_forms": [
+      "Necrozma",
+      "ネクロズマ"
+    ]
+  },
+  {
+    "canonical": "マギアナ",
+    "surface_forms": [
+      "Magearna",
+      "マギアナ"
+    ]
+  },
+  {
+    "canonical": "マーシャドー",
+    "surface_forms": [
+      "Marshadow",
+      "マーシャドー"
+    ]
+  },
+  {
+    "canonical": "ベベノム",
+    "surface_forms": [
+      "Poipole",
+      "ベベノム"
+    ]
+  },
+  {
+    "canonical": "アーゴヨン",
+    "surface_forms": [
+      "Naganadel",
+      "アーゴヨン"
+    ]
+  },
+  {
+    "canonical": "ツンデツンデ",
+    "surface_forms": [
+      "Stakataka",
+      "ツンデツンデ"
+    ]
+  },
+  {
+    "canonical": "ズガドーン",
+    "surface_forms": [
+      "Blacephalon",
+      "ズガドーン"
+    ]
+  },
+  {
+    "canonical": "ゼラオラ",
+    "surface_forms": [
+      "Zeraora",
+      "ゼラオラ"
+    ]
+  },
+  {
+    "canonical": "メルタン",
+    "surface_forms": [
+      "Meltan",
+      "メルタン"
+    ]
+  },
+  {
+    "canonical": "メルメタル",
+    "surface_forms": [
+      "Melmetal",
+      "メルメタル"
+    ]
+  },
+  {
+    "canonical": "サルノリ",
+    "surface_forms": [
+      "Grookey",
+      "サルノリ"
+    ]
+  },
+  {
+    "canonical": "バチンキー",
+    "surface_forms": [
+      "Thwackey",
+      "バチンキー"
+    ]
+  },
+  {
+    "canonical": "ゴリランダー",
+    "surface_forms": [
+      "Rillaboom",
+      "ゴリランダー"
+    ]
+  },
+  {
+    "canonical": "ヒバニー",
+    "surface_forms": [
+      "Scorbunny",
+      "ヒバニー"
+    ]
+  },
+  {
+    "canonical": "ラビフット",
+    "surface_forms": [
+      "Raboot",
+      "ラビフット"
+    ]
+  },
+  {
+    "canonical": "エースバーン",
+    "surface_forms": [
+      "Cinderace",
+      "エースバーン"
+    ]
+  },
+  {
+    "canonical": "メッソン",
+    "surface_forms": [
+      "Sobble",
+      "メッソン"
+    ]
+  },
+  {
+    "canonical": "ジメレオン",
+    "surface_forms": [
+      "Drizzile",
+      "ジメレオン"
+    ]
+  },
+  {
+    "canonical": "インテレオン",
+    "surface_forms": [
+      "Inteleon",
+      "インテレオン"
+    ]
+  },
+  {
+    "canonical": "ホシガリス",
+    "surface_forms": [
+      "Skwovet",
+      "ホシガリス"
+    ]
+  },
+  {
+    "canonical": "ヨクバリス",
+    "surface_forms": [
+      "Greedent",
+      "ヨクバリス"
+    ]
+  },
+  {
+    "canonical": "ココガラ",
+    "surface_forms": [
+      "Rookidee",
+      "ココガラ"
+    ]
+  },
+  {
+    "canonical": "アオガラス",
+    "surface_forms": [
+      "Corvisquire",
+      "アオガラス"
+    ]
+  },
+  {
+    "canonical": "アーマーガア",
+    "surface_forms": [
+      "Corviknight",
+      "アーマーガア"
+    ]
+  },
+  {
+    "canonical": "サッチムシ",
+    "surface_forms": [
+      "Blipbug",
+      "サッチムシ"
+    ]
+  },
+  {
+    "canonical": "レドームシ",
+    "surface_forms": [
+      "Dottler",
+      "レドームシ"
+    ]
+  },
+  {
+    "canonical": "イオルブ",
+    "surface_forms": [
+      "Orbeetle",
+      "イオルブ"
+    ]
+  },
+  {
+    "canonical": "クスネ",
+    "surface_forms": [
+      "Nickit",
+      "クスネ"
+    ]
+  },
+  {
+    "canonical": "フォクスライ",
+    "surface_forms": [
+      "Thievul",
+      "フォクスライ"
+    ]
+  },
+  {
+    "canonical": "ヒメンカ",
+    "surface_forms": [
+      "Gossifleur",
+      "ヒメンカ"
+    ]
+  },
+  {
+    "canonical": "ワタシラガ",
+    "surface_forms": [
+      "Eldegoss",
+      "ワタシラガ"
+    ]
+  },
+  {
+    "canonical": "ウールー",
+    "surface_forms": [
+      "Wooloo",
+      "ウールー"
+    ]
+  },
+  {
+    "canonical": "バイウールー",
+    "surface_forms": [
+      "Dubwool",
+      "バイウールー"
+    ]
+  },
+  {
+    "canonical": "カムカメ",
+    "surface_forms": [
+      "Chewtle",
+      "カムカメ"
+    ]
+  },
+  {
+    "canonical": "カジリガメ",
+    "surface_forms": [
+      "Drednaw",
+      "カジリガメ"
+    ]
+  },
+  {
+    "canonical": "ワンパチ",
+    "surface_forms": [
+      "Yamper",
+      "ワンパチ"
+    ]
+  },
+  {
+    "canonical": "パルスワン",
+    "surface_forms": [
+      "Boltund",
+      "パルスワン"
+    ]
+  },
+  {
+    "canonical": "タンドン",
+    "surface_forms": [
+      "Rolycoly",
+      "タンドン"
+    ]
+  },
+  {
+    "canonical": "トロッゴン",
+    "surface_forms": [
+      "Carkol",
+      "トロッゴン"
+    ]
+  },
+  {
+    "canonical": "セキタンザン",
+    "surface_forms": [
+      "Coalossal",
+      "セキタンザン"
+    ]
+  },
+  {
+    "canonical": "カジッチュ",
+    "surface_forms": [
+      "Applin",
+      "カジッチュ"
+    ]
+  },
+  {
+    "canonical": "アップリュー",
+    "surface_forms": [
+      "Flapple",
+      "アップリュー"
+    ]
+  },
+  {
+    "canonical": "タルップル",
+    "surface_forms": [
+      "Appletun",
+      "タルップル"
+    ]
+  },
+  {
+    "canonical": "スナヘビ",
+    "surface_forms": [
+      "Silicobra",
+      "スナヘビ"
+    ]
+  },
+  {
+    "canonical": "サダイジャ",
+    "surface_forms": [
+      "Sandaconda",
+      "サダイジャ"
+    ]
+  },
+  {
+    "canonical": "ウッウ",
+    "surface_forms": [
+      "Cramorant",
+      "ウッウ"
+    ]
+  },
+  {
+    "canonical": "サシカマス",
+    "surface_forms": [
+      "Arrokuda",
+      "サシカマス"
+    ]
+  },
+  {
+    "canonical": "カマスジョー",
+    "surface_forms": [
+      "Barraskewda",
+      "カマスジョー"
+    ]
+  },
+  {
+    "canonical": "エレズン",
+    "surface_forms": [
+      "Toxel",
+      "エレズン"
+    ]
+  },
+  {
+    "canonical": "ストリンダー",
+    "surface_forms": [
+      "Toxtricity",
+      "ストリンダー"
+    ]
+  },
+  {
+    "canonical": "ヤクデ",
+    "surface_forms": [
+      "Sizzlipede",
+      "ヤクデ"
+    ]
+  },
+  {
+    "canonical": "マルヤクデ",
+    "surface_forms": [
+      "Centiskorch",
+      "マルヤクデ"
+    ]
+  },
+  {
+    "canonical": "タタッコ",
+    "surface_forms": [
+      "Clobbopus",
+      "タタッコ"
+    ]
+  },
+  {
+    "canonical": "オトスパス",
+    "surface_forms": [
+      "Grapploct",
+      "オトスパス"
+    ]
+  },
+  {
+    "canonical": "ヤバチャ",
+    "surface_forms": [
+      "Sinistea",
+      "ヤバチャ"
+    ]
+  },
+  {
+    "canonical": "ポットデス",
+    "surface_forms": [
+      "Polteageist",
+      "ポットデス"
+    ]
+  },
+  {
+    "canonical": "ミブリム",
+    "surface_forms": [
+      "Hatenna",
+      "ミブリム"
+    ]
+  },
+  {
+    "canonical": "テブリム",
+    "surface_forms": [
+      "Hattrem",
+      "テブリム"
+    ]
+  },
+  {
+    "canonical": "ブリムオン",
+    "surface_forms": [
+      "Hatterene",
+      "ブリムオン"
+    ]
+  },
+  {
+    "canonical": "ベロバー",
+    "surface_forms": [
+      "Impidimp",
+      "ベロバー"
+    ]
+  },
+  {
+    "canonical": "ギモー",
+    "surface_forms": [
+      "Morgrem",
+      "ギモー"
+    ]
+  },
+  {
+    "canonical": "オーロンゲ",
+    "surface_forms": [
+      "Grimmsnarl",
+      "オーロンゲ"
+    ]
+  },
+  {
+    "canonical": "タチフサグマ",
+    "surface_forms": [
+      "Obstagoon",
+      "タチフサグマ"
+    ]
+  },
+  {
+    "canonical": "ニャイキング",
+    "surface_forms": [
+      "Perrserker",
+      "ニャイキング"
+    ]
+  },
+  {
+    "canonical": "サニゴーン",
+    "surface_forms": [
+      "Cursola",
+      "サニゴーン"
+    ]
+  },
+  {
+    "canonical": "ネギガナイト",
+    "surface_forms": [
+      "Sirfetch’d",
+      "ネギガナイト"
+    ]
+  },
+  {
+    "canonical": "バリコオル",
+    "surface_forms": [
+      "Mr. Rime",
+      "バリコオル"
+    ]
+  },
+  {
+    "canonical": "デスバーン",
+    "surface_forms": [
+      "Runerigus",
+      "デスバーン"
+    ]
+  },
+  {
+    "canonical": "マホミル",
+    "surface_forms": [
+      "Milcery",
+      "マホミル"
+    ]
+  },
+  {
+    "canonical": "マホイップ",
+    "surface_forms": [
+      "Alcremie",
+      "マホイップ"
+    ]
+  },
+  {
+    "canonical": "タイレーツ",
+    "surface_forms": [
+      "Falinks",
+      "タイレーツ"
+    ]
+  },
+  {
+    "canonical": "バチンウニ",
+    "surface_forms": [
+      "Pincurchin",
+      "バチンウニ"
+    ]
+  },
+  {
+    "canonical": "ユキハミ",
+    "surface_forms": [
+      "Snom",
+      "ユキハミ"
+    ]
+  },
+  {
+    "canonical": "モスノウ",
+    "surface_forms": [
+      "Frosmoth",
+      "モスノウ"
+    ]
+  },
+  {
+    "canonical": "イシヘンジン",
+    "surface_forms": [
+      "Stonjourner",
+      "イシヘンジン"
+    ]
+  },
+  {
+    "canonical": "コオリッポ",
+    "surface_forms": [
+      "Eiscue",
+      "コオリッポ"
+    ]
+  },
+  {
+    "canonical": "イエッサン",
+    "surface_forms": [
+      "Indeedee",
+      "イエッサン"
+    ]
+  },
+  {
+    "canonical": "モルペコ",
+    "surface_forms": [
+      "Morpeko",
+      "モルペコ"
+    ]
+  },
+  {
+    "canonical": "ゾウドウ",
+    "surface_forms": [
+      "Cufant",
+      "ゾウドウ"
+    ]
+  },
+  {
+    "canonical": "ダイオウドウ",
+    "surface_forms": [
+      "Copperajah",
+      "ダイオウドウ"
+    ]
+  },
+  {
+    "canonical": "パッチラゴン",
+    "surface_forms": [
+      "Dracozolt",
+      "パッチラゴン"
+    ]
+  },
+  {
+    "canonical": "パッチルドン",
+    "surface_forms": [
+      "Arctozolt",
+      "パッチルドン"
+    ]
+  },
+  {
+    "canonical": "ウオノラゴン",
+    "surface_forms": [
+      "Dracovish",
+      "ウオノラゴン"
+    ]
+  },
+  {
+    "canonical": "ウオチルドン",
+    "surface_forms": [
+      "Arctovish",
+      "ウオチルドン"
+    ]
+  },
+  {
+    "canonical": "ジュラルドン",
+    "surface_forms": [
+      "Duraludon",
+      "ジュラルドン"
+    ]
+  },
+  {
+    "canonical": "ドラメシヤ",
+    "surface_forms": [
+      "Dreepy",
+      "ドラメシヤ"
+    ]
+  },
+  {
+    "canonical": "ドロンチ",
+    "surface_forms": [
+      "Drakloak",
+      "ドロンチ"
+    ]
+  },
+  {
+    "canonical": "ドラパルト",
+    "surface_forms": [
+      "Dragapult",
+      "ドラパルト"
+    ]
+  },
+  {
+    "canonical": "ザシアン",
+    "surface_forms": [
+      "Zacian",
+      "ザシアン"
+    ]
+  },
+  {
+    "canonical": "ザマゼンタ",
+    "surface_forms": [
+      "Zamazenta",
+      "ザマゼンタ"
+    ]
+  },
+  {
+    "canonical": "ムゲンダイナ",
+    "surface_forms": [
+      "Eternatus",
+      "ムゲンダイナ"
+    ]
+  },
+  {
+    "canonical": "ダクマ",
+    "surface_forms": [
+      "Kubfu",
+      "ダクマ"
+    ]
+  },
+  {
+    "canonical": "ウーラオス",
+    "surface_forms": [
+      "Urshifu",
+      "ウーラオス"
+    ]
+  },
+  {
+    "canonical": "ザルード",
+    "surface_forms": [
+      "Zarude",
+      "ザルード"
+    ]
+  },
+  {
+    "canonical": "レジエレキ",
+    "surface_forms": [
+      "Regieleki",
+      "レジエレキ"
+    ]
+  },
+  {
+    "canonical": "レジドラゴ",
+    "surface_forms": [
+      "Regidrago",
+      "レジドラゴ"
+    ]
+  },
+  {
+    "canonical": "ブリザポス",
+    "surface_forms": [
+      "Glastrier",
+      "ブリザポス"
+    ]
+  },
+  {
+    "canonical": "レイスポス",
+    "surface_forms": [
+      "Spectrier",
+      "レイスポス"
+    ]
+  },
+  {
+    "canonical": "バドレックス",
+    "surface_forms": [
+      "Calyrex",
+      "バドレックス"
+    ]
+  },
+  {
+    "canonical": "アヤシシ",
+    "surface_forms": [
+      "Wyrdeer",
+      "アヤシシ"
+    ]
+  },
+  {
+    "canonical": "バサギリ",
+    "surface_forms": [
+      "Kleavor",
+      "バサギリ"
+    ]
+  },
+  {
+    "canonical": "ガチグマ",
+    "surface_forms": [
+      "Ursaluna",
+      "ガチグマ"
+    ]
+  },
+  {
+    "canonical": "イダイトウ",
+    "surface_forms": [
+      "Basculegion",
+      "イダイトウ"
+    ]
+  },
+  {
+    "canonical": "オオニューラ",
+    "surface_forms": [
+      "Sneasler",
+      "オオニューラ"
+    ]
+  },
+  {
+    "canonical": "ハリーマン",
+    "surface_forms": [
+      "Overqwil",
+      "ハリーマン"
+    ]
+  },
+  {
+    "canonical": "ラブトロス",
+    "surface_forms": [
+      "Enamorus",
+      "ラブトロス"
+    ]
+  },
+  {
+    "canonical": "ニャオハ",
+    "surface_forms": [
+      "Sprigatito",
+      "ニャオハ"
+    ]
+  },
+  {
+    "canonical": "ニャローテ",
+    "surface_forms": [
+      "Floragato",
+      "ニャローテ"
+    ]
+  },
+  {
+    "canonical": "マスカーニャ",
+    "surface_forms": [
+      "Meowscarada",
+      "マスカーニャ"
+    ]
+  },
+  {
+    "canonical": "ホゲータ",
+    "surface_forms": [
+      "Fuecoco",
+      "ホゲータ"
+    ]
+  },
+  {
+    "canonical": "アチゲータ",
+    "surface_forms": [
+      "Crocalor",
+      "アチゲータ"
+    ]
+  },
+  {
+    "canonical": "ラウドボーン",
+    "surface_forms": [
+      "Skeledirge",
+      "ラウドボーン"
+    ]
+  },
+  {
+    "canonical": "クワッス",
+    "surface_forms": [
+      "Quaxly",
+      "クワッス"
+    ]
+  },
+  {
+    "canonical": "ウェルカモ",
+    "surface_forms": [
+      "Quaxwell",
+      "ウェルカモ"
+    ]
+  },
+  {
+    "canonical": "ウェーニバル",
+    "surface_forms": [
+      "Quaquaval",
+      "ウェーニバル"
+    ]
+  },
+  {
+    "canonical": "グルトン",
+    "surface_forms": [
+      "Lechonk",
+      "グルトン"
+    ]
+  },
+  {
+    "canonical": "パフュートン",
+    "surface_forms": [
+      "Oinkologne",
+      "パフュートン"
+    ]
+  },
+  {
+    "canonical": "タマンチュラ",
+    "surface_forms": [
+      "Tarountula",
+      "タマンチュラ"
+    ]
+  },
+  {
+    "canonical": "ワナイダー",
+    "surface_forms": [
+      "Spidops",
+      "ワナイダー"
+    ]
+  },
+  {
+    "canonical": "マメバッタ",
+    "surface_forms": [
+      "Nymble",
+      "マメバッタ"
+    ]
+  },
+  {
+    "canonical": "エクスレッグ",
+    "surface_forms": [
+      "Lokix",
+      "エクスレッグ"
+    ]
+  },
+  {
+    "canonical": "パモ",
+    "surface_forms": [
+      "Pawmi",
+      "パモ"
+    ]
+  },
+  {
+    "canonical": "パモット",
+    "surface_forms": [
+      "Pawmo",
+      "パモット"
+    ]
+  },
+  {
+    "canonical": "パーモット",
+    "surface_forms": [
+      "Pawmot",
+      "パーモット"
+    ]
+  },
+  {
+    "canonical": "ワッカネズミ",
+    "surface_forms": [
+      "Tandemaus",
+      "ワッカネズミ"
+    ]
+  },
+  {
+    "canonical": "イッカネズミ",
+    "surface_forms": [
+      "Maushold",
+      "イッカネズミ"
+    ]
+  },
+  {
+    "canonical": "パピモッチ",
+    "surface_forms": [
+      "Fidough",
+      "パピモッチ"
+    ]
+  },
+  {
+    "canonical": "バウッツェル",
+    "surface_forms": [
+      "Dachsbun",
+      "バウッツェル"
+    ]
+  },
+  {
+    "canonical": "ミニーブ",
+    "surface_forms": [
+      "Smoliv",
+      "ミニーブ"
+    ]
+  },
+  {
+    "canonical": "オリーニョ",
+    "surface_forms": [
+      "Dolliv",
+      "オリーニョ"
+    ]
+  },
+  {
+    "canonical": "オリーヴァ",
+    "surface_forms": [
+      "Arboliva",
+      "オリーヴァ"
+    ]
+  },
+  {
+    "canonical": "イキリンコ",
+    "surface_forms": [
+      "Squawkabilly",
+      "イキリンコ"
+    ]
+  },
+  {
+    "canonical": "コジオ",
+    "surface_forms": [
+      "Nacli",
+      "コジオ"
+    ]
+  },
+  {
+    "canonical": "ジオヅム",
+    "surface_forms": [
+      "Naclstack",
+      "ジオヅム"
+    ]
+  },
+  {
+    "canonical": "キョジオーン",
+    "surface_forms": [
+      "Garganacl",
+      "キョジオーン"
+    ]
+  },
+  {
+    "canonical": "カルボウ",
+    "surface_forms": [
+      "Charcadet",
+      "カルボウ"
+    ]
+  },
+  {
+    "canonical": "グレンアルマ",
+    "surface_forms": [
+      "Armarouge",
+      "グレンアルマ"
+    ]
+  },
+  {
+    "canonical": "ソウブレイズ",
+    "surface_forms": [
+      "Ceruledge",
+      "ソウブレイズ"
+    ]
+  },
+  {
+    "canonical": "ズピカ",
+    "surface_forms": [
+      "Tadbulb",
+      "ズピカ"
+    ]
+  },
+  {
+    "canonical": "ハラバリー",
+    "surface_forms": [
+      "Bellibolt",
+      "ハラバリー"
+    ]
+  },
+  {
+    "canonical": "カイデン",
+    "surface_forms": [
+      "Wattrel",
+      "カイデン"
+    ]
+  },
+  {
+    "canonical": "タイカイデン",
+    "surface_forms": [
+      "Kilowattrel",
+      "タイカイデン"
+    ]
+  },
+  {
+    "canonical": "オラチフ",
+    "surface_forms": [
+      "Maschiff",
+      "オラチフ"
+    ]
+  },
+  {
+    "canonical": "マフィティフ",
+    "surface_forms": [
+      "Mabosstiff",
+      "マフィティフ"
+    ]
+  },
+  {
+    "canonical": "シルシュルー",
+    "surface_forms": [
+      "Shroodle",
+      "シルシュルー"
+    ]
+  },
+  {
+    "canonical": "タギングル",
+    "surface_forms": [
+      "Grafaiai",
+      "タギングル"
+    ]
+  },
+  {
+    "canonical": "アノクサ",
+    "surface_forms": [
+      "Bramblin",
+      "アノクサ"
+    ]
+  },
+  {
+    "canonical": "アノホラグサ",
+    "surface_forms": [
+      "Brambleghast",
+      "アノホラグサ"
+    ]
+  },
+  {
+    "canonical": "ノノクラゲ",
+    "surface_forms": [
+      "Toedscool",
+      "ノノクラゲ"
+    ]
+  },
+  {
+    "canonical": "リククラゲ",
+    "surface_forms": [
+      "Toedscruel",
+      "リククラゲ"
+    ]
+  },
+  {
+    "canonical": "ガケガニ",
+    "surface_forms": [
+      "Klawf",
+      "ガケガニ"
+    ]
+  },
+  {
+    "canonical": "カプサイジ",
+    "surface_forms": [
+      "Capsakid",
+      "カプサイジ"
+    ]
+  },
+  {
+    "canonical": "スコヴィラン",
+    "surface_forms": [
+      "Scovillain",
+      "スコヴィラン"
+    ]
+  },
+  {
+    "canonical": "シガロコ",
+    "surface_forms": [
+      "Rellor",
+      "シガロコ"
+    ]
+  },
+  {
+    "canonical": "ベラカス",
+    "surface_forms": [
+      "Rabsca",
+      "ベラカス"
+    ]
+  },
+  {
+    "canonical": "ヒラヒナ",
+    "surface_forms": [
+      "Flittle",
+      "ヒラヒナ"
+    ]
+  },
+  {
+    "canonical": "クエスパトラ",
+    "surface_forms": [
+      "Espathra",
+      "クエスパトラ"
+    ]
+  },
+  {
+    "canonical": "カヌチャン",
+    "surface_forms": [
+      "Tinkatink",
+      "カヌチャン"
+    ]
+  },
+  {
+    "canonical": "ナカヌチャン",
+    "surface_forms": [
+      "Tinkatuff",
+      "ナカヌチャン"
+    ]
+  },
+  {
+    "canonical": "デカヌチャン",
+    "surface_forms": [
+      "Tinkaton",
+      "デカヌチャン"
+    ]
+  },
+  {
+    "canonical": "ウミディグダ",
+    "surface_forms": [
+      "Wiglett",
+      "ウミディグダ"
+    ]
+  },
+  {
+    "canonical": "ウミトリオ",
+    "surface_forms": [
+      "Wugtrio",
+      "ウミトリオ"
+    ]
+  },
+  {
+    "canonical": "オトシドリ",
+    "surface_forms": [
+      "Bombirdier",
+      "オトシドリ"
+    ]
+  },
+  {
+    "canonical": "ナミイルカ",
+    "surface_forms": [
+      "Finizen",
+      "ナミイルカ"
+    ]
+  },
+  {
+    "canonical": "イルカマン",
+    "surface_forms": [
+      "Palafin",
+      "イルカマン"
+    ]
+  },
+  {
+    "canonical": "ブロロン",
+    "surface_forms": [
+      "Varoom",
+      "ブロロン"
+    ]
+  },
+  {
+    "canonical": "ブロロローム",
+    "surface_forms": [
+      "Revavroom",
+      "ブロロローム"
+    ]
+  },
+  {
+    "canonical": "モトトカゲ",
+    "surface_forms": [
+      "Cyclizar",
+      "モトトカゲ"
+    ]
+  },
+  {
+    "canonical": "ミミズズ",
+    "surface_forms": [
+      "Orthworm",
+      "ミミズズ"
+    ]
+  },
+  {
+    "canonical": "キラーメ",
+    "surface_forms": [
+      "Glimmet",
+      "キラーメ"
+    ]
+  },
+  {
+    "canonical": "キラフロル",
+    "surface_forms": [
+      "Glimmora",
+      "キラフロル"
+    ]
+  },
+  {
+    "canonical": "ボチ",
+    "surface_forms": [
+      "Greavard",
+      "ボチ"
+    ]
+  },
+  {
+    "canonical": "ハカドッグ",
+    "surface_forms": [
+      "Houndstone",
+      "ハカドッグ"
+    ]
+  },
+  {
+    "canonical": "カラミンゴ",
+    "surface_forms": [
+      "Flamigo",
+      "カラミンゴ"
+    ]
+  },
+  {
+    "canonical": "アルクジラ",
+    "surface_forms": [
+      "Cetoddle",
+      "アルクジラ"
+    ]
+  },
+  {
+    "canonical": "ハルクジラ",
+    "surface_forms": [
+      "Cetitan",
+      "ハルクジラ"
+    ]
+  },
+  {
+    "canonical": "ミガルーサ",
+    "surface_forms": [
+      "Veluza",
+      "ミガルーサ"
+    ]
+  },
+  {
+    "canonical": "ヘイラッシャ",
+    "surface_forms": [
+      "Dondozo",
+      "ヘイラッシャ"
+    ]
+  },
+  {
+    "canonical": "シャリタツ",
+    "surface_forms": [
+      "Tatsugiri",
+      "シャリタツ"
+    ]
+  },
+  {
+    "canonical": "コノヨザル",
+    "surface_forms": [
+      "Annihilape",
+      "コノヨザル"
+    ]
+  },
+  {
+    "canonical": "ドオー",
+    "surface_forms": [
+      "Clodsire",
+      "ドオー"
+    ]
+  },
+  {
+    "canonical": "リキキリン",
+    "surface_forms": [
+      "Farigiraf",
+      "リキキリン"
+    ]
+  },
+  {
+    "canonical": "ノココッチ",
+    "surface_forms": [
+      "Dudunsparce",
+      "ノココッチ"
+    ]
+  },
+  {
+    "canonical": "ドドゲザン",
+    "surface_forms": [
+      "Kingambit",
+      "ドドゲザン"
+    ]
+  },
+  {
+    "canonical": "イダイナキバ",
+    "surface_forms": [
+      "Great Tusk",
+      "イダイナキバ"
+    ]
+  },
+  {
+    "canonical": "サケブシッポ",
+    "surface_forms": [
+      "Scream Tail",
+      "サケブシッポ"
+    ]
+  },
+  {
+    "canonical": "アラブルタケ",
+    "surface_forms": [
+      "Brute Bonnet",
+      "アラブルタケ"
+    ]
+  },
+  {
+    "canonical": "ハバタクカミ",
+    "surface_forms": [
+      "Flutter Mane",
+      "ハバタクカミ"
+    ]
+  },
+  {
+    "canonical": "チヲハウハネ",
+    "surface_forms": [
+      "Slither Wing",
+      "チヲハウハネ"
+    ]
+  },
+  {
+    "canonical": "スナノケガワ",
+    "surface_forms": [
+      "Sandy Shocks",
+      "スナノケガワ"
+    ]
+  },
+  {
+    "canonical": "テツノワダチ",
+    "surface_forms": [
+      "Iron Treads",
+      "テツノワダチ"
+    ]
+  },
+  {
+    "canonical": "テツノツツミ",
+    "surface_forms": [
+      "Iron Bundle",
+      "テツノツツミ"
+    ]
+  },
+  {
+    "canonical": "テツノカイナ",
+    "surface_forms": [
+      "Iron Hands",
+      "テツノカイナ"
+    ]
+  },
+  {
+    "canonical": "テツノコウベ",
+    "surface_forms": [
+      "Iron Jugulis",
+      "テツノコウベ"
+    ]
+  },
+  {
+    "canonical": "テツノドクガ",
+    "surface_forms": [
+      "Iron Moth",
+      "テツノドクガ"
+    ]
+  },
+  {
+    "canonical": "テツノイバラ",
+    "surface_forms": [
+      "Iron Thorns",
+      "テツノイバラ"
+    ]
+  },
+  {
+    "canonical": "セビエ",
+    "surface_forms": [
+      "Frigibax",
+      "セビエ"
+    ]
+  },
+  {
+    "canonical": "セゴール",
+    "surface_forms": [
+      "Arctibax",
+      "セゴール"
+    ]
+  },
+  {
+    "canonical": "セグレイブ",
+    "surface_forms": [
+      "Baxcalibur",
+      "セグレイブ"
+    ]
+  },
+  {
+    "canonical": "コレクレー",
+    "surface_forms": [
+      "Gimmighoul",
+      "コレクレー"
+    ]
+  },
+  {
+    "canonical": "サーフゴー",
+    "surface_forms": [
+      "Gholdengo",
+      "サーフゴー"
+    ]
+  },
+  {
+    "canonical": "チオンジェン",
+    "surface_forms": [
+      "Wo-Chien",
+      "チオンジェン"
+    ]
+  },
+  {
+    "canonical": "パオジアン",
+    "surface_forms": [
+      "Chien-Pao",
+      "パオジアン"
+    ]
+  },
+  {
+    "canonical": "ディンルー",
+    "surface_forms": [
+      "Ting-Lu",
+      "ディンルー"
+    ]
+  },
+  {
+    "canonical": "イーユイ",
+    "surface_forms": [
+      "Chi-Yu",
+      "イーユイ"
+    ]
+  },
+  {
+    "canonical": "トドロクツキ",
+    "surface_forms": [
+      "Roaring Moon",
+      "トドロクツキ"
+    ]
+  },
+  {
+    "canonical": "テツノブジン",
+    "surface_forms": [
+      "Iron Valiant",
+      "テツノブジン"
+    ]
+  },
+  {
+    "canonical": "コライドン",
+    "surface_forms": [
+      "Koraidon",
+      "コライドン"
+    ]
+  },
+  {
+    "canonical": "ミライドン",
+    "surface_forms": [
+      "Miraidon",
+      "ミライドン"
+    ]
+  },
+  {
+    "canonical": "ウネルミナモ",
+    "surface_forms": [
+      "Walking Wake",
+      "ウネルミナモ"
+    ]
+  },
+  {
+    "canonical": "テツノイサハ",
+    "surface_forms": [
+      "Iron Leaves",
+      "テツノイサハ"
+    ]
+  },
+  {
+    "canonical": "カミッチュ",
+    "surface_forms": [
+      "Dipplin",
+      "カミッチュ"
+    ]
+  },
+  {
+    "canonical": "チャデス",
+    "surface_forms": [
+      "Poltchageist",
+      "チャデス"
+    ]
+  },
+  {
+    "canonical": "ヤバソチャ",
+    "surface_forms": [
+      "Sinistcha",
+      "ヤバソチャ"
+    ]
+  },
+  {
+    "canonical": "イイネイヌ",
+    "surface_forms": [
+      "Okidogi",
+      "イイネイヌ"
+    ]
+  },
+  {
+    "canonical": "マシマシラ",
+    "surface_forms": [
+      "Munkidori",
+      "マシマシラ"
+    ]
+  },
+  {
+    "canonical": "キチキギス",
+    "surface_forms": [
+      "Fezandipiti",
+      "キチキギス"
+    ]
+  },
+  {
+    "canonical": "オーガポン",
+    "surface_forms": [
+      "Ogerpon",
+      "オーガポン"
+    ]
+  },
+  {
+    "canonical": "ブリジュラス",
+    "surface_forms": [
+      "Archaludon",
+      "ブリジュラス"
+    ]
+  },
+  {
+    "canonical": "カミツオロチ",
+    "surface_forms": [
+      "Hydrapple",
+      "カミツオロチ"
+    ]
+  },
+  {
+    "canonical": "ウガツホムラ",
+    "surface_forms": [
+      "Gouging Fire",
+      "ウガツホムラ"
+    ]
+  },
+  {
+    "canonical": "タケルライコ",
+    "surface_forms": [
+      "Raging Bolt",
+      "タケルライコ"
+    ]
+  },
+  {
+    "canonical": "テツノイワオ",
+    "surface_forms": [
+      "Iron Boulder",
+      "テツノイワオ"
+    ]
+  },
+  {
+    "canonical": "テツノカシラ",
+    "surface_forms": [
+      "Iron Crown",
+      "テツノカシラ"
+    ]
+  },
+  {
+    "canonical": "テラパゴス",
+    "surface_forms": [
+      "Terapagos",
+      "テラパゴス"
+    ]
+  },
+  {
+    "canonical": "モモワロウ",
+    "surface_forms": [
+      "Pecharunt",
+      "モモワロウ"
+    ]
+  }
+]
