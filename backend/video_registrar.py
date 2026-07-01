@@ -50,6 +50,12 @@ def register_videos(videos: list[dict]) -> None:
         description = snippet.get("description", "")
         tags = snippet.get("tags", [])
 
+        duration_seconds = youtube_client.parse_duration_seconds(
+            video.get("contentDetails", {}).get("duration")
+        )
+        if duration_seconds is not None and duration_seconds <= config.MIN_VIDEO_DURATION_SECONDS:
+            continue
+
         discovered_via = classify_discovery(title, description, tags)
         if discovered_via is None:
             continue
@@ -58,7 +64,7 @@ def register_videos(videos: list[dict]) -> None:
         if not pokemon_names:
             continue
 
-        candidate_videos.append((video, discovered_via))
+        candidate_videos.append((video, discovered_via, duration_seconds))
         candidates_by_key[video["id"]] = (title, pokemon_names)
 
     if not candidate_videos:
@@ -71,11 +77,11 @@ def register_videos(videos: list[dict]) -> None:
     filtered_by_key = filter_used_pokemon_batch(candidates_by_key)
 
     relevant_videos = [
-        (video, discovered_via, filtered_by_key[video["id"]])
-        for video, discovered_via in candidate_videos
+        (video, discovered_via, duration_seconds, filtered_by_key[video["id"]])
+        for video, discovered_via, duration_seconds in candidate_videos
     ]
 
-    channel_ids = [v["snippet"]["channelId"] for v, _, _ in relevant_videos]
+    channel_ids = [v["snippet"]["channelId"] for v, _, _, _ in relevant_videos]
     channels = youtube_client.get_channels_details(channel_ids)
 
     channel_rows = [
@@ -91,7 +97,7 @@ def register_videos(videos: list[dict]) -> None:
 
     video_rows = []
     video_pokemon_rows = []
-    for video, discovered_via, pokemon_names in relevant_videos:
+    for video, discovered_via, duration_seconds, pokemon_names in relevant_videos:
         snippet = video["snippet"]
         video_id = video["id"]
 
@@ -103,6 +109,7 @@ def register_videos(videos: list[dict]) -> None:
                 "published_at": snippet["publishedAt"],
                 "channel_id": snippet["channelId"],
                 "discovered_via": discovered_via,
+                "duration_seconds": duration_seconds,
             }
         )
 

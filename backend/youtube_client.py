@@ -1,8 +1,22 @@
+import re
+
 from googleapiclient.discovery import build
 
 import config
 
 _youtube = None
+
+_ISO8601_DURATION_RE = re.compile(r"^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$")
+
+
+def parse_duration_seconds(duration: str) -> int | None:
+    """Parse an ISO 8601 duration (e.g. "PT2M35S") into seconds, or None if
+    unparseable (e.g. an ongoing livestream/premiere reports "P0D")."""
+    match = _ISO8601_DURATION_RE.match(duration or "")
+    if not match:
+        return None
+    hours, minutes, seconds = (int(g) if g else 0 for g in match.groups())
+    return hours * 3600 + minutes * 60 + seconds
 
 
 def get_youtube():
@@ -46,14 +60,16 @@ def search_video_ids(query: str, published_after: str, max_pages: int = 5) -> li
 
 
 def get_videos_details(video_ids: list[str]) -> list[dict]:
-    """Fetch snippet+statistics for up to 50 video ids per call (batched)."""
+    """Fetch snippet+statistics+contentDetails for up to 50 video ids per
+    call (batched). contentDetails.duration is used to filter out very
+    short videos (see config.MIN_VIDEO_DURATION_SECONDS)."""
     youtube = get_youtube()
     results = []
     for i in range(0, len(video_ids), 50):
         batch = video_ids[i : i + 50]
         response = (
             youtube.videos()
-            .list(part="snippet,statistics", id=",".join(batch))
+            .list(part="snippet,statistics,contentDetails", id=",".join(batch))
             .execute()
         )
         results.extend(response.get("items", []))

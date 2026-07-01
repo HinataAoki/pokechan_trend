@@ -26,6 +26,10 @@ HASHTAGS = ["#ポケチャン", "#ポケモンチャンピオンズ"]
 TITLE_KEYWORDS = ["ポケモンチャンピオンズ", "ポケチャン"]
 GAME_TITLE_KEYWORDS = ["Pokémon Champions", "Pokemon Champions"]
 
+# Videos this short or shorter are excluded entirely (typically low-effort
+# clips/#shorts reposts that don't represent a real "use" of a Pokemon).
+MIN_VIDEO_DURATION_SECONDS = 180
+
 # Only videos still within this many hours of publication are tracked for snapshots.
 MAX_TRACKING_HOURS = 144
 SNAPSHOT_OFFSETS_HOURS = [24, 48, 72, 96, 108, 120, 144]

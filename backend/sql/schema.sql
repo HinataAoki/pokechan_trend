@@ -21,6 +21,7 @@ create table if not exists videos (
     published_at timestamptz not null,
     channel_id text not null references channels(channel_id),
     discovered_via text not null check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title')),
+    duration_seconds int,
     created_at timestamptz not null default now()
 );
 
@@ -29,6 +30,9 @@ create table if not exists videos (
 alter table videos drop constraint if exists videos_discovered_via_check;
 alter table videos add constraint videos_discovered_via_check
     check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title'));
+
+-- Migration: add duration_seconds if this table already existed without it.
+alter table videos add column if not exists duration_seconds int;
 
 create index if not exists idx_videos_published_at on videos(published_at);
 
