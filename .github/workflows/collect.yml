@@ -18,18 +18,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --locked
 
       - name: Discover new videos
-        run: python collector.py
+        run: uv run python collector.py
 
       - name: Take due view-count snapshots
-        run: python snapshotter.py
+        run: uv run python snapshotter.py
 
       - name: Recompute forecast
-        run: python forecaster.py
+        run: uv run python forecaster.py

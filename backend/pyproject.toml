@@ -1,0 +1,11 @@
+[project]
+name = "pokechan-trend-backend"
+version = "0.1.0"
+description = "Data collection and forecast pipeline for the Pokemon Champions usage calendar"
+requires-python = ">=3.11"
+dependencies = [
+    "google-api-python-client==2.149.0",
+    "python-dotenv==1.0.1",
+    "supabase>=2.15",
+    "websockets>=13,<16",
+]
