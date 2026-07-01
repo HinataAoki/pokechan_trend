@@ -12,20 +12,36 @@ def get_youtube():
     return _youtube
 
 
-def search_video_ids(query: str, max_results: int = 50) -> list[str]:
-    """Search recent videos matching a text query, return video ids."""
+def search_video_ids(query: str, published_after: str, max_pages: int = 10) -> list[str]:
+    """Search videos matching a text query published since `published_after`
+    (RFC3339 timestamp), paginating through all results rather than just the
+    first 50 - with `order="date"` and no date bound, videos can get pushed
+    off the first page (and never discovered) once upload volume is high."""
     youtube = get_youtube()
     video_ids = []
-    request = youtube.search().list(
-        part="id",
-        q=query,
-        type="video",
-        order="date",
-        maxResults=min(max_results, 50),
-    )
-    response = request.execute()
-    for item in response.get("items", []):
-        video_ids.append(item["id"]["videoId"])
+    page_token = None
+
+    for _ in range(max_pages):
+        response = (
+            youtube.search()
+            .list(
+                part="id",
+                q=query,
+                type="video",
+                order="date",
+                publishedAfter=published_after,
+                maxResults=50,
+                pageToken=page_token,
+            )
+            .execute()
+        )
+        for item in response.get("items", []):
+            video_ids.append(item["id"]["videoId"])
+
+        page_token = response.get("nextPageToken")
+        if not page_token:
+            break
+
     return video_ids
 
 

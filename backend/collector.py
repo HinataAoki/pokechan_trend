@@ -4,6 +4,8 @@ Run standalone: `python collector.py`
 Meant to run once per scheduled workflow invocation, before snapshotter.py.
 """
 
+from datetime import datetime, timedelta, timezone
+
 import config
 import youtube_client
 from pokemon_matcher import match_pokemon
@@ -15,13 +17,20 @@ def _classify_discovery(title: str, description: str, tags: list[str]) -> str | 
     are all fair signals here - this only decides relevance, not which
     Pokemon are shown (see match_pokemon below, which is title-only)."""
     haystack_title = title or ""
-    haystack_rest = "\n".join([description or "", "\n".join(tags or [])])
+    haystack_description = description or ""
+    haystack_tags = "\n".join(tags or [])
 
-    if any(kw in haystack_title for kw in config.TITLE_KEYWORDS):
+    game_keywords = config.TITLE_KEYWORDS + config.GAME_TITLE_KEYWORDS
+
+    if any(kw in haystack_title for kw in game_keywords):
         return "title_keyword"
-    if any(tag in haystack_rest for tag in config.HASHTAGS):
+    if any(tag in haystack_description for tag in config.HASHTAGS):
         return "hashtag"
-    if any(kw in haystack_title or kw in haystack_rest for kw in config.GAME_TITLE_KEYWORDS):
+    # YouTube tags rarely include the "#" prefix, so match the bare keywords
+    # there too (e.g. a tag literally set to "ポケモンチャンピオンズ").
+    if any(kw in haystack_tags for kw in game_keywords):
+        return "tag"
+    if any(kw in haystack_description for kw in game_keywords):
         return "game_title"
     return None
 
@@ -29,9 +38,13 @@ def _classify_discovery(title: str, description: str, tags: list[str]) -> str | 
 def collect() -> None:
     client = get_client()
 
+    published_after = (
+        datetime.now(timezone.utc) - timedelta(hours=config.SEARCH_LOOKBACK_HOURS)
+    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+
     video_ids: set[str] = set()
     for query in config.SEARCH_QUERIES:
-        video_ids.update(youtube_client.search_video_ids(query))
+        video_ids.update(youtube_client.search_video_ids(query, published_after))
 
     if not video_ids:
         print("no candidate videos found")

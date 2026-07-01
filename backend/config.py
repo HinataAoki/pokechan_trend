@@ -17,9 +17,15 @@ SEARCH_QUERIES = [
 
 # Hashtags/keywords checked against title, description and tags.
 HASHTAGS = ["#ポケチャン", "#ポケモンチャンピオンズ"]
-TITLE_KEYWORDS = ["ポケモンチャンピオンズ"]
+TITLE_KEYWORDS = ["ポケモンチャンピオンズ", "ポケチャン"]
 GAME_TITLE_KEYWORDS = ["Pokémon Champions", "Pokemon Champions"]
 
 # Only videos still within this many hours of publication are tracked for snapshots.
 MAX_TRACKING_HOURS = 144
 SNAPSHOT_OFFSETS_HOURS = [24, 48, 72, 96, 108, 120, 144]
+
+# How far back to search for candidate videos each run. Should comfortably
+# exceed the scheduled run interval so a slow/missed run doesn't lose videos,
+# while staying within MAX_TRACKING_HOURS since older videos can't be
+# meaningfully snapshotted anyway.
+SEARCH_LOOKBACK_HOURS = MAX_TRACKING_HOURS

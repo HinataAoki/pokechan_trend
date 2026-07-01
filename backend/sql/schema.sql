@@ -20,9 +20,15 @@ create table if not exists videos (
     title text not null,
     published_at timestamptz not null,
     channel_id text not null references channels(channel_id),
-    discovered_via text not null check (discovered_via in ('title_keyword', 'hashtag', 'game_title')),
+    discovered_via text not null check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title')),
     created_at timestamptz not null default now()
 );
+
+-- Migration: widen the check constraint if this table already existed
+-- with the older, narrower list of allowed discovered_via values.
+alter table videos drop constraint if exists videos_discovered_via_check;
+alter table videos add constraint videos_discovered_via_check
+    check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title'));
 
 create index if not exists idx_videos_published_at on videos(published_at);
 

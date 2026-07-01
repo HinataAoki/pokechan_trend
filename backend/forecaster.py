@@ -119,6 +119,15 @@ def forecast() -> None:
                     }
                 )
 
+    date_strs = [d.isoformat() for d in dates]
+
+    # Fully replace these tables for the computed date window rather than
+    # just upserting - otherwise a pokemon/video association that no longer
+    # applies (e.g. a corrected match, or a video that dropped out of the
+    # lookback window) leaves a stale row behind forever.
+    client.table("pokemon_daily_forecast").delete().in_("date", date_strs).execute()
+    client.table("pokemon_video_contribution").delete().in_("date", date_strs).execute()
+
     if not forecast_rows:
         print("no forecast rows computed")
         return
@@ -130,7 +139,7 @@ def forecast() -> None:
     client.table("pokemon_daily_forecast").upsert(rows).execute()
     client.table("pokemon_video_contribution").upsert(contribution_rows).execute()
     print(
-        f"upserted {len(rows)} forecast rows and {len(contribution_rows)} "
+        f"replaced {len(rows)} forecast rows and {len(contribution_rows)} "
         f"contribution rows across {len(dates)} dates"
     )
 
