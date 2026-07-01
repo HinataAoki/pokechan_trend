@@ -76,3 +76,60 @@ create policy "public read forecast"
     using (true);
 
 -- No insert/update/delete policy for anon -> only service_role can write.
+
+-- ==========================================================
+-- Public table: which videos contributed to a given date/pokemon
+-- score, so the frontend can show "influential videos" when a
+-- calendar day is tapped. Only video-identifying fields needed for
+-- display are exposed here (title/url/published_at/contribution) -
+-- the raw videos/channels tables above remain fully private.
+-- ==========================================================
+
+create table if not exists pokemon_video_contribution (
+    date date not null,
+    pokemon_name text not null,
+    video_id text not null,
+    video_title text not null,
+    youtube_url text not null,
+    published_at timestamptz not null,
+    contribution_score numeric not null,
+    primary key (date, pokemon_name, video_id)
+);
+
+create index if not exists idx_contribution_date_pokemon
+    on pokemon_video_contribution(date, pokemon_name);
+
+alter table pokemon_video_contribution enable row level security;
+
+drop policy if exists "public read contribution" on pokemon_video_contribution;
+create policy "public read contribution"
+    on pokemon_video_contribution
+    for select
+    to anon
+    using (true);
+
+-- ==========================================================
+-- Public table + storage bucket: cached Pokemon icon images.
+-- Images are scraped once from an external source and re-hosted here
+-- so the frontend never hotlinks a third-party site. Populated by
+-- backend/pokemon_images.py (service_role writes, anon SELECT-only).
+-- ==========================================================
+
+insert into storage.buckets (id, name, public)
+values ('pokemon-icons', 'pokemon-icons', true)
+on conflict (id) do nothing;
+
+create table if not exists pokemon_images (
+    pokemon_name text primary key,
+    image_url text not null,
+    fetched_at timestamptz not null default now()
+);
+
+alter table pokemon_images enable row level security;
+
+drop policy if exists "public read pokemon images" on pokemon_images;
+create policy "public read pokemon images"
+    on pokemon_images
+    for select
+    to anon
+    using (true);

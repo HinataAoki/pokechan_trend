@@ -37,7 +37,7 @@ def forecast() -> None:
 
     videos_resp = (
         client.table("videos")
-        .select("video_id, published_at, channel_id")
+        .select("video_id, title, youtube_url, published_at, channel_id")
         .gte("published_at", lookback_start.isoformat())
         .execute()
     )
@@ -85,6 +85,7 @@ def forecast() -> None:
     ]
 
     forecast_rows: dict[tuple, float] = defaultdict(float)
+    contribution_rows = []
     for video in videos:
         pokemon_names = pokemon_by_video.get(video["video_id"])
         if not pokemon_names:
@@ -106,6 +107,17 @@ def forecast() -> None:
                 continue
             for pokemon_name in pokemon_names:
                 forecast_rows[(date, pokemon_name)] += score
+                contribution_rows.append(
+                    {
+                        "date": date.isoformat(),
+                        "pokemon_name": pokemon_name,
+                        "video_id": video["video_id"],
+                        "video_title": video["title"],
+                        "youtube_url": video["youtube_url"],
+                        "published_at": video["published_at"],
+                        "contribution_score": round(score, 2),
+                    }
+                )
 
     if not forecast_rows:
         print("no forecast rows computed")
@@ -116,7 +128,11 @@ def forecast() -> None:
         for (date, pokemon_name), score in forecast_rows.items()
     ]
     client.table("pokemon_daily_forecast").upsert(rows).execute()
-    print(f"upserted {len(rows)} forecast rows across {len(dates)} dates")
+    client.table("pokemon_video_contribution").upsert(contribution_rows).execute()
+    print(
+        f"upserted {len(rows)} forecast rows and {len(contribution_rows)} "
+        f"contribution rows across {len(dates)} dates"
+    )
 
 
 if __name__ == "__main__":

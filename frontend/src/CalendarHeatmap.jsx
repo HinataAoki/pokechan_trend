@@ -18,7 +18,7 @@ function weekdayLabel(dateStr) {
   return ["日", "月", "火", "水", "木", "金", "土"][d.getUTCDay()];
 }
 
-export default function CalendarHeatmap({ dates, scoreByDate, today }) {
+export default function CalendarHeatmap({ dates, scoreByDate, today, onDateClick }) {
   const maxScore = Math.max(1, ...Object.values(scoreByDate));
 
   return (
@@ -31,17 +31,19 @@ export default function CalendarHeatmap({ dates, scoreByDate, today }) {
           const isToday = date === today;
           const isFuture = date > today;
           return (
-            <div
+            <button
               key={date}
+              type="button"
               className={`calendar-cell${isToday ? " calendar-cell-today" : ""}`}
               style={{ backgroundColor: LEVEL_COLORS[level] }}
               title={`${date}: score ${score.toFixed(1)}`}
+              onClick={() => onDateClick?.(date)}
             >
               <div className="calendar-cell-weekday">{weekdayLabel(date)}</div>
               <div className="calendar-cell-date">{formatDate(date)}</div>
               <div className="calendar-cell-score">{score > 0 ? score.toFixed(0) : "-"}</div>
               {isFuture && <div className="calendar-cell-forecast-tag">予想</div>}
-            </div>
+            </button>
           );
         })}
       </div>

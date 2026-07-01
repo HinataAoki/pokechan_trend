@@ -29,6 +29,9 @@ jobs:
       - name: Discover new videos
         run: uv run python collector.py
 
+      - name: Cache missing pokemon icons
+        run: uv run python pokemon_images.py
+
       - name: Take due view-count snapshots
         run: uv run python snapshotter.py
 

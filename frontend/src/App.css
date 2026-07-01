@@ -47,6 +47,12 @@ header h1 {
   justify-content: center;
   border: 2px solid transparent;
   position: relative;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.calendar-cell:hover {
+  filter: brightness(0.95);
 }
 
 .calendar-cell-today {
@@ -90,4 +96,147 @@ header h1 {
   height: 18px;
   border-radius: 4px;
   display: inline-block;
+}
+
+.calendar-hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.pokemon-select-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 6px;
+  object-fit: contain;
+}
+
+.top3 {
+  margin-top: 1.5rem;
+}
+
+.top3 h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.top3-cards {
+  display: flex;
+  gap: 12px;
+}
+
+.top3-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+}
+
+.top3-card:hover {
+  background: #f0f0f0;
+}
+
+.top3-rank {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-weight: 700;
+  color: #999;
+}
+
+.top3-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.top3-icon-placeholder {
+  background: #eee;
+  border-radius: 50%;
+}
+
+.top3-name {
+  font-weight: 600;
+}
+
+.top3-score {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 480px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 1.5rem;
+}
+
+.contribution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contribution-list li {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+
+.contribution-list a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contribution-list a:hover {
+  text-decoration: underline;
+}
+
+.contribution-meta {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 2px;
 }
