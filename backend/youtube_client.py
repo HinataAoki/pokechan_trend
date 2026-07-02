@@ -76,6 +76,52 @@ def get_videos_details(video_ids: list[str]) -> list[dict]:
     return results
 
 
+def get_channel_by_handle(handle: str) -> dict | None:
+    """Resolve an @handle (without the @) to its channel snippet+statistics."""
+    youtube = get_youtube()
+    response = youtube.channels().list(part="snippet,statistics", forHandle=handle).execute()
+    items = response.get("items", [])
+    return items[0] if items else None
+
+
+def fetch_channel_video_ids_since(channel_id: str, published_after: str) -> list[str]:
+    """Page through a channel's uploads playlist (cheap: 1 unit/page,
+    unlike search.list) collecting video ids published since `published_after`
+    (RFC3339 timestamp). The uploads playlist is newest-first, so pagination
+    stops as soon as an older video is seen."""
+    youtube = get_youtube()
+    uploads_playlist_id = "UU" + channel_id[2:]
+    video_ids = []
+    page_token = None
+
+    while True:
+        response = (
+            youtube.playlistItems()
+            .list(
+                part="contentDetails",
+                playlistId=uploads_playlist_id,
+                maxResults=50,
+                pageToken=page_token,
+            )
+            .execute()
+        )
+
+        reached_older_videos = False
+        for item in response.get("items", []):
+            details = item["contentDetails"]
+            video_published_at = details.get("videoPublishedAt")
+            if video_published_at and video_published_at < published_after:
+                reached_older_videos = True
+                continue
+            video_ids.append(details["videoId"])
+
+        page_token = response.get("nextPageToken")
+        if reached_older_videos or not page_token:
+            break
+
+    return video_ids
+
+
 def get_channels_details(channel_ids: list[str]) -> list[dict]:
     """Fetch snippet+statistics for up to 50 channel ids per call (batched)."""
     youtube = get_youtube()

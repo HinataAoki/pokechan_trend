@@ -32,13 +32,22 @@ export function generateMockImages() {
   return images;
 }
 
-export function generateMockContributions(date) {
-  return MOCK_POKEMON.slice(0, 3).map(({ name }, i) => ({
-    video_id: `mock-${date}-${i}`,
-    pokemon_name: name,
-    video_title: `【${name}】ポケモンチャンピオンズ 実況 #${i + 1}`,
-    youtube_url: "https://www.youtube.com/",
-    published_at: `${date}T09:00:00Z`,
-    contribution_score: Math.max(0, 500 - i * 120 + Math.random() * 50),
-  }));
+export function generateMockContributions() {
+  const contributions = [];
+  for (let i = -28; i <= 1; i++) {
+    const dt = new Date();
+    dt.setDate(dt.getDate() + i);
+    const date = dt.toISOString().slice(0, 10);
+    MOCK_POKEMON.slice(0, 3).forEach(({ name }, j) => {
+      contributions.push({
+        video_id: `mock-${date}-${j}`,
+        pokemon_name: name,
+        video_title: `【${name}】ポケモンチャンピオンズ 実況 #${j + 1}`,
+        youtube_url: "https://www.youtube.com/",
+        published_at: `${date}T09:00:00Z`,
+        contribution_score: Math.max(0, 500 - j * 120 + Math.random() * 50),
+      });
+    });
+  }
+  return contributions;
 }

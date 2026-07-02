@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { supabase } from "./supabaseClient";
 import CalendarHeatmap from "./CalendarHeatmap";
 import TopThree from "./TopThree";
 import ContributionModal from "./ContributionModal";
@@ -7,6 +6,7 @@ import { generateMockRows, generateMockImages, generateMockContributions } from 
 import "./App.css";
 
 const USE_MOCK_DATA = import.meta.env.VITE_USE_MOCK_DATA === "true";
+const SNAPSHOT_URL = import.meta.env.VITE_SNAPSHOT_URL;
 
 function todayIso() {
   return new Date().toISOString().slice(0, 10);
@@ -15,42 +15,40 @@ function todayIso() {
 function App() {
   const [rows, setRows] = useState([]);
   const [imageByName, setImageByName] = useState({});
+  const [contributions, setContributions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const [modalDate, setModalDate] = useState(null);
-  const [modalVideos, setModalVideos] = useState([]);
-  const [modalLoading, setModalLoading] = useState(false);
+  const [modal, setModal] = useState(null); // { date, pokemonName? } | null
 
   useEffect(() => {
     if (USE_MOCK_DATA) {
       setRows(generateMockRows());
       setImageByName(generateMockImages());
+      setContributions(generateMockContributions());
       setLoading(false);
       return;
     }
 
     let cancelled = false;
 
-    Promise.all([
-      supabase.from("pokemon_daily_forecast").select("date, pokemon_name, score").order("date", { ascending: true }),
-      supabase.from("pokemon_images").select("pokemon_name, image_url"),
-    ]).then(([forecastResult, imagesResult]) => {
-      if (cancelled) return;
-      if (forecastResult.error) {
-        setError(forecastResult.error.message);
-      } else {
-        setRows(forecastResult.data ?? []);
-      }
-      if (!imagesResult.error) {
-        const images = {};
-        for (const row of imagesResult.data ?? []) {
-          images[row.pokemon_name] = row.image_url;
-        }
-        setImageByName(images);
-      }
-      setLoading(false);
-    });
+    fetch(SNAPSHOT_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error(`snapshot fetch failed: ${res.status}`);
+        return res.json();
+      })
+      .then((snapshot) => {
+        if (cancelled) return;
+        setRows(snapshot.forecast ?? []);
+        setImageByName(snapshot.images ?? {});
+        setContributions(snapshot.contributions ?? []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setError(err.message);
+        setLoading(false);
+      });
 
     return () => {
       cancelled = true;
@@ -88,26 +86,17 @@ function App() {
     return map;
   }, [rows]);
 
-  async function openContributions(date) {
-    setModalDate(date);
-    setModalLoading(true);
-
-    if (USE_MOCK_DATA) {
-      setModalVideos(generateMockContributions(date));
-      setModalLoading(false);
-      return;
-    }
-
-    const { data, error } = await supabase
-      .from("pokemon_video_contribution")
-      .select("video_id, pokemon_name, video_title, youtube_url, published_at, contribution_score")
-      .eq("date", date)
-      .order("contribution_score", { ascending: false })
-      .limit(30);
-
-    setModalVideos(error ? [] : data ?? []);
-    setModalLoading(false);
+  function openContributions(date, pokemonName = null) {
+    setModal({ date, pokemonName });
   }
+
+  const modalVideos = useMemo(() => {
+    if (!modal) return [];
+    return contributions
+      .filter((c) => c.date === modal.date && (!modal.pokemonName || c.pokemon_name === modal.pokemonName))
+      .sort((a, b) => b.contribution_score - a.contribution_score)
+      .slice(0, 30);
+  }, [contributions, modal]);
 
   return (
     <div className="app">
@@ -129,7 +118,11 @@ function App() {
 
       {!loading && !error && rows.length > 0 && (
         <>
-          <TopThree top3={top3} imageByName={imageByName} onSelect={() => openContributions(today)} />
+          <TopThree
+            top3={top3}
+            imageByName={imageByName}
+            onSelect={(name) => openContributions(today, name)}
+          />
 
           <CalendarHeatmap
             dates={dates}
@@ -142,12 +135,13 @@ function App() {
         </>
       )}
 
-      {modalDate && (
+      {modal && (
         <ContributionModal
-          date={modalDate}
+          date={modal.date}
+          pokemonName={modal.pokemonName}
           videos={modalVideos}
-          loading={modalLoading}
-          onClose={() => setModalDate(null)}
+          loading={false}
+          onClose={() => setModal(null)}
         />
       )}
     </div>

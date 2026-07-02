@@ -11,8 +11,18 @@ create table if not exists channels (
     channel_id text primary key,
     channel_name text not null,
     subscriber_count bigint not null default 0,
+    -- Player skill tier for curated/seeded creators (light/mid/high/top).
+    -- Nullable since not every discovered channel is manually categorized.
+    -- Not used in any scoring yet - stored for future use.
+    category text check (category in ('light', 'mid', 'high', 'top')),
     updated_at timestamptz not null default now()
 );
+
+-- Migration: add category if this table already existed without it.
+alter table channels add column if not exists category text;
+alter table channels drop constraint if exists channels_category_check;
+alter table channels add constraint channels_category_check
+    check (category in ('light', 'mid', 'high', 'top'));
 
 create table if not exists videos (
     video_id text primary key,
@@ -22,6 +32,9 @@ create table if not exists videos (
     channel_id text not null references channels(channel_id),
     discovered_via text not null check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title')),
     duration_seconds int,
+    -- Battle format tag: everything is 'single' for now (doubles support is
+    -- a possible future addition) - not used in any scoring yet.
+    battle_format text not null default 'single' check (battle_format in ('single', 'double')),
     created_at timestamptz not null default now()
 );
 
@@ -31,8 +44,13 @@ alter table videos drop constraint if exists videos_discovered_via_check;
 alter table videos add constraint videos_discovered_via_check
     check (discovered_via in ('title_keyword', 'hashtag', 'tag', 'game_title'));
 
--- Migration: add duration_seconds if this table already existed without it.
+-- Migration: add duration_seconds/battle_format if this table already
+-- existed without them.
 alter table videos add column if not exists duration_seconds int;
+alter table videos add column if not exists battle_format text not null default 'single';
+alter table videos drop constraint if exists videos_battle_format_check;
+alter table videos add constraint videos_battle_format_check
+    check (battle_format in ('single', 'double'));
 
 create index if not exists idx_videos_published_at on videos(published_at);
 
@@ -143,3 +161,15 @@ create policy "public read pokemon images"
     for select
     to anon
     using (true);
+
+-- ==========================================================
+-- Storage bucket for the baked JSON snapshot (export_snapshot.py).
+-- The frontend fetches this single file instead of querying the tables
+-- above directly - the anon SELECT policies on those tables are left in
+-- place for now (possible future direct-query use cases), but are no
+-- longer on the frontend's hot path.
+-- ==========================================================
+
+insert into storage.buckets (id, name, public)
+values ('public-data', 'public-data', true)
+on conflict (id) do nothing;

@@ -1,15 +1,15 @@
-export default function ContributionModal({ date, videos, loading, onClose }) {
+export default function ContributionModal({ date, pokemonName, videos, loading, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button type="button" className="modal-close" onClick={onClose}>
           ×
         </button>
-        <h3>{date} に影響を与えた動画</h3>
+        <h3>{pokemonName ? `${date} の ${pokemonName} に影響を与えた動画` : `${date} に影響を与えた動画`}</h3>
 
         {loading && <p>読み込み中...</p>}
 
-        {!loading && videos.length === 0 && <p>この日に影響した動画は見つかりませんでした。</p>}
+        {!loading && videos.length === 0 && <p>影響した動画は見つかりませんでした。</p>}
 
         {!loading && videos.length > 0 && (
           <ul className="contribution-list">
@@ -19,7 +19,7 @@ export default function ContributionModal({ date, videos, loading, onClose }) {
                   {v.video_title}
                 </a>
                 <div className="contribution-meta">
-                  {v.pokemon_name} / 投稿日: {v.published_at.slice(0, 10)} / 影響度:{" "}
+                  {!pokemonName && `${v.pokemon_name} / `}投稿日: {v.published_at.slice(0, 10)} / 影響度:{" "}
                   {v.contribution_score.toFixed(0)}
                 </div>
               </li>

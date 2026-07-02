@@ -56,3 +56,6 @@ jobs:
 
       - name: Recompute forecast
         run: uv run python forecaster.py
+
+      - name: Bake public JSON snapshot
+        run: uv run python export_snapshot.py
