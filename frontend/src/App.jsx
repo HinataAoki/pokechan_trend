@@ -18,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const [modal, setModal] = useState(null); // { date, pokemonName } | null
+  const [modalDate, setModalDate] = useState(null);
   const [modalVideos, setModalVideos] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
 
@@ -71,35 +71,39 @@ function App() {
     return [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
   }, [rows, today]);
 
-  // Best (top-1) pokemon per date, shown as the calendar day's icon.
-  const bestByDate = useMemo(() => {
-    const map = {};
+  // Top 3 pokemon per date, shown as icons in each calendar day cell.
+  const topByDate = useMemo(() => {
+    const byDate = new Map();
     for (const row of rows) {
-      const current = map[row.date];
-      if (!current || row.score > current.score) {
-        map[row.date] = { pokemon_name: row.pokemon_name, score: row.score };
-      }
+      if (!byDate.has(row.date)) byDate.set(row.date, []);
+      byDate.get(row.date).push(row);
+    }
+    const map = {};
+    for (const [date, dateRows] of byDate) {
+      map[date] = dateRows
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3)
+        .map((r) => ({ pokemon_name: r.pokemon_name, score: r.score }));
     }
     return map;
   }, [rows]);
 
-  async function openContributions(date, pokemonName) {
-    if (!pokemonName) return;
-    setModal({ date, pokemonName });
+  async function openContributions(date) {
+    setModalDate(date);
     setModalLoading(true);
 
     if (USE_MOCK_DATA) {
-      setModalVideos(generateMockContributions(date, pokemonName));
+      setModalVideos(generateMockContributions(date));
       setModalLoading(false);
       return;
     }
 
     const { data, error } = await supabase
       .from("pokemon_video_contribution")
-      .select("video_id, video_title, youtube_url, published_at, contribution_score")
+      .select("video_id, pokemon_name, video_title, youtube_url, published_at, contribution_score")
       .eq("date", date)
-      .eq("pokemon_name", pokemonName)
-      .order("contribution_score", { ascending: false });
+      .order("contribution_score", { ascending: false })
+      .limit(30);
 
     setModalVideos(error ? [] : data ?? []);
     setModalLoading(false);
@@ -125,30 +129,25 @@ function App() {
 
       {!loading && !error && rows.length > 0 && (
         <>
-          <TopThree
-            top3={top3}
-            imageByName={imageByName}
-            onSelect={(name) => openContributions(today, name)}
-          />
+          <TopThree top3={top3} imageByName={imageByName} onSelect={() => openContributions(today)} />
 
           <CalendarHeatmap
             dates={dates}
-            bestByDate={bestByDate}
+            topByDate={topByDate}
             imageByName={imageByName}
             today={today}
-            onDateClick={(date) => openContributions(date, bestByDate[date]?.pokemon_name)}
+            onDateClick={openContributions}
           />
-          <p className="calendar-hint">日付をタップすると、その日のTOP1ポケモンに影響した動画を確認できます。</p>
+          <p className="calendar-hint">日付をタップすると、その日に影響した動画を確認できます。</p>
         </>
       )}
 
-      {modal && (
+      {modalDate && (
         <ContributionModal
-          date={modal.date}
-          pokemonName={modal.pokemonName}
+          date={modalDate}
           videos={modalVideos}
           loading={modalLoading}
-          onClose={() => setModal(null)}
+          onClose={() => setModalDate(null)}
         />
       )}
     </div>

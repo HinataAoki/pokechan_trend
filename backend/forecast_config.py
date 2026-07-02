@@ -15,8 +15,9 @@ TAU_HOURS = 72.0
 # clipped to a minimum of 1.0 so small channels are never penalized below baseline.
 SUBSCRIBER_BASELINE = 10_000
 
-# How many days ahead of "today" to (re)compute forecast rows for.
-FORECAST_HORIZON_DAYS = 3
+# Calendar window: how many days to (re)compute forecast rows for, ending
+# at tomorrow (i.e. tomorrow + the previous CALENDAR_TOTAL_DAYS-1 days).
+CALENDAR_TOTAL_DAYS = 30
 
 # How many days back to look for videos whose influence might still be nonzero.
 # Set to ~1 month so a month of history is always considered/available while

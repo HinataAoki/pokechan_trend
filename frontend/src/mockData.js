@@ -10,12 +10,13 @@ const MOCK_POKEMON = [
 
 export function generateMockRows() {
   const rows = [];
-  for (let i = -5; i <= 3; i++) {
+  // 30-day window ending tomorrow, matching forecaster.py's CALENDAR_TOTAL_DAYS.
+  for (let i = -28; i <= 1; i++) {
     const dt = new Date();
     dt.setDate(dt.getDate() + i);
     const date = dt.toISOString().slice(0, 10);
     for (const { name } of MOCK_POKEMON) {
-      const base = (5 - Math.abs(i)) * 150;
+      const base = Math.max(0, 5 - Math.abs(i)) * 150;
       rows.push({ date, pokemon_name: name, score: Math.max(0, base + Math.random() * 150) });
     }
   }
@@ -31,10 +32,11 @@ export function generateMockImages() {
   return images;
 }
 
-export function generateMockContributions(date, pokemonName) {
-  return [1, 2, 3].map((i) => ({
+export function generateMockContributions(date) {
+  return MOCK_POKEMON.slice(0, 3).map(({ name }, i) => ({
     video_id: `mock-${date}-${i}`,
-    video_title: `【${pokemonName}】ポケモンチャンピオンズ 実況 #${i}`,
+    pokemon_name: name,
+    video_title: `【${name}】ポケモンチャンピオンズ 実況 #${i + 1}`,
     youtube_url: "https://www.youtube.com/",
     published_at: `${date}T09:00:00Z`,
     contribution_score: Math.max(0, 500 - i * 120 + Math.random() * 50),

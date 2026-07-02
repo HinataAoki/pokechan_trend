@@ -3,7 +3,7 @@
 Run standalone: `python forecaster.py`
 Meant to run once per scheduled workflow invocation, after snapshotter.py.
 Safe to re-run any time (e.g. after tuning forecast_config.py) since it
-fully recomputes scores for the lookback/horizon window from raw data.
+fully recomputes scores for the calendar window from raw data.
 """
 
 import math
@@ -83,9 +83,13 @@ def forecast() -> None:
         row["channel_id"]: row["subscriber_count"] for row in channels_resp.data
     }
 
+    # Calendar window ends at tomorrow and spans CALENDAR_TOTAL_DAYS days back
+    # from there (i.e. mostly past days, plus tomorrow as the one forecasted
+    # day), in ascending order.
+    tomorrow = (now + timedelta(days=1)).date()
     dates = [
-        (now + timedelta(days=offset)).date()
-        for offset in range(fc.FORECAST_HORIZON_DAYS + 1)
+        tomorrow - timedelta(days=offset)
+        for offset in range(fc.CALENDAR_TOTAL_DAYS - 1, -1, -1)
     ]
 
     forecast_rows: dict[tuple, float] = defaultdict(float)
