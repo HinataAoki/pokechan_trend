@@ -65,11 +65,20 @@ create index if not exists idx_video_pokemon_pokemon_name on video_pokemon(pokem
 create table if not exists view_snapshots (
     id bigint generated always as identity primary key,
     video_id text not null references videos(video_id) on delete cascade,
-    hours_offset int not null check (hours_offset in (24, 48, 72, 96, 108, 120, 144)),
+    -- One of the fixed SNAPSHOT_OFFSETS_HOURS for actively-tracked videos,
+    -- or the video's actual age at capture time for a one-off catch-up
+    -- snapshot on an already-old/backfilled video (see snapshotter.py).
+    hours_offset int not null check (hours_offset > 0),
     captured_at timestamptz not null default now(),
     view_count bigint not null,
     unique (video_id, hours_offset)
 );
+
+-- Migration: widen the check constraint if this table already existed with
+-- the older fixed-offsets-only list.
+alter table view_snapshots drop constraint if exists view_snapshots_hours_offset_check;
+alter table view_snapshots add constraint view_snapshots_hours_offset_check
+    check (hours_offset > 0);
 
 alter table channels enable row level security;
 alter table videos enable row level security;

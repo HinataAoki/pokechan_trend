@@ -1,4 +1,7 @@
-"""Take due view-count snapshots for videos still within the tracking window.
+"""Take due view-count snapshots for videos still within the tracking window,
+plus a one-off "catch-up" snapshot for older/backfilled videos that were
+never tracked (e.g. seed_creators.py backfilling a month of history) so
+they still have a view count to contribute to the forecast.
 
 Run standalone: `python snapshotter.py`
 Meant to run once per scheduled workflow invocation, after collector.py.
@@ -19,47 +22,41 @@ def _hours_since(published_at: str) -> float:
 def snapshot() -> None:
     client = get_client()
 
-    videos_resp = (
-        client.table("videos")
-        .select("video_id, published_at")
-        .execute()
-    )
+    videos_resp = client.table("videos").select("video_id, published_at").execute()
     videos = videos_resp.data
     if not videos:
         print("no videos tracked yet")
         return
 
-    tracked = [v for v in videos if _hours_since(v["published_at"]) <= config.MAX_TRACKING_HOURS]
-    if not tracked:
-        print("no videos within tracking window")
-        return
-
-    existing_resp = (
-        client.table("view_snapshots")
-        .select("video_id, hours_offset")
-        .in_("video_id", [v["video_id"] for v in tracked])
-        .execute()
-    )
+    existing_resp = client.table("view_snapshots").select("video_id, hours_offset").execute()
     already_captured = {(row["video_id"], row["hours_offset"]) for row in existing_resp.data}
+    videos_with_any_snapshot = {video_id for video_id, _ in already_captured}
 
-    due_video_ids = []
     due_map: dict[str, list[int]] = {}
-    for video in tracked:
+    for video in videos:
         elapsed = _hours_since(video["published_at"])
-        due_offsets = [
-            offset
-            for offset in config.SNAPSHOT_OFFSETS_HOURS
-            if elapsed >= offset and (video["video_id"], offset) not in already_captured
-        ]
-        if due_offsets:
-            due_video_ids.append(video["video_id"])
-            due_map[video["video_id"]] = due_offsets
+        video_id = video["video_id"]
 
-    if not due_video_ids:
+        if elapsed <= config.MAX_TRACKING_HOURS:
+            due_offsets = [
+                offset
+                for offset in config.SNAPSHOT_OFFSETS_HOURS
+                if elapsed >= offset and (video_id, offset) not in already_captured
+            ]
+            if due_offsets:
+                due_map[video_id] = due_offsets
+        elif video_id not in videos_with_any_snapshot:
+            # Backfilled video, already past the normal tracking window and
+            # never snapshotted - take one catch-up reading now, recorded
+            # under its actual current age, rather than leaving it with no
+            # view count (and thus no forecast contribution) forever.
+            due_map[video_id] = [round(elapsed)]
+
+    if not due_map:
         print("no snapshots due")
         return
 
-    details = youtube_client.get_videos_details(due_video_ids)
+    details = youtube_client.get_videos_details(list(due_map.keys()))
     stats_by_id = {d["id"]: int(d["statistics"].get("viewCount", 0)) for d in details}
 
     snapshot_rows = []
@@ -79,12 +76,9 @@ def snapshot() -> None:
     if snapshot_rows:
         client.table("view_snapshots").upsert(snapshot_rows).execute()
 
-    # Refresh subscriber counts for tracked videos' channels while we're at it.
+    # Refresh subscriber counts for the channels of videos snapshotted this run.
     channel_ids_resp = (
-        client.table("videos")
-        .select("channel_id")
-        .in_("video_id", due_video_ids)
-        .execute()
+        client.table("videos").select("channel_id").in_("video_id", list(due_map.keys())).execute()
     )
     channel_ids = [row["channel_id"] for row in channel_ids_resp.data]
     if channel_ids:
@@ -99,7 +93,7 @@ def snapshot() -> None:
         ]
         client.table("channels").upsert(channel_rows).execute()
 
-    print(f"inserted {len(snapshot_rows)} snapshots across {len(due_video_ids)} videos")
+    print(f"inserted {len(snapshot_rows)} snapshots across {len(due_map)} videos")
 
 
 if __name__ == "__main__":

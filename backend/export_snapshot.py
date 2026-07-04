@@ -13,18 +13,33 @@ from supabase_client import get_client
 
 STORAGE_BUCKET = "public-data"
 STORAGE_PATH = "snapshot.json"
+PAGE_SIZE = 1000  # PostgREST's default/max rows per response
+
+
+def _select_all(client, table: str, columns: str) -> list[dict]:
+    """Page through a table's rows - a plain .execute() silently caps out
+    at PostgREST's default row limit (1000), which truncated this export
+    once the calendar's dataset grew past it."""
+    rows = []
+    offset = 0
+    while True:
+        page = client.table(table).select(columns).range(offset, offset + PAGE_SIZE - 1).execute().data
+        rows.extend(page)
+        if len(page) < PAGE_SIZE:
+            break
+        offset += PAGE_SIZE
+    return rows
 
 
 def export_snapshot() -> None:
     client = get_client()
 
-    forecast_rows = client.table("pokemon_daily_forecast").select("date, pokemon_name, score").execute().data
-    image_rows = client.table("pokemon_images").select("pokemon_name, image_url").execute().data
-    contribution_rows = (
-        client.table("pokemon_video_contribution")
-        .select("date, pokemon_name, video_id, video_title, youtube_url, published_at, contribution_score")
-        .execute()
-        .data
+    forecast_rows = _select_all(client, "pokemon_daily_forecast", "date, pokemon_name, score")
+    image_rows = _select_all(client, "pokemon_images", "pokemon_name, image_url")
+    contribution_rows = _select_all(
+        client,
+        "pokemon_video_contribution",
+        "date, pokemon_name, video_id, video_title, youtube_url, published_at, contribution_score",
     )
 
     snapshot = {
