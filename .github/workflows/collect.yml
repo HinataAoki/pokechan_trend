@@ -31,17 +31,22 @@ jobs:
         id: search_gate
         run: |
           hour=$(date -u +%H)
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( 10#$hour % 6 )) -eq 0 ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$hour" = "00" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # search.list is quota-expensive (100 units/call) and only exists to
-      # find channels we haven't seen before, so it only needs to run a few
-      # times a day - rss_watcher.py below covers known channels for free,
-      # every hour.
-      - name: Discover new channels via keyword search (every 6h)
+      # Primary discovery path: scraped hashtag pages + date-sorted search
+      # results via yt-dlp - zero API quota, so it can run every hour.
+      # Details for candidates still come from videos.list (1 unit / 50).
+      - name: Discover new videos via scraping (quota-free, hourly)
+        run: uv run python scrape_collector.py
+
+      # search.list is quota-expensive (100 units/call) and has different
+      # recall than the scraped feeds, so it stays as a once-daily safety
+      # net - rss_watcher.py below covers known channels for free, hourly.
+      - name: Discover new channels via keyword search (daily)
         if: steps.search_gate.outputs.run == 'true'
         run: uv run python collector.py
 
