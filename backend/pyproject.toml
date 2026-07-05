@@ -9,4 +9,5 @@ dependencies = [
     "python-dotenv==1.0.1",
     "supabase>=2.15",
     "websockets>=13,<16",
+    "yt-dlp>=2026.7.4",
 ]
