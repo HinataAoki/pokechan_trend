@@ -74,7 +74,12 @@ def snapshot() -> None:
             )
 
     if snapshot_rows:
-        client.table("view_snapshots").upsert(snapshot_rows).execute()
+        # Conflict target must be the (video_id, hours_offset) unique key, not
+        # the surrogate id PK - otherwise a snapshot inserted concurrently
+        # (e.g. by the scheduled workflow) makes this whole upsert fail.
+        client.table("view_snapshots").upsert(
+            snapshot_rows, on_conflict="video_id,hours_offset", ignore_duplicates=True
+        ).execute()
 
     # Refresh subscriber counts for the channels of videos snapshotted this run.
     channel_ids_resp = (
