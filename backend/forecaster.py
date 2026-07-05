@@ -10,34 +10,12 @@ Safe to re-run any time (e.g. after tuning forecast_config.py) since it
 fully recomputes scores for the calendar window from raw data.
 """
 
-import json
 import math
 from collections import defaultdict
 from datetime import datetime, time, timedelta, timezone
-from pathlib import Path
 
 import forecast_config as fc
 from supabase_client import get_client, select_all
-
-_DATA_DIR = Path(__file__).parent / "data"
-
-
-def _load_video_types() -> tuple[dict[str, str], dict[str, dict]]:
-    """Video-type labels + refined counter targets (see forecast_config
-    VIDEO_TYPE_WEIGHTS). Both files are optional so the forecaster still
-    runs on a checkout without them."""
-    types_path = _DATA_DIR / "video_types.json"
-    counters_path = _DATA_DIR / "counter_targets.json"
-    types = json.loads(types_path.read_text(encoding="utf-8")) if types_path.exists() else {}
-    counters = (
-        json.loads(counters_path.read_text(encoding="utf-8")) if counters_path.exists() else {}
-    )
-    # Counter-labeled videos that turned out to be strength showcases are
-    # effectively build videos.
-    for video_id, info in counters.items():
-        if info.get("kind") == "showcase" and types.get(video_id) == "counter":
-            types[video_id] = "build"
-    return types, counters
 
 
 def _lag_kernel(delta_t_hours: float) -> float:
@@ -101,7 +79,7 @@ def forecast() -> None:
     videos = select_all(
         client,
         "videos",
-        "video_id, title, youtube_url, published_at, channel_id",
+        "video_id, title, youtube_url, published_at, channel_id, video_type, counter_target",
         lambda q: q.gte("published_at", lookback_start.isoformat()),
     )
     if not videos:
@@ -145,8 +123,6 @@ def forecast() -> None:
         for offset in range(fc.CALENDAR_TOTAL_DAYS - 1, -1, -1)
     ]
 
-    video_types, counter_targets = _load_video_types()
-
     # Pass 1: per-video/date score *before* the bandwagon multiplier (which
     # depends on how many distinct channels used a pokemon on that date -
     # only known once every video has been scored once).
@@ -154,10 +130,10 @@ def forecast() -> None:
     base_scores: dict[tuple, float] = defaultdict(float)
     adopting_channels: dict[tuple, set] = defaultdict(set)
 
-    def _counter_target(video_id: str) -> str | None:
-        if video_types.get(video_id) != "counter":
+    def _counter_target(video: dict) -> str | None:
+        if video.get("video_type") != "counter":
             return None
-        return counter_targets.get(video_id, {}).get("target")
+        return video.get("counter_target")
 
     for video in videos:
         pokemon_names = pokemon_by_video.get(video["video_id"])
@@ -168,7 +144,7 @@ def forecast() -> None:
         if not increments:
             continue
 
-        video_type = video_types.get(video["video_id"], fc.DEFAULT_VIDEO_TYPE)
+        video_type = video.get("video_type") or fc.DEFAULT_VIDEO_TYPE
         channel = channel_by_id.get(video["channel_id"], {})
         weight = (
             _channel_weight(channel.get("subscriber_count", 0))
@@ -177,7 +153,7 @@ def forecast() -> None:
             * fc.VIDEO_TYPE_WEIGHTS.get(video_type, 1.0)
         )
         published = datetime.fromisoformat(video["published_at"].replace("Z", "+00:00"))
-        skip_pokemon = _counter_target(video["video_id"])
+        skip_pokemon = _counter_target(video)
 
         for date in dates:
             target = datetime.combine(date, time(hour=12), tzinfo=timezone.utc)
@@ -207,7 +183,7 @@ def forecast() -> None:
         pokemon_names = pokemon_by_video.get(video["video_id"])
         if not pokemon_names:
             continue
-        skip_pokemon = _counter_target(video["video_id"])
+        skip_pokemon = _counter_target(video)
         for date in dates:
             base_score = per_video_date_score.get((video["video_id"], date))
             if base_score is None:

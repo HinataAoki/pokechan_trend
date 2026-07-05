@@ -47,6 +47,45 @@ B = 紹介動画: 特定のポケモンの強さ・構築・使い方を肯定�
 """
 
 
+def refine_counters(items: list[dict]) -> dict[str, dict]:
+    """items: [{id, title, candidates: [pokemon_name, ...]}, ...]
+    Returns {id: {"kind": "counter", "target": name} | {"kind": "showcase"}}.
+    Used by the bulk CLI below and by video_registrar.py at registration
+    time. On a Gemini failure, missing ids are simply absent (callers treat
+    them as showcase, i.e. no zeroing)."""
+    gclient = genai.Client(api_key=config.GEMINI_API_KEY)
+    result: dict[str, dict] = {}
+
+    for start in range(0, len(items), BATCH_SIZE):
+        batch = items[start : start + BATCH_SIZE]
+        lines = []
+        for i, item in enumerate(batch, 1):
+            cands = "、".join(item.get("candidates", [])) or "(候補なし)"
+            lines.append(f"[{i}] タイトル: {item['title']}\n    候補: {cands}")
+        try:
+            response = gclient.models.generate_content(
+                model=config.GEMINI_MODEL, contents=PROMPT_HEADER + "\n".join(lines)
+            )
+        except Exception as e:
+            print(f"counter-refinement batch failed ({e}) - continuing with partial results")
+            break
+        for line in (response.text or "").splitlines():
+            m = re.match(r"\s*(\d+)\s*[::]\s*([AB])(?:\s*[::]\s*(.+))?", line.strip())
+            if not m:
+                continue
+            idx = int(m.group(1))
+            if not (1 <= idx <= len(batch)):
+                continue
+            vid = batch[idx - 1]["id"]
+            if m.group(2) == "A" and m.group(3):
+                result[vid] = {"kind": "counter", "target": m.group(3).strip()}
+            else:
+                result[vid] = {"kind": "showcase"}
+        if start + BATCH_SIZE < len(items):
+            time.sleep(5)
+    return result
+
+
 def refine() -> None:
     types = json.loads((DATA / "video_types.json").read_text(encoding="utf-8"))
     counter_ids = [vid for vid, label in types.items() if label == "counter"]
@@ -67,33 +106,12 @@ def refine() -> None:
     for r in rows:
         pokemon_by_video[r["video_id"]].append(r["pokemon_name"])
 
-    videos = [v for v in counter_ids if v in details]
-    gclient = genai.Client(api_key=config.GEMINI_API_KEY)
-    result: dict[str, dict] = {}
-
-    for start in range(0, len(videos), BATCH_SIZE):
-        batch = videos[start : start + BATCH_SIZE]
-        lines = []
-        for i, vid in enumerate(batch, 1):
-            title = details[vid]["title"]
-            cands = "、".join(pokemon_by_video.get(vid, [])) or "(候補なし)"
-            lines.append(f"[{i}] タイトル: {title}\n    候補: {cands}")
-        response = gclient.models.generate_content(
-            model=config.GEMINI_MODEL, contents=PROMPT_HEADER + "\n".join(lines)
-        )
-        for line in (response.text or "").splitlines():
-            m = re.match(r"\s*(\d+)\s*[::]\s*([AB])(?:\s*[::]\s*(.+))?", line.strip())
-            if not m:
-                continue
-            idx = int(m.group(1))
-            if not (1 <= idx <= len(batch)):
-                continue
-            vid = batch[idx - 1]
-            if m.group(2) == "A" and m.group(3):
-                result[vid] = {"kind": "counter", "target": m.group(3).strip()}
-            else:
-                result[vid] = {"kind": "showcase"}
-        time.sleep(5)
+    items = [
+        {"id": vid, "title": details[vid]["title"], "candidates": pokemon_by_video.get(vid, [])}
+        for vid in counter_ids
+        if vid in details
+    ]
+    result = refine_counters(items)
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
     n_counter = sum(1 for v in result.values() if v["kind"] == "counter")

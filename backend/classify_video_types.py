@@ -95,6 +95,33 @@ def _classify_batch(batch: list[dict]) -> dict[str, int]:
     return result
 
 
+def classify_types(items: list[dict], progress_cb=None) -> dict[str, str]:
+    """Classify a list of {id, title, description} dicts into type labels.
+    Used both by the bulk CLI below and by video_registrar.py at
+    registration time. On a permanent Gemini failure, returns whatever was
+    classified so far (callers treat missing ids as DEFAULT_VIDEO_TYPE).
+    """
+    labels: dict[str, str] = {}
+    for start in range(0, len(items), BATCH_SIZE):
+        batch = items[start : start + BATCH_SIZE]
+        try:
+            numeric = _classify_batch(batch)
+        except Exception as e:
+            print(f"type-classification batch failed ({e}) - continuing with partial labels")
+            break
+        for v in batch:
+            label = LABELS.get(numeric.get(v["id"], 4), "battle")
+            haystack = f"{v.get('title', '')}\n{v.get('description', '')}"
+            if label != "counter" and RENTAL_RE.search(haystack):
+                label = "rental"
+            labels[v["id"]] = label
+        if progress_cb:
+            progress_cb(labels)
+        if start + BATCH_SIZE < len(items):
+            time.sleep(SECONDS_BETWEEN_CALLS)
+    return labels
+
+
 def classify() -> None:
     videos = [
         json.loads(line) for line in DETAILS.read_text(encoding="utf-8").splitlines() if line
@@ -107,24 +134,13 @@ def classify() -> None:
     todo = [v for v in videos if v["id"] not in labels]
     print(f"classifying {len(todo)} videos in batches of {BATCH_SIZE}")
 
-    for start in range(0, len(todo), BATCH_SIZE):
-        batch = todo[start : start + BATCH_SIZE]
-        try:
-            numeric = _classify_batch(batch)
-        except Exception as e:
-            print(f"batch failed permanently ({e}) - progress saved, rerun to resume")
-            break
-        for v in batch:
-            label = LABELS.get(numeric.get(v["id"], 4), "battle")
-            haystack = f"{v.get('title', '')}\n{v.get('description', '')}"
-            if label != "counter" and RENTAL_RE.search(haystack):
-                label = "rental"
-            labels[v["id"]] = label
+    def _save(new_labels: dict[str, str]) -> None:
+        labels.update(new_labels)
         OUT.write_text(json.dumps(labels, ensure_ascii=False, indent=0), encoding="utf-8")
-        done = min(start + BATCH_SIZE, len(todo))
-        if done % 100 < BATCH_SIZE or done == len(todo):
-            print(f"  {done}/{len(todo)}")
-        time.sleep(SECONDS_BETWEEN_CALLS)
+        if len(new_labels) % 100 < BATCH_SIZE:
+            print(f"  {len(new_labels)}/{len(todo)}")
+
+    classify_types(todo, progress_cb=_save)
 
     from collections import Counter
 

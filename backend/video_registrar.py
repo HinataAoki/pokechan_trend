@@ -8,8 +8,10 @@ how a video was found.
 
 import config
 import youtube_client
+from classify_video_types import classify_types
 from llm_classifier import filter_used_pokemon_batch
 from pokemon_matcher import match_pokemon
+from refine_counter_targets import refine_counters
 from supabase_client import get_client
 
 
@@ -81,6 +83,37 @@ def register_videos(videos: list[dict]) -> None:
         for video, discovered_via, duration_seconds in candidate_videos
     ]
 
+    # Video-type label for the influence model's F_type factor. Counter-
+    # labeled videos get a second pass separating true counter guides (whose
+    # target pokemon is zeroed in the forecaster) from strength showcases
+    # (effectively build videos). See docs/influence_model.md section 2.4/5.
+    type_labels = classify_types(
+        [
+            {
+                "id": video["id"],
+                "title": video["snippet"].get("title", ""),
+                "description": video["snippet"].get("description", ""),
+            }
+            for video, _, _, _ in relevant_videos
+        ]
+    )
+    counter_items = [
+        {
+            "id": video["id"],
+            "title": video["snippet"].get("title", ""),
+            "candidates": sorted(pokemon_names),
+        }
+        for video, _, _, pokemon_names in relevant_videos
+        if type_labels.get(video["id"]) == "counter"
+    ]
+    refined = refine_counters(counter_items) if counter_items else {}
+    counter_target_by_key: dict[str, str | None] = {}
+    for video_id, info in refined.items():
+        if info["kind"] == "showcase":
+            type_labels[video_id] = "build"
+        else:
+            counter_target_by_key[video_id] = info.get("target")
+
     channel_ids = [v["snippet"]["channelId"] for v, _, _, _ in relevant_videos]
     channels = youtube_client.get_channels_details(channel_ids)
 
@@ -110,6 +143,8 @@ def register_videos(videos: list[dict]) -> None:
                 "channel_id": snippet["channelId"],
                 "discovered_via": discovered_via,
                 "duration_seconds": duration_seconds,
+                "video_type": type_labels.get(video_id, "battle"),
+                "counter_target": counter_target_by_key.get(video_id),
             }
         )
 

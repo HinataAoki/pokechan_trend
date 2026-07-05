@@ -12,3 +12,4 @@ backend/data/api_video_details.jsonl
 backend/data/backfill_*_raw.json
 backend/data/backfill_search_cache.json
 backend/data/scrape_meta_cache.jsonl
+supabase/.temp/

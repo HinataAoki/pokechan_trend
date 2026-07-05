@@ -52,6 +52,16 @@ alter table videos drop constraint if exists videos_battle_format_check;
 alter table videos add constraint videos_battle_format_check
     check (battle_format in ('single', 'double'));
 
+-- Migration: add video_type/counter_target if this table already existed
+-- without them (also applied via supabase/migrations/20260705120000_*.sql).
+-- video_type feeds the influence model's F_type factor; counter_target is
+-- the pokemon a true counter video targets (zeroed in the forecaster).
+alter table videos add column if not exists video_type text;
+alter table videos drop constraint if exists videos_video_type_check;
+alter table videos add constraint videos_video_type_check
+    check (video_type in ('build', 'rental', 'counter', 'battle'));
+alter table videos add column if not exists counter_target text;
+
 create index if not exists idx_videos_published_at on videos(published_at);
 
 create table if not exists video_pokemon (
