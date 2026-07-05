@@ -62,3 +62,17 @@ LOOKBACK_DAYS = 30
 # #shorts tend to be watched more passively / imitated less than full videos,
 # so their contribution is scaled down.
 SHORTS_WEIGHT = 1 / 3
+
+# Video-type factor (F_type): labels come from data/video_types.json
+# (classify_video_types.py) refined by data/counter_targets.json
+# (refine_counter_targets.py). Build guides and rental-code videos convert
+# viewers into imitators far better than raw battle VODs. Videos without a
+# label (i.e. registered after the last classification run) default to
+# "battle". True counter videos contribute nothing to their *target*
+# pokemon (a counter guide is not a "use" signal - this is what made
+# Swampert's decline invisible) but count normally for the other pokemon
+# in the video; negative contribution was tested and rejected, since
+# counter videos turned out to be a lagging indicator of popularity
+# (docs/influence_model.md section 5).
+VIDEO_TYPE_WEIGHTS = {"build": 2.0, "rental": 3.0, "counter": 1.0, "battle": 1.0}
+DEFAULT_VIDEO_TYPE = "battle"
