@@ -1,8 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import CalendarHeatmap from "./CalendarHeatmap";
 import TopThree from "./TopThree";
+import SurgeStrip from "./SurgeStrip";
 import ContributionModal from "./ContributionModal";
-import { generateMockRows, generateMockImages, generateMockContributions } from "./mockData";
+import {
+  generateMockRows,
+  generateMockImages,
+  generateMockContributions,
+  generateMockSurges,
+} from "./mockData";
 import "./App.css";
 
 const USE_MOCK_DATA = import.meta.env.VITE_USE_MOCK_DATA === "true";
@@ -16,6 +22,7 @@ function App() {
   const [rows, setRows] = useState([]);
   const [imageByName, setImageByName] = useState({});
   const [contributions, setContributions] = useState([]);
+  const [surges, setSurges] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,6 +33,7 @@ function App() {
       setRows(generateMockRows());
       setImageByName(generateMockImages());
       setContributions(generateMockContributions());
+      setSurges(generateMockSurges());
       setLoading(false);
       return;
     }
@@ -42,6 +50,7 @@ function App() {
         setRows(snapshot.forecast ?? []);
         setImageByName(snapshot.images ?? {});
         setContributions(snapshot.contributions ?? []);
+        setSurges(snapshot.surges ?? {});
         setLoading(false);
       })
       .catch((err) => {
@@ -100,10 +109,13 @@ function App() {
 
   return (
     <div className="app">
-      <header>
-        <h1>ポケモンチャンピオンズ 使用率予想カレンダー</h1>
+      <header className="app-header">
+        <div className="app-header-bar">
+          <span className="pokeball" aria-hidden="true" />
+          <h1>ポケチャン流行カレンダー</h1>
+        </div>
         <p className="subtitle">
-          YouTube上の実況動画の再生数・投稿からの経過時間・チャンネル登録者数から、
+          YouTube上の実況動画の再生数・投稿からの経過時間・チャンネル登録者数・動画の種類から、
           各ポケモンが「今どれくらい模倣されて使われやすいか」を推定した勢いです。
           未来日は既知動画の減衰の見込みであり、新規投稿までは予測できません。
         </p>
@@ -121,13 +133,23 @@ function App() {
           <TopThree
             top3={top3}
             imageByName={imageByName}
+            surgingNames={surges[today] ?? []}
             onSelect={(name) => openContributions(today, name)}
+          />
+
+          <SurgeStrip
+            surges={surges}
+            dates={dates}
+            today={today}
+            imageByName={imageByName}
+            onSelect={openContributions}
           />
 
           <CalendarHeatmap
             dates={dates}
             topByDate={topByDate}
             imageByName={imageByName}
+            surges={surges}
             today={today}
             onDateClick={openContributions}
           />

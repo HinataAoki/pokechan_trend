@@ -34,6 +34,7 @@ export function generateMockImages() {
 
 export function generateMockContributions() {
   const contributions = [];
+  const types = ["rental", "build", "battle"];
   for (let i = -28; i <= 1; i++) {
     const dt = new Date();
     dt.setDate(dt.getDate() + i);
@@ -46,8 +47,20 @@ export function generateMockContributions() {
         youtube_url: "https://www.youtube.com/",
         published_at: `${date}T09:00:00Z`,
         contribution_score: Math.max(0, 500 - j * 120 + Math.random() * 50),
+        video_type: types[j % types.length],
       });
     });
   }
   return contributions;
+}
+
+export function generateMockSurges() {
+  // Mark one pokemon as surging on today and the forecast day.
+  const surges = {};
+  for (const offset of [0, 1]) {
+    const dt = new Date();
+    dt.setDate(dt.getDate() + offset);
+    surges[dt.toISOString().slice(0, 10)] = [MOCK_POKEMON[1].name];
+  }
+  return surges;
 }
