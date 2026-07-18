@@ -11,6 +11,18 @@
       rel="stylesheet"
     />
     <title>ポケチャン流行カレンダー | ポケモンチャンピオンズ使用率予想</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGQJETQFQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+        gtag("config", "G-XGQJETQFQ3");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
