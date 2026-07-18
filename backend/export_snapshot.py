@@ -18,9 +18,11 @@ STORAGE_PATH = "snapshot.json"
 # "Rising on YouTube" badge: a pokemon surges when its share of the day's
 # total influence score rose by at least SURGE_MIN_SHARE_DELTA compared to
 # SURGE_WINDOW_DAYS earlier; the top SURGE_TOP_N per date are exported.
+# TOP_N=5: mid-season rise-episode recall 14% -> 29% vs top-3 in the
+# 2026-07-19 rise-detection backtest (docs/influence_model.md section 5).
 SURGE_WINDOW_DAYS = 3
 SURGE_MIN_SHARE_DELTA = 0.008
-SURGE_TOP_N = 3
+SURGE_TOP_N = 5
 
 
 def export_snapshot() -> None:
