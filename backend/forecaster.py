@@ -19,13 +19,16 @@ from supabase_client import get_client, select_all, select_all_in
 
 
 def _lag_kernel(delta_t_hours: float) -> float:
-    """Lognormal kernel: a view converts to a "play" roughly LAG_MU_HOURS
-    later. Zero for delta_t <= 0 (a burst can't influence a date before it
-    happened)."""
+    """Lognormal view->play lag kernel (peaking ~LAG_MU_HOURS after a view
+    burst) times an exponential freshness decay (FRESHNESS_TAU_HOURS) that
+    kills the lognormal's heavy right tail - the meta moves fast, so a
+    week-old video shouldn't keep propping up today's ranking. Zero for
+    delta_t <= 0 (a burst can't influence a date before it happened)."""
     if delta_t_hours <= 0:
         return 0.0
     x = math.log(delta_t_hours) - math.log(fc.LAG_MU_HOURS)
-    return math.exp(-(x * x) / (2 * fc.LAG_SIGMA * fc.LAG_SIGMA))
+    lognormal = math.exp(-(x * x) / (2 * fc.LAG_SIGMA * fc.LAG_SIGMA))
+    return lognormal * math.exp(-delta_t_hours / fc.FRESHNESS_TAU_HOURS)
 
 
 def _view_increments(snapshots: list[dict]) -> list[tuple[float, float]]:

@@ -25,6 +25,15 @@ Formula recap (S_p(t) = daily score for pokemon p on date t):
 LAG_MU_HOURS = 24.0
 LAG_SIGMA = 1.0
 
+# Extra exponential freshness decay multiplied onto the lag kernel. The
+# lognormal's right tail alone leaves a 13-day-old viral video with ~4% of
+# its weight - enough for it to squat in the daily top 3 (the "stale
+# Raichu" problem). exp(-dt/tau) with tau=5 days cuts a 4-day-old burst to
+# ~45% and a 13-day-old one to ~7% of its lognormal weight. Grid-searched
+# against pokedb daily-rank GT on 6/8-7/17: cross-sectional Spearman
+# 0.232 -> 0.245 vs no freshness term (docs/influence_model.md section 5).
+FRESHNESS_TAU_HOURS = 120.0
+
 # A single burst is assumed concentrated within this many hours of when it
 # was measured, capped so an old backfilled video's one-off "catch-up"
 # snapshot (which reports total views measured possibly weeks after
