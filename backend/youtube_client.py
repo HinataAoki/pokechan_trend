@@ -1,3 +1,4 @@
+import functools
 import re
 
 from googleapiclient.discovery import build
@@ -7,6 +8,29 @@ import config
 _youtube = None
 
 _ISO8601_DURATION_RE = re.compile(r"^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$")
+
+
+def _retry_on_connection_error(fn):
+    """Rebuild the API client and retry once on connection-level errors.
+
+    The client's underlying HTTPS connection goes stale when a run spends a
+    long stretch between API calls (e.g. rate-limited Gemini classification
+    inside register_videos), and the next reuse dies with BrokenPipeError /
+    ConnectionReset / SSL errors - all OSError subclasses. A fresh client
+    gets a fresh connection; API reads here are idempotent so a whole-call
+    retry is safe."""
+
+    @functools.wraps(fn)
+    def wrapper(*args, **kwargs):
+        global _youtube
+        try:
+            return fn(*args, **kwargs)
+        except OSError as e:
+            print(f"YouTube API connection error ({e!r}) - rebuilding client, retrying once")
+            _youtube = None
+            return fn(*args, **kwargs)
+
+    return wrapper
 
 
 def parse_duration_seconds(duration: str) -> int | None:
@@ -26,6 +50,7 @@ def get_youtube():
     return _youtube
 
 
+@_retry_on_connection_error
 def search_video_ids(query: str, published_after: str, max_pages: int = 5) -> list[str]:
     """Search videos matching a text query published since `published_after`
     (RFC3339 timestamp), paginating through all results rather than just the
@@ -59,6 +84,7 @@ def search_video_ids(query: str, published_after: str, max_pages: int = 5) -> li
     return video_ids
 
 
+@_retry_on_connection_error
 def get_videos_details(video_ids: list[str]) -> list[dict]:
     """Fetch snippet+statistics+contentDetails for up to 50 video ids per
     call (batched). contentDetails.duration is used to filter out very
@@ -76,6 +102,7 @@ def get_videos_details(video_ids: list[str]) -> list[dict]:
     return results
 
 
+@_retry_on_connection_error
 def get_channel_by_handle(handle: str) -> dict | None:
     """Resolve an @handle (without the @) to its channel snippet+statistics."""
     youtube = get_youtube()
@@ -84,6 +111,7 @@ def get_channel_by_handle(handle: str) -> dict | None:
     return items[0] if items else None
 
 
+@_retry_on_connection_error
 def fetch_channel_video_ids_since(channel_id: str, published_after: str) -> list[str]:
     """Page through a channel's uploads playlist (cheap: 1 unit/page,
     unlike search.list) collecting video ids published since `published_after`
@@ -122,6 +150,7 @@ def fetch_channel_video_ids_since(channel_id: str, published_after: str) -> list
     return video_ids
 
 
+@_retry_on_connection_error
 def get_channels_details(channel_ids: list[str]) -> list[dict]:
     """Fetch snippet+statistics for up to 50 channel ids per call (batched)."""
     youtube = get_youtube()

@@ -12,7 +12,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 import youtube_client
-from supabase_client import get_client
+from supabase_client import get_client, select_all
 from video_registrar import register_videos
 
 FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
@@ -42,14 +42,15 @@ def _fetch_channel_video_ids(channel_id: str) -> list[str]:
 def watch() -> None:
     client = get_client()
 
-    channel_ids = [row["channel_id"] for row in client.table("channels").select("channel_id").execute().data]
+    # select_all, not a bare .execute(): PostgREST silently caps a plain
+    # select at 1000 rows, which made every video/channel past the cap look
+    # "new" again on each run once the tables grew beyond it.
+    channel_ids = [row["channel_id"] for row in select_all(client, "channels", "channel_id")]
     if not channel_ids:
         print("no known channels yet - run collector.py first")
         return
 
-    existing_video_ids = {
-        row["video_id"] for row in client.table("videos").select("video_id").execute().data
-    }
+    existing_video_ids = {row["video_id"] for row in select_all(client, "videos", "video_id")}
 
     new_video_ids: set[str] = set()
     for channel_id in channel_ids:

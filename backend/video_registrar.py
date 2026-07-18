@@ -38,10 +38,26 @@ def classify_discovery(title: str, description: str, tags: list[str]) -> str | N
     return None
 
 
+# Candidates are processed in slices this big, each carried all the way
+# through LLM classification and upserts before the next slice starts, so a
+# crash partway through a large backlog (e.g. a stale-connection error after
+# minutes of rate-limited Gemini calls) keeps everything processed so far -
+# the next run only redoes the slice that failed.
+REGISTER_CHUNK_SIZE = 200
+
+
 def register_videos(videos: list[dict]) -> None:
     """Classify, match, and upsert a batch of videos().list() items
     (snippet+statistics) into Supabase. Videos that aren't recognizably
     about the game, or that name no Pokemon in their title, are dropped."""
+    total_chunks = -(-len(videos) // REGISTER_CHUNK_SIZE) if videos else 0
+    for i in range(0, len(videos), REGISTER_CHUNK_SIZE):
+        if total_chunks > 1:
+            print(f"registering chunk {i // REGISTER_CHUNK_SIZE + 1}/{total_chunks}")
+        _register_chunk(videos[i : i + REGISTER_CHUNK_SIZE])
+
+
+def _register_chunk(videos: list[dict]) -> None:
     client = get_client()
 
     candidate_videos = []

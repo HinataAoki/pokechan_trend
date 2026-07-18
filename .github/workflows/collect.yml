@@ -2,7 +2,9 @@ name: Collect video data and recompute forecast
 
 on:
   schedule:
-    - cron: "0 * * * *" # every hour, UTC
+    # Every 2 hours, off the :00 mark (on-the-hour schedules are the most
+    # congested slot on GitHub's shared cron and get delayed/dropped).
+    - cron: "17 */2 * * *"
   workflow_dispatch: {}
 
 jobs:
@@ -23,6 +25,8 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
+          enable-cache: true
+          cache-dependency-glob: "backend/uv.lock"
 
       - name: Install dependencies
         run: uv sync --locked
