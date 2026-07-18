@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 import config
 import youtube_client
-from supabase_client import get_client
+from supabase_client import get_client, select_all_in
 
 
 def _hours_since(published_at: str) -> float:
@@ -82,10 +82,12 @@ def snapshot() -> None:
         ).execute()
 
     # Refresh subscriber counts for the channels of videos snapshotted this run.
-    channel_ids_resp = (
-        client.table("videos").select("channel_id").in_("video_id", list(due_map.keys())).execute()
+    # Chunked in-filter: after a collection outage the due list can hold
+    # thousands of ids, which overflows a single request URL (400).
+    channel_id_rows = select_all_in(
+        client, "videos", "channel_id", "video_id", list(due_map.keys())
     )
-    channel_ids = [row["channel_id"] for row in channel_ids_resp.data]
+    channel_ids = [row["channel_id"] for row in channel_id_rows]
     if channel_ids:
         channels = youtube_client.get_channels_details(channel_ids)
         channel_rows = [

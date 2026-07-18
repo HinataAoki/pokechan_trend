@@ -15,7 +15,7 @@ from collections import defaultdict
 from datetime import datetime, time, timedelta, timezone
 
 import forecast_config as fc
-from supabase_client import get_client, select_all
+from supabase_client import get_client, select_all, select_all_in
 
 
 def _lag_kernel(delta_t_hours: float) -> float:
@@ -88,29 +88,23 @@ def forecast() -> None:
 
     video_ids = [v["video_id"] for v in videos]
 
-    pokemon_rows = select_all(
-        client, "video_pokemon", "video_id, pokemon_name", lambda q: q.in_("video_id", video_ids)
+    pokemon_rows = select_all_in(
+        client, "video_pokemon", "video_id, pokemon_name", "video_id", video_ids
     )
     pokemon_by_video: dict[str, list[str]] = defaultdict(list)
     for row in pokemon_rows:
         pokemon_by_video[row["video_id"]].append(row["pokemon_name"])
 
-    snapshot_rows = select_all(
-        client,
-        "view_snapshots",
-        "video_id, hours_offset, view_count",
-        lambda q: q.in_("video_id", video_ids),
+    snapshot_rows = select_all_in(
+        client, "view_snapshots", "video_id, hours_offset, view_count", "video_id", video_ids
     )
     snapshots_by_video: dict[str, list[dict]] = defaultdict(list)
     for row in snapshot_rows:
         snapshots_by_video[row["video_id"]].append(row)
 
     channel_ids = list({v["channel_id"] for v in videos})
-    channel_rows = select_all(
-        client,
-        "channels",
-        "channel_id, subscriber_count, category",
-        lambda q: q.in_("channel_id", channel_ids),
+    channel_rows = select_all_in(
+        client, "channels", "channel_id, subscriber_count, category", "channel_id", channel_ids
     )
     channel_by_id = {row["channel_id"]: row for row in channel_rows}
 

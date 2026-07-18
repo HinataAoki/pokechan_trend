@@ -21,6 +21,24 @@ def get_client() -> Client:
     return _client
 
 
+def select_all_in(
+    client: Client,
+    table: str,
+    columns: str,
+    key: str,
+    values: list,
+    chunk_size: int = 200,
+) -> list[dict]:
+    """select_all with an `in` filter applied in chunks - PostgREST encodes
+    the in-list into the request URL, so a single call with thousands of ids
+    blows past the URL length limit and comes back as a raw 400 Bad Request."""
+    rows = []
+    for i in range(0, len(values), chunk_size):
+        chunk = values[i : i + chunk_size]
+        rows.extend(select_all(client, table, columns, lambda q, c=chunk: q.in_(key, c)))
+    return rows
+
+
 def select_all(
     client: Client,
     table: str,

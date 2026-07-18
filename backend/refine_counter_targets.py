@@ -25,7 +25,7 @@ from pathlib import Path
 from google import genai
 
 import config
-from supabase_client import get_client, select_all
+from supabase_client import get_client, select_all_in
 
 DATA = Path(__file__).parent / "data"
 OUT = DATA / "counter_targets.json"
@@ -99,10 +99,7 @@ def refine() -> None:
 
     client = get_client()
     pokemon_by_video = defaultdict(list)
-    rows = select_all(
-        client, "video_pokemon", "video_id, pokemon_name",
-        lambda q: q.in_("video_id", counter_ids),
-    )
+    rows = select_all_in(client, "video_pokemon", "video_id, pokemon_name", "video_id", counter_ids)
     for r in rows:
         pokemon_by_video[r["video_id"]].append(r["pokemon_name"])
 
