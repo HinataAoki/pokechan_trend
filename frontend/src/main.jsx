@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// Google Analytics (GA4). Loaded only when a measurement id is configured
-// (VITE_GA_MEASUREMENT_ID, e.g. "G-XXXXXXXXXX"), so local dev and forks
-// without the env var send nothing.
-const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID
+// Google Analytics (GA4). The measurement id is a public identifier (it's
+// visible in any site's page source), so the production default lives here;
+// VITE_GA_MEASUREMENT_ID overrides it, and dev-server sessions send nothing.
+const gaId =
+  import.meta.env.VITE_GA_MEASUREMENT_ID ||
+  (import.meta.env.PROD ? 'G-XGQJETQFQ3' : '')
 if (gaId) {
   const script = document.createElement('script')
   script.async = true
