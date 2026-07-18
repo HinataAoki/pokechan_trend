@@ -195,17 +195,26 @@
   color: var(--ink-soft);
 }
 
+/* 5 pills in one row on desktop; 3+2 on half-width/mobile viewports. */
 .surge-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
+}
+
+@media (max-width: 820px) {
+  .surge-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .surge-card {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0.5rem 0.9rem;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 0.5rem 0.6rem;
   border-radius: 999px;
   border: 2.5px solid var(--poke-red);
   background: #fff2ec;
@@ -231,7 +240,11 @@
 
 .surge-name {
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .surge-badge {
@@ -241,6 +254,28 @@
   font-weight: 800;
   padding: 2px 8px;
   border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* On very narrow screens the per-pill badge is redundant (the section
+   heading already says 急上昇) and squeezes names down to one character. */
+@media (max-width: 480px) {
+  .surge-badge {
+    display: none;
+  }
+
+  .surge-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .surge-name {
+    font-size: 0.76rem;
+  }
+
+  .surge-card {
+    padding: 0.45rem 0.4rem;
+  }
 }
 
 /* ---------- calendar ---------- */
